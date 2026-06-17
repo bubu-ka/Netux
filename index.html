@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nexus · 财经可视化大盘</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 左侧目录 -->
+      <aside id="sidebar">
+        <div class="brand">
+          <div class="brand-logo">N</div>
+          <div class="brand-text">
+            <div class="brand-title">NEXUS</div>
+            <div class="brand-sub">财经可视化大盘</div>
+          </div>
+        </div>
+        <nav id="nav"></nav>
+        <div class="sidebar-foot">
+          <span class="dot"></span>
+          <span>静态数据 · 由 AKShare 驱动</span>
+        </div>
+      </aside>
+
+      <!-- 主内容 -->
+      <main id="main">
+        <header id="topbar">
+          <div class="crumb">
+            <span id="crumb-group">概览</span>
+            <span class="sep">/</span>
+            <span id="crumb-page">行业一览图</span>
+          </div>
+          <div class="meta">
+            <span class="meta-item" id="updated-at">--</span>
+            <span class="meta-item live"><span class="live-dot"></span>STATIC</span>
+          </div>
+        </header>
+        <section id="view"></section>
+      </main>
+    </div>
+
+    <script src="assets/js/components/industry-summary.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
