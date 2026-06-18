@@ -1,0 +1,182 @@
+{
+  "component": "metrics",
+  "title": "大盘",
+  "updated_at": "2026-06-19 07:33:58",
+  "source": "tickflow.klines (free tier)",
+  "tier": "free",
+  "total": 16,
+  "ok": 16,
+  "failed": 0,
+  "quotes_hit": 0,
+  "fallback_recovered": 16,
+  "groups": [
+    {
+      "name": "A 股指数",
+      "items": [
+        {
+          "symbol": "000001.SH",
+          "name": "上证指数",
+          "last_price": 4090.482,
+          "prev_close": 4108.076,
+          "change": -17.594,
+          "change_pct": -0.4283,
+          "source": "klines"
+        },
+        {
+          "symbol": "399006.SZ",
+          "name": "创业板指",
+          "last_price": 4252.39,
+          "prev_close": 4167.048,
+          "change": 85.342,
+          "change_pct": 2.048,
+          "source": "klines"
+        },
+        {
+          "symbol": "000300.SH",
+          "name": "沪深300",
+          "last_price": 4941.598,
+          "prev_close": 4931.386,
+          "change": 10.212,
+          "change_pct": 0.2071,
+          "source": "klines"
+        },
+        {
+          "symbol": "000905.SH",
+          "name": "中证500",
+          "last_price": 8673.09,
+          "prev_close": 8627.087,
+          "change": 46.003,
+          "change_pct": 0.5332,
+          "source": "klines"
+        }
+      ]
+    },
+    {
+      "name": "国内期货",
+      "items": [
+        {
+          "symbol": "au2608.SHF",
+          "name": "沪金主力",
+          "last_price": 937.96,
+          "prev_close": 942.94,
+          "change": -4.98,
+          "change_pct": -0.5281,
+          "source": "klines",
+          "alias": "@au.SHF"
+        },
+        {
+          "symbol": "ag2608.SHF",
+          "name": "沪银主力",
+          "last_price": 16493.0,
+          "prev_close": 16865.0,
+          "change": -372.0,
+          "change_pct": -2.2058,
+          "source": "klines",
+          "alias": "@ag.SHF"
+        },
+        {
+          "symbol": "cu2607.SHF",
+          "name": "沪铜主力",
+          "last_price": 104780.0,
+          "prev_close": 105400.0,
+          "change": -620.0,
+          "change_pct": -0.5882,
+          "source": "klines",
+          "alias": "@cu.SHF"
+        },
+        {
+          "symbol": "sc2608.INE",
+          "name": "原油主力",
+          "last_price": 508.5,
+          "prev_close": 510.2,
+          "change": -1.7,
+          "change_pct": -0.3332,
+          "source": "klines",
+          "alias": "@sc.INE"
+        },
+        {
+          "symbol": "lc2609.GFE",
+          "name": "碳酸锂主力",
+          "last_price": 160500.0,
+          "prev_close": 171300.0,
+          "change": -10800.0,
+          "change_pct": -6.3047,
+          "source": "klines",
+          "alias": "@lc.GFE"
+        },
+        {
+          "symbol": "lh2609.DCE",
+          "name": "生猪主力",
+          "last_price": 11650.0,
+          "prev_close": 11770.0,
+          "change": -120.0,
+          "change_pct": -1.0195,
+          "source": "klines",
+          "alias": "@lh.DCE"
+        },
+        {
+          "symbol": "IF2606.CFX",
+          "name": "沪深300股指",
+          "last_price": 4960.6,
+          "prev_close": 4928.0,
+          "change": 32.6,
+          "change_pct": 0.6615,
+          "source": "klines",
+          "alias": "@IF.CFX"
+        },
+        {
+          "symbol": "IH2606.CFX",
+          "name": "上证50股指",
+          "last_price": 2941.0,
+          "prev_close": 2935.0,
+          "change": 6.0,
+          "change_pct": 0.2044,
+          "source": "klines",
+          "alias": "@IH.CFX"
+        },
+        {
+          "symbol": "IC2606.CFX",
+          "name": "中证500股指",
+          "last_price": 8682.8,
+          "prev_close": 8613.2,
+          "change": 69.6,
+          "change_pct": 0.8081,
+          "source": "klines",
+          "alias": "@IC.CFX"
+        }
+      ]
+    },
+    {
+      "name": "美股大盘 ETF",
+      "items": [
+        {
+          "symbol": "QQQ.US",
+          "name": "纳斯达克 (QQQ)",
+          "last_price": 722.51,
+          "prev_close": 729.86,
+          "change": -7.35,
+          "change_pct": -1.007,
+          "source": "klines"
+        },
+        {
+          "symbol": "DIA.US",
+          "name": "道琼斯 (DIA)",
+          "last_price": 516.3,
+          "prev_close": 521.44,
+          "change": -5.14,
+          "change_pct": -0.9857,
+          "source": "klines"
+        },
+        {
+          "symbol": "SOXX.US",
+          "name": "费城半导体 (SOXX)",
+          "last_price": 599.73,
+          "prev_close": 591.24,
+          "change": 8.49,
+          "change_pct": 1.436,
+          "source": "klines"
+        }
+      ]
+    }
+  ]
+}
