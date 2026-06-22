@@ -568,3 +568,357 @@ table.fractal-tbl tbody tr.row-pick.active {
   font-size: 11px;
   letter-spacing: 0.3px;
 }
+
+/* ===== 波段策略 range ===== */
+.range-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.range-tab {
+  flex: 1 1 220px;
+  min-width: 200px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 12px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all .15s ease;
+  text-align: left;
+  font: inherit;
+}
+.range-tab:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+.range-tab.active {
+  background: linear-gradient(135deg, rgba(37,212,242,0.18), rgba(91,140,255,0.10));
+  border-color: var(--primary);
+  box-shadow: var(--shadow-glow);
+}
+.range-tab .t-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.range-tab .t-group {
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 2px 8px;
+  background: rgba(91,140,255,0.12);
+  border-radius: 10px;
+}
+.range-tab .t-stat {
+  margin-left: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+.range-tab .t-stat.up { color: var(--up); }
+.range-tab .t-stat.down { color: var(--down); }
+
+/* 策略说明卡 */
+.range-strategy-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.rs-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.rs-title { display: flex; align-items: center; gap: 10px; }
+.rs-name { font-size: 18px; font-weight: 700; letter-spacing: 0.5px; }
+.rs-tag {
+  font-size: 11px;
+  color: var(--primary);
+  background: rgba(37,212,242,0.10);
+  border: 1px solid rgba(37,212,242,0.30);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.rs-params {
+  margin-left: auto;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+.rs-params code {
+  background: var(--panel-2);
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-left: 4px;
+  color: var(--primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.rs-desc {
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.rs-kpis {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+.rs-kpi {
+  background: var(--panel-2);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+}
+.rs-kpi .label { color: var(--text-dim); font-size: 11px; letter-spacing: 0.5px; }
+.rs-kpi .value {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 4px 0 2px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.rs-kpi .sub { color: var(--text-mute); font-size: 11px; }
+.rs-kpi.up .value { color: var(--up); }
+.rs-kpi.down .value { color: var(--down); }
+.rs-kpi.flat .value { color: var(--text); }
+
+@media (max-width: 1280px) {
+  .rs-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* 排行榜表格 */
+.range-table-panel { margin-bottom: 14px; }
+.range-table-wrap { overflow-x: auto; }
+.range-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.range-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--panel-2);
+  color: var(--text-dim);
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  letter-spacing: 0.3px;
+}
+.range-table th.num,
+.range-table td.num {
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.range-table tbody td {
+  padding: 9px 12px;
+  border-bottom: 1px solid rgba(29,41,66,0.5);
+}
+.range-table tbody tr {
+  cursor: pointer;
+  transition: background .12s ease;
+}
+.range-table tbody tr:hover { background: rgba(37,212,242,0.06); }
+.range-table tbody tr.active {
+  background: linear-gradient(90deg,
+    rgba(37,212,242,0.12), rgba(37,212,242,0.04));
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+.range-table td.sym {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--text-dim);
+}
+.range-table .strong { font-weight: 700; }
+.range-table .up { color: var(--up); }
+.range-table .down { color: var(--down); }
+.range-table .flat { color: var(--text); }
+.text-mute { color: var(--text-mute); }
+
+.pos-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.pos-tag.pos-in {
+  background: rgba(255,77,109,0.12);
+  color: var(--up);
+  border: 1px solid rgba(255,77,109,0.35);
+}
+.pos-tag.pos-out {
+  background: rgba(125,138,166,0.10);
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+}
+
+.recent-cell { white-space: nowrap; }
+.sig-chip {
+  display: inline-block;
+  font-size: 10.5px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-right: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.sig-chip.sig-buy {
+  background: rgba(255,77,109,0.14);
+  color: var(--up);
+  border: 1px solid rgba(255,77,109,0.35);
+}
+.sig-chip.sig-sell {
+  background: rgba(25,210,122,0.14);
+  color: var(--down);
+  border: 1px solid rgba(25,210,122,0.35);
+}
+
+/* 详情面板 */
+.range-detail-panel { margin-bottom: 14px; }
+.range-detail-panel .panel-head { padding-bottom: 12px; }
+.detail-meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.detail-meta b {
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+}
+.detail-meta .up b { color: var(--up); }
+.detail-meta .down b { color: var(--down); }
+
+/* 交易明细 */
+.trade-list-wrap {
+  margin-top: 14px;
+  padding: 12px 0 0;
+  border-top: 1px dashed var(--line);
+}
+.trade-list-title {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+.trade-list {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.trade-list th, .trade-list td {
+  padding: 6px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(29,41,66,0.5);
+}
+.trade-list th { color: var(--text-dim); font-weight: 500; }
+.trade-list th.num, .trade-list td.num {
+  text-align: right;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.trade-list tr.up td { color: var(--up); }
+.trade-list tr.down td { color: var(--down); }
+.trade-list td.note { color: var(--text-dim); }
+.trade-list .strong { font-weight: 700; }
+.trade-empty {
+  margin-top: 14px;
+  padding: 20px;
+  text-align: center;
+  color: var(--text-mute);
+  font-size: 13px;
+  background: var(--panel-2);
+  border-radius: 8px;
+  border: 1px dashed var(--line);
+}
+
+/* ---------- composite 推荐徽章 ---------- */
+.t-rec {
+  margin-left: 6px;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  padding: 1px 6px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: #061018;
+  border-radius: 6px;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
+/* ---------- 最近 1 月信号大色块 ---------- */
+.recent-sig-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 4px;
+}
+.rs-pill {
+  flex: 0 0 auto;
+  min-width: 168px;
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+}
+.rs-pill.rs-buy {
+  background: linear-gradient(135deg, rgba(255,77,109,0.16), rgba(255,77,109,0.04));
+  border-color: rgba(255,77,109,0.45);
+}
+.rs-pill.rs-sell {
+  background: linear-gradient(135deg, rgba(25,210,122,0.16), rgba(25,210,122,0.04));
+  border-color: rgba(25,210,122,0.45);
+}
+.rs-pill-head {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 4px;
+}
+.rs-pill-tag {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 1px 8px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+.rs-buy .rs-pill-tag { background: var(--up); color: #fff; }
+.rs-sell .rs-pill-tag { background: var(--down); color: #061018; }
+.rs-pill-date {
+  font-size: 12px; color: var(--text-dim);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.rs-pill-price {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.3px;
+}
+.rs-buy .rs-pill-price { color: var(--up); }
+.rs-sell .rs-pill-price { color: var(--down); }
+.rs-pill-note {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+.recent-sig-empty {
+  padding: 12px 14px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  color: var(--text-mute);
+  font-size: 13px;
+  margin: 10px 0 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.pos-tag.pos-in.up { color: var(--up); border-color: rgba(255,77,109,0.45); }
+.pos-tag.pos-in.down { color: var(--down); border-color: rgba(25,210,122,0.45); }
+
+/* 砍掉 5 列布局,Composite 推荐 4 列 KPI 同样适配 */
+.rs-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1280px) {
+  .rs-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
