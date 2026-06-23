@@ -1,0 +1,1835 @@
+{
+  "component": "range",
+  "updated_at": "2026-06-24 02:40:48",
+  "strategy": {
+    "name": "donchian_channel",
+    "title": "唐奇安通道",
+    "group": "通道低吸 + 上轨止盈"
+  },
+  "symbol": "159695.SZ",
+  "name": "通信ETF",
+  "last_close": 3.699,
+  "klines": {
+    "symbol": "159695.SZ",
+    "name": "通信ETF",
+    "first_date": "2024-11-26",
+    "last_date": "2026-06-23",
+    "n_bars": 380,
+    "chart_start_index": 317,
+    "chart_bars": 63,
+    "recent_start_index": 317,
+    "recent_bars": 63,
+    "last_close": 3.699,
+    "klines": [
+      {
+        "date": "2026-03-20",
+        "open": 2.421,
+        "close": 2.384,
+        "high": 2.46,
+        "low": 2.383,
+        "volume": 99843.0
+      },
+      {
+        "date": "2026-03-23",
+        "open": 2.303,
+        "close": 2.283,
+        "high": 2.356,
+        "low": 2.264,
+        "volume": 145086.0
+      },
+      {
+        "date": "2026-03-24",
+        "open": 2.304,
+        "close": 2.329,
+        "high": 2.333,
+        "low": 2.251,
+        "volume": 152116.0
+      },
+      {
+        "date": "2026-03-25",
+        "open": 2.377,
+        "close": 2.411,
+        "high": 2.427,
+        "low": 2.376,
+        "volume": 107788.0
+      },
+      {
+        "date": "2026-03-26",
+        "open": 2.401,
+        "close": 2.37,
+        "high": 2.429,
+        "low": 2.36,
+        "volume": 95742.0
+      },
+      {
+        "date": "2026-03-27",
+        "open": 2.3,
+        "close": 2.365,
+        "high": 2.394,
+        "low": 2.3,
+        "volume": 113410.0
+      },
+      {
+        "date": "2026-03-30",
+        "open": 2.315,
+        "close": 2.407,
+        "high": 2.408,
+        "low": 2.315,
+        "volume": 105664.0
+      },
+      {
+        "date": "2026-03-31",
+        "open": 2.373,
+        "close": 2.363,
+        "high": 2.412,
+        "low": 2.343,
+        "volume": 86911.0
+      },
+      {
+        "date": "2026-04-01",
+        "open": 2.42,
+        "close": 2.419,
+        "high": 2.434,
+        "low": 2.376,
+        "volume": 101275.0
+      },
+      {
+        "date": "2026-04-02",
+        "open": 2.395,
+        "close": 2.383,
+        "high": 2.434,
+        "low": 2.373,
+        "volume": 82736.0
+      },
+      {
+        "date": "2026-04-03",
+        "open": 2.412,
+        "close": 2.44,
+        "high": 2.482,
+        "low": 2.412,
+        "volume": 124561.0
+      },
+      {
+        "date": "2026-04-07",
+        "open": 2.438,
+        "close": 2.443,
+        "high": 2.469,
+        "low": 2.415,
+        "volume": 118779.0
+      },
+      {
+        "date": "2026-04-08",
+        "open": 2.504,
+        "close": 2.592,
+        "high": 2.592,
+        "low": 2.494,
+        "volume": 118496.0
+      },
+      {
+        "date": "2026-04-09",
+        "open": 2.575,
+        "close": 2.628,
+        "high": 2.628,
+        "low": 2.542,
+        "volume": 115506.0
+      },
+      {
+        "date": "2026-04-10",
+        "open": 2.629,
+        "close": 2.645,
+        "high": 2.666,
+        "low": 2.609,
+        "volume": 152505.0
+      },
+      {
+        "date": "2026-04-13",
+        "open": 2.62,
+        "close": 2.636,
+        "high": 2.65,
+        "low": 2.6,
+        "volume": 103348.0
+      },
+      {
+        "date": "2026-04-14",
+        "open": 2.661,
+        "close": 2.67,
+        "high": 2.7,
+        "low": 2.648,
+        "volume": 94782.0
+      },
+      {
+        "date": "2026-04-15",
+        "open": 2.68,
+        "close": 2.637,
+        "high": 2.712,
+        "low": 2.618,
+        "volume": 135340.0
+      },
+      {
+        "date": "2026-04-16",
+        "open": 2.629,
+        "close": 2.724,
+        "high": 2.724,
+        "low": 2.624,
+        "volume": 102897.0
+      },
+      {
+        "date": "2026-04-17",
+        "open": 2.74,
+        "close": 2.831,
+        "high": 2.834,
+        "low": 2.74,
+        "volume": 102430.0
+      },
+      {
+        "date": "2026-04-20",
+        "open": 2.825,
+        "close": 2.87,
+        "high": 2.901,
+        "low": 2.825,
+        "volume": 81391.0
+      },
+      {
+        "date": "2026-04-21",
+        "open": 2.821,
+        "close": 2.876,
+        "high": 2.882,
+        "low": 2.813,
+        "volume": 114713.0
+      },
+      {
+        "date": "2026-04-22",
+        "open": 2.858,
+        "close": 3.002,
+        "high": 3.002,
+        "low": 2.85,
+        "volume": 122610.0
+      },
+      {
+        "date": "2026-04-23",
+        "open": 3.0,
+        "close": 2.958,
+        "high": 3.031,
+        "low": 2.916,
+        "volume": 201205.0
+      },
+      {
+        "date": "2026-04-24",
+        "open": 2.886,
+        "close": 2.858,
+        "high": 2.931,
+        "low": 2.812,
+        "volume": 193668.0
+      },
+      {
+        "date": "2026-04-27",
+        "open": 2.858,
+        "close": 2.891,
+        "high": 2.923,
+        "low": 2.855,
+        "volume": 102523.0
+      },
+      {
+        "date": "2026-04-28",
+        "open": 2.861,
+        "close": 2.827,
+        "high": 2.886,
+        "low": 2.808,
+        "volume": 124130.0
+      },
+      {
+        "date": "2026-04-29",
+        "open": 2.821,
+        "close": 2.83,
+        "high": 2.858,
+        "low": 2.788,
+        "volume": 107490.0
+      },
+      {
+        "date": "2026-04-30",
+        "open": 2.855,
+        "close": 2.84,
+        "high": 2.869,
+        "low": 2.791,
+        "volume": 86469.0
+      },
+      {
+        "date": "2026-05-06",
+        "open": 2.863,
+        "close": 2.905,
+        "high": 2.95,
+        "low": 2.863,
+        "volume": 113051.0
+      },
+      {
+        "date": "2026-05-07",
+        "open": 2.94,
+        "close": 3.041,
+        "high": 3.041,
+        "low": 2.895,
+        "volume": 176214.0
+      },
+      {
+        "date": "2026-05-08",
+        "open": 2.992,
+        "close": 3.087,
+        "high": 3.089,
+        "low": 2.96,
+        "volume": 158300.0
+      },
+      {
+        "date": "2026-05-11",
+        "open": 3.131,
+        "close": 3.192,
+        "high": 3.192,
+        "low": 3.073,
+        "volume": 157297.0
+      },
+      {
+        "date": "2026-05-12",
+        "open": 3.23,
+        "close": 3.218,
+        "high": 3.282,
+        "low": 3.188,
+        "volume": 219340.0
+      },
+      {
+        "date": "2026-05-13",
+        "open": 3.177,
+        "close": 3.29,
+        "high": 3.29,
+        "low": 3.16,
+        "volume": 187407.0
+      },
+      {
+        "date": "2026-05-14",
+        "open": 3.341,
+        "close": 3.278,
+        "high": 3.347,
+        "low": 3.25,
+        "volume": 184747.0
+      },
+      {
+        "date": "2026-05-15",
+        "open": 3.277,
+        "close": 3.181,
+        "high": 3.303,
+        "low": 3.129,
+        "volume": 221862.0
+      },
+      {
+        "date": "2026-05-18",
+        "open": 3.153,
+        "close": 3.248,
+        "high": 3.275,
+        "low": 3.148,
+        "volume": 143516.0
+      },
+      {
+        "date": "2026-05-19",
+        "open": 3.211,
+        "close": 3.251,
+        "high": 3.256,
+        "low": 3.12,
+        "volume": 152136.0
+      },
+      {
+        "date": "2026-05-20",
+        "open": 3.222,
+        "close": 3.239,
+        "high": 3.271,
+        "low": 3.195,
+        "volume": 183977.0
+      },
+      {
+        "date": "2026-05-21",
+        "open": 3.252,
+        "close": 3.07,
+        "high": 3.268,
+        "low": 3.065,
+        "volume": 237284.0
+      },
+      {
+        "date": "2026-05-22",
+        "open": 3.07,
+        "close": 3.184,
+        "high": 3.189,
+        "low": 3.07,
+        "volume": 247696.0
+      },
+      {
+        "date": "2026-05-25",
+        "open": 3.191,
+        "close": 3.272,
+        "high": 3.275,
+        "low": 3.139,
+        "volume": 173404.0
+      },
+      {
+        "date": "2026-05-26",
+        "open": 3.252,
+        "close": 3.232,
+        "high": 3.259,
+        "low": 3.174,
+        "volume": 213882.0
+      },
+      {
+        "date": "2026-05-27",
+        "open": 3.202,
+        "close": 3.207,
+        "high": 3.289,
+        "low": 3.178,
+        "volume": 166757.0
+      },
+      {
+        "date": "2026-05-28",
+        "open": 3.207,
+        "close": 3.34,
+        "high": 3.343,
+        "low": 3.154,
+        "volume": 173297.0
+      },
+      {
+        "date": "2026-05-29",
+        "open": 3.347,
+        "close": 3.279,
+        "high": 3.373,
+        "low": 3.254,
+        "volume": 168335.0
+      },
+      {
+        "date": "2026-06-01",
+        "open": 3.252,
+        "close": 3.163,
+        "high": 3.288,
+        "low": 3.16,
+        "volume": 163444.0
+      },
+      {
+        "date": "2026-06-02",
+        "open": 3.161,
+        "close": 3.338,
+        "high": 3.35,
+        "low": 3.161,
+        "volume": 202680.0
+      },
+      {
+        "date": "2026-06-03",
+        "open": 3.424,
+        "close": 3.476,
+        "high": 3.579,
+        "low": 3.38,
+        "volume": 255293.0
+      },
+      {
+        "date": "2026-06-04",
+        "open": 3.4,
+        "close": 3.485,
+        "high": 3.498,
+        "low": 3.386,
+        "volume": 214527.0
+      },
+      {
+        "date": "2026-06-05",
+        "open": 3.472,
+        "close": 3.446,
+        "high": 3.628,
+        "low": 3.4,
+        "volume": 240011.0
+      },
+      {
+        "date": "2026-06-08",
+        "open": 3.28,
+        "close": 3.319,
+        "high": 3.42,
+        "low": 3.273,
+        "volume": 359403.0
+      },
+      {
+        "date": "2026-06-09",
+        "open": 3.385,
+        "close": 3.485,
+        "high": 3.488,
+        "low": 3.353,
+        "volume": 192454.0
+      },
+      {
+        "date": "2026-06-10",
+        "open": 3.4,
+        "close": 3.378,
+        "high": 3.456,
+        "low": 3.336,
+        "volume": 190202.0
+      },
+      {
+        "date": "2026-06-11",
+        "open": 3.324,
+        "close": 3.329,
+        "high": 3.428,
+        "low": 3.251,
+        "volume": 232348.0
+      },
+      {
+        "date": "2026-06-12",
+        "open": 3.422,
+        "close": 3.29,
+        "high": 3.425,
+        "low": 3.276,
+        "volume": 237205.0
+      },
+      {
+        "date": "2026-06-15",
+        "open": 3.339,
+        "close": 3.467,
+        "high": 3.471,
+        "low": 3.243,
+        "volume": 296939.0
+      },
+      {
+        "date": "2026-06-16",
+        "open": 3.489,
+        "close": 3.587,
+        "high": 3.608,
+        "low": 3.481,
+        "volume": 292383.0
+      },
+      {
+        "date": "2026-06-17",
+        "open": 3.519,
+        "close": 3.622,
+        "high": 3.624,
+        "low": 3.515,
+        "volume": 212125.0
+      },
+      {
+        "date": "2026-06-18",
+        "open": 3.591,
+        "close": 3.724,
+        "high": 3.732,
+        "low": 3.583,
+        "volume": 295855.0
+      },
+      {
+        "date": "2026-06-22",
+        "open": 3.754,
+        "close": 3.794,
+        "high": 3.818,
+        "low": 3.678,
+        "volume": 190969.0
+      },
+      {
+        "date": "2026-06-23",
+        "open": 3.791,
+        "close": 3.699,
+        "high": 3.801,
+        "low": 3.654,
+        "volume": 179930.0
+      }
+    ]
+  },
+  "signals": [
+    {
+      "index": 29,
+      "date": "2025-01-07",
+      "kind": "buy",
+      "price": 1.155,
+      "note": "下轨附近企稳反弹"
+    },
+    {
+      "index": 32,
+      "date": "2025-01-10",
+      "kind": "sell",
+      "price": 1.12,
+      "note": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "index": 34,
+      "date": "2025-01-14",
+      "kind": "buy",
+      "price": 1.164,
+      "note": "下轨附近企稳反弹"
+    },
+    {
+      "index": 46,
+      "date": "2025-02-07",
+      "kind": "sell",
+      "price": 1.22,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 64,
+      "date": "2025-03-05",
+      "kind": "buy",
+      "price": 1.228,
+      "note": "下轨附近企稳反弹"
+    },
+    {
+      "index": 78,
+      "date": "2025-03-25",
+      "kind": "sell",
+      "price": 1.175,
+      "note": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "index": 84,
+      "date": "2025-04-02",
+      "kind": "buy",
+      "price": 1.172,
+      "note": "下轨附近企稳反弹"
+    },
+    {
+      "index": 85,
+      "date": "2025-04-03",
+      "kind": "sell",
+      "price": 1.149,
+      "note": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "index": 88,
+      "date": "2025-04-09",
+      "kind": "buy",
+      "price": 1.039,
+      "note": "下轨附近企稳反弹"
+    },
+    {
+      "index": 105,
+      "date": "2025-05-07",
+      "kind": "sell",
+      "price": 1.135,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 124,
+      "date": "2025-06-04",
+      "kind": "buy",
+      "price": 1.169,
+      "note": "下轨附近企稳反弹"
+    },
+    {
+      "index": 129,
+      "date": "2025-06-11",
+      "kind": "sell",
+      "price": 1.196,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 130,
+      "date": "2025-06-12",
+      "kind": "buy",
+      "price": 1.209,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 135,
+      "date": "2025-06-19",
+      "kind": "sell",
+      "price": 1.229,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 211,
+      "date": "2025-10-13",
+      "kind": "buy",
+      "price": 1.891,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 215,
+      "date": "2025-10-17",
+      "kind": "sell",
+      "price": 1.792,
+      "note": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "index": 216,
+      "date": "2025-10-20",
+      "kind": "buy",
+      "price": 1.848,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 221,
+      "date": "2025-10-27",
+      "kind": "sell",
+      "price": 2.065,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 222,
+      "date": "2025-10-28",
+      "kind": "buy",
+      "price": 2.065,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 240,
+      "date": "2025-11-21",
+      "kind": "sell",
+      "price": 1.806,
+      "note": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "index": 242,
+      "date": "2025-11-25",
+      "kind": "buy",
+      "price": 1.87,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 247,
+      "date": "2025-12-02",
+      "kind": "sell",
+      "price": 2.019,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 281,
+      "date": "2026-01-21",
+      "kind": "buy",
+      "price": 2.258,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 288,
+      "date": "2026-01-30",
+      "kind": "sell",
+      "price": 2.4,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 290,
+      "date": "2026-02-03",
+      "kind": "buy",
+      "price": 2.41,
+      "note": "下轨附近企稳反弹;重新站上唐奇安中轨;收盘价位于EMA120上方"
+    },
+    {
+      "index": 295,
+      "date": "2026-02-10",
+      "kind": "sell",
+      "price": 2.391,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 297,
+      "date": "2026-02-12",
+      "kind": "buy",
+      "price": 2.394,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 302,
+      "date": "2026-02-27",
+      "kind": "sell",
+      "price": 2.465,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 305,
+      "date": "2026-03-04",
+      "kind": "buy",
+      "price": 2.394,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 310,
+      "date": "2026-03-11",
+      "kind": "sell",
+      "price": 2.483,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 312,
+      "date": "2026-03-13",
+      "kind": "buy",
+      "price": 2.433,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 314,
+      "date": "2026-03-17",
+      "kind": "sell",
+      "price": 2.318,
+      "note": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "index": 315,
+      "date": "2026-03-18",
+      "kind": "buy",
+      "price": 2.4,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 318,
+      "date": "2026-03-23",
+      "kind": "sell",
+      "price": 2.283,
+      "note": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "index": 319,
+      "date": "2026-03-24",
+      "kind": "buy",
+      "price": 2.329,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 327,
+      "date": "2026-04-03",
+      "kind": "sell",
+      "price": 2.44,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 328,
+      "date": "2026-04-07",
+      "kind": "buy",
+      "price": 2.443,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 333,
+      "date": "2026-04-14",
+      "kind": "sell",
+      "price": 2.67,
+      "note": "接近唐奇安上轨,波段止盈"
+    }
+  ],
+  "signals_recent": [
+    {
+      "index": 318,
+      "date": "2026-03-23",
+      "kind": "sell",
+      "price": 2.283,
+      "note": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "index": 319,
+      "date": "2026-03-24",
+      "kind": "buy",
+      "price": 2.329,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 327,
+      "date": "2026-04-03",
+      "kind": "sell",
+      "price": 2.44,
+      "note": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "index": 328,
+      "date": "2026-04-07",
+      "kind": "buy",
+      "price": 2.443,
+      "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+    },
+    {
+      "index": 333,
+      "date": "2026-04-14",
+      "kind": "sell",
+      "price": 2.67,
+      "note": "接近唐奇安上轨,波段止盈"
+    }
+  ],
+  "position": {
+    "in_position": false,
+    "since": null,
+    "entry_price": null,
+    "float_pnl_pct": null,
+    "last_close": 3.699,
+    "bars_held": null
+  },
+  "next_day": {
+    "action": "watch",
+    "action_label": "观察等待",
+    "existing_holder_action": "watch",
+    "existing_holder_label": "观察等待",
+    "new_entry_action": "watch",
+    "new_entry_label": "观察等待",
+    "entry_timing": "late",
+    "direction": "flat",
+    "direction_label": "震荡观察",
+    "rise_confidence_pct": 40,
+    "fall_risk_pct": 60,
+    "confidence_label": "偏弱",
+    "is_rule_based": true,
+    "not_ml_probability": true,
+    "basis": [
+      "收盘价站上唐奇安中轨",
+      "距上轨约2.5%",
+      "收盘价位于EMA120上方"
+    ],
+    "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "waves": {
+    "upward_1y_count": 16,
+    "upward_3m_count": 4,
+    "current_wave": {
+      "active": true,
+      "start_index": 374,
+      "start_date": "2026-06-15",
+      "start_price": 3.243,
+      "end_index": 379,
+      "end_date": "2026-06-23",
+      "end_price": 3.699,
+      "return_pct": 14.06,
+      "bars": 5,
+      "status": "active"
+    },
+    "items": [
+      {
+        "start_index": 16,
+        "start_date": "2024-12-18",
+        "start_price": 1.19,
+        "end_index": 24,
+        "end_date": "2024-12-30",
+        "end_price": 1.28,
+        "return_pct": 7.56,
+        "bars": 8,
+        "status": "completed"
+      },
+      {
+        "start_index": 33,
+        "start_date": "2025-01-13",
+        "start_price": 1.107,
+        "end_index": 43,
+        "end_date": "2025-01-27",
+        "end_price": 1.357,
+        "return_pct": 22.58,
+        "bars": 10,
+        "status": "completed"
+      },
+      {
+        "start_index": 51,
+        "start_date": "2025-02-14",
+        "start_price": 1.23,
+        "end_index": 56,
+        "end_date": "2025-02-21",
+        "end_price": 1.345,
+        "return_pct": 9.35,
+        "bars": 5,
+        "status": "completed"
+      },
+      {
+        "start_index": 63,
+        "start_date": "2025-03-04",
+        "start_price": 1.173,
+        "end_index": 65,
+        "end_date": "2025-03-06",
+        "end_price": 1.258,
+        "return_pct": 7.25,
+        "bars": 2,
+        "status": "completed"
+      },
+      {
+        "start_index": 88,
+        "start_date": "2025-04-09",
+        "start_price": 0.977,
+        "end_index": 100,
+        "end_date": "2025-04-25",
+        "end_price": 1.107,
+        "return_pct": 13.31,
+        "bars": 12,
+        "status": "completed"
+      },
+      {
+        "start_index": 102,
+        "start_date": "2025-04-29",
+        "start_price": 1.081,
+        "end_index": 109,
+        "end_date": "2025-05-13",
+        "end_price": 1.182,
+        "return_pct": 9.34,
+        "bars": 7,
+        "status": "completed"
+      },
+      {
+        "start_index": 119,
+        "start_date": "2025-05-27",
+        "start_price": 1.129,
+        "end_index": 135,
+        "end_date": "2025-06-19",
+        "end_price": 1.243,
+        "return_pct": 10.1,
+        "bars": 16,
+        "status": "completed"
+      },
+      {
+        "start_index": 137,
+        "start_date": "2025-06-23",
+        "start_price": 1.204,
+        "end_index": 142,
+        "end_date": "2025-06-30",
+        "end_price": 1.299,
+        "return_pct": 7.89,
+        "bars": 5,
+        "status": "completed"
+      },
+      {
+        "start_index": 147,
+        "start_date": "2025-07-07",
+        "start_price": 1.246,
+        "end_index": 158,
+        "end_date": "2025-07-22",
+        "end_price": 1.418,
+        "return_pct": 13.8,
+        "bars": 11,
+        "status": "completed"
+      },
+      {
+        "start_index": 159,
+        "start_date": "2025-07-23",
+        "start_price": 1.369,
+        "end_index": 188,
+        "end_date": "2025-09-02",
+        "end_price": 2.049,
+        "return_pct": 49.67,
+        "bars": 29,
+        "status": "completed"
+      },
+      {
+        "start_index": 192,
+        "start_date": "2025-09-08",
+        "start_price": 1.755,
+        "end_index": 203,
+        "end_date": "2025-09-23",
+        "end_price": 2.023,
+        "return_pct": 15.27,
+        "bars": 11,
+        "status": "completed"
+      },
+      {
+        "start_index": 213,
+        "start_date": "2025-10-15",
+        "start_price": 1.784,
+        "end_index": 222,
+        "end_date": "2025-10-28",
+        "end_price": 2.11,
+        "return_pct": 18.27,
+        "bars": 9,
+        "status": "completed"
+      },
+      {
+        "start_index": 236,
+        "start_date": "2025-11-17",
+        "start_price": 1.842,
+        "end_index": 239,
+        "end_date": "2025-11-20",
+        "end_price": 1.965,
+        "return_pct": 6.68,
+        "bars": 3,
+        "status": "completed"
+      },
+      {
+        "start_index": 241,
+        "start_date": "2025-11-24",
+        "start_price": 1.776,
+        "end_index": 253,
+        "end_date": "2025-12-10",
+        "end_price": 2.21,
+        "return_pct": 24.44,
+        "bars": 12,
+        "status": "completed"
+      },
+      {
+        "start_index": 257,
+        "start_date": "2025-12-16",
+        "start_price": 2.048,
+        "end_index": 275,
+        "end_date": "2026-01-13",
+        "end_price": 2.47,
+        "return_pct": 20.61,
+        "bars": 18,
+        "status": "completed"
+      },
+      {
+        "start_index": 281,
+        "start_date": "2026-01-21",
+        "start_price": 2.22,
+        "end_index": 289,
+        "end_date": "2026-02-02",
+        "end_price": 2.438,
+        "return_pct": 9.82,
+        "bars": 8,
+        "status": "completed"
+      },
+      {
+        "start_index": 298,
+        "start_date": "2026-02-13",
+        "start_price": 2.342,
+        "end_index": 304,
+        "end_date": "2026-03-03",
+        "end_price": 2.543,
+        "return_pct": 8.58,
+        "bars": 6,
+        "status": "completed"
+      },
+      {
+        "start_index": 308,
+        "start_date": "2026-03-09",
+        "start_price": 2.292,
+        "end_index": 310,
+        "end_date": "2026-03-11",
+        "end_price": 2.54,
+        "return_pct": 10.82,
+        "bars": 2,
+        "status": "completed"
+      },
+      {
+        "start_index": 314,
+        "start_date": "2026-03-17",
+        "start_price": 2.31,
+        "end_index": 317,
+        "end_date": "2026-03-20",
+        "end_price": 2.46,
+        "return_pct": 6.49,
+        "bars": 3,
+        "status": "completed"
+      },
+      {
+        "start_index": 319,
+        "start_date": "2026-03-24",
+        "start_price": 2.251,
+        "end_index": 340,
+        "end_date": "2026-04-23",
+        "end_price": 3.031,
+        "return_pct": 34.65,
+        "bars": 21,
+        "status": "completed"
+      },
+      {
+        "start_index": 344,
+        "start_date": "2026-04-29",
+        "start_price": 2.788,
+        "end_index": 352,
+        "end_date": "2026-05-14",
+        "end_price": 3.347,
+        "return_pct": 20.05,
+        "bars": 8,
+        "status": "completed"
+      },
+      {
+        "start_index": 357,
+        "start_date": "2026-05-21",
+        "start_price": 3.065,
+        "end_index": 368,
+        "end_date": "2026-06-05",
+        "end_price": 3.628,
+        "return_pct": 18.37,
+        "bars": 11,
+        "status": "completed"
+      }
+    ]
+  },
+  "regime": {
+    "current": {
+      "type": "main_up",
+      "label": "主升阶段",
+      "start_index": 329,
+      "start_date": "2026-04-08",
+      "end_index": 379,
+      "end_date": "2026-06-23",
+      "bars": 51,
+      "return_pct": 42.71,
+      "max_drawdown_pct": 6.69,
+      "strategy_name": "medium_swing",
+      "strategy_title": "海龟交易",
+      "basis": [
+        "EMA60 位于 EMA120 上方且斜率向上",
+        "近20日收益 +13.05%",
+        "价格接近40日高位"
+      ],
+      "entry_posture": "late"
+    },
+    "segments": [
+      {
+        "type": "choppy",
+        "label": "震荡阶段",
+        "start_index": 305,
+        "start_date": "2026-03-04",
+        "end_index": 305,
+        "end_date": "2026-03-04",
+        "bars": 1,
+        "return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "strategy_name": "donchian_channel",
+        "strategy_title": "唐奇安通道",
+        "basis": [
+          "近40日区间涨跌幅有限",
+          "均线斜率偏弱,更偏震荡交易"
+        ]
+      },
+      {
+        "type": "main_up",
+        "label": "主升阶段",
+        "start_index": 306,
+        "start_date": "2026-03-05",
+        "end_index": 307,
+        "end_date": "2026-03-06",
+        "bars": 2,
+        "return_pct": -0.78,
+        "max_drawdown_pct": 0.78,
+        "strategy_name": "medium_swing",
+        "strategy_title": "海龟交易",
+        "basis": [
+          "EMA60 位于 EMA120 上方且斜率向上",
+          "近20日收益 +3.90%",
+          "价格接近40日高位"
+        ]
+      },
+      {
+        "type": "choppy",
+        "label": "震荡阶段",
+        "start_index": 308,
+        "start_date": "2026-03-09",
+        "end_index": 308,
+        "end_date": "2026-03-09",
+        "bars": 1,
+        "return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "strategy_name": "donchian_channel",
+        "strategy_title": "唐奇安通道",
+        "basis": [
+          "近40日区间涨跌幅有限",
+          "均线斜率偏弱,更偏震荡交易"
+        ]
+      },
+      {
+        "type": "main_up",
+        "label": "主升阶段",
+        "start_index": 309,
+        "start_date": "2026-03-10",
+        "end_index": 310,
+        "end_date": "2026-03-11",
+        "bars": 2,
+        "return_pct": 0.61,
+        "max_drawdown_pct": 0.0,
+        "strategy_name": "medium_swing",
+        "strategy_title": "海龟交易",
+        "basis": [
+          "EMA60 位于 EMA120 上方且斜率向上",
+          "近20日收益 +3.03%",
+          "价格接近40日高位"
+        ]
+      },
+      {
+        "type": "choppy",
+        "label": "震荡阶段",
+        "start_index": 311,
+        "start_date": "2026-03-12",
+        "end_index": 311,
+        "end_date": "2026-03-12",
+        "bars": 1,
+        "return_pct": 0.0,
+        "max_drawdown_pct": 0.0,
+        "strategy_name": "donchian_channel",
+        "strategy_title": "唐奇安通道",
+        "basis": [
+          "近40日区间涨跌幅有限",
+          "均线斜率偏弱,更偏震荡交易"
+        ]
+      },
+      {
+        "type": "main_up",
+        "label": "主升阶段",
+        "start_index": 312,
+        "start_date": "2026-03-13",
+        "end_index": 313,
+        "end_date": "2026-03-16",
+        "bars": 2,
+        "return_pct": -0.21,
+        "max_drawdown_pct": 0.21,
+        "strategy_name": "medium_swing",
+        "strategy_title": "海龟交易",
+        "basis": [
+          "EMA60 位于 EMA120 上方且斜率向上",
+          "近20日收益 +6.12%",
+          "价格接近40日高位"
+        ]
+      },
+      {
+        "type": "choppy",
+        "label": "震荡阶段",
+        "start_index": 314,
+        "start_date": "2026-03-17",
+        "end_index": 328,
+        "end_date": "2026-04-07",
+        "bars": 15,
+        "return_pct": 5.39,
+        "max_drawdown_pct": 4.88,
+        "strategy_name": "donchian_channel",
+        "strategy_title": "唐奇安通道",
+        "basis": [
+          "近40日区间涨跌幅有限",
+          "均线斜率偏弱,更偏震荡交易"
+        ]
+      },
+      {
+        "type": "main_up",
+        "label": "主升阶段",
+        "start_index": 329,
+        "start_date": "2026-04-08",
+        "end_index": 379,
+        "end_date": "2026-06-23",
+        "bars": 51,
+        "return_pct": 42.71,
+        "max_drawdown_pct": 6.69,
+        "strategy_name": "medium_swing",
+        "strategy_title": "海龟交易",
+        "basis": [
+          "EMA60 位于 EMA120 上方且斜率向上",
+          "近20日收益 +13.05%",
+          "价格接近40日高位"
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "initial": 10000.0,
+    "final": 10366.39,
+    "strategy_return_1m_pct": 0.0,
+    "strategy_return_1y_pct": 6.48,
+    "stock_return_1m_pct": 16.17,
+    "stock_return_1y_pct": 204.7,
+    "excess_1m_pct": -16.17,
+    "excess_1y_pct": -198.22,
+    "capture_ratio_1y_pct": 3.17,
+    "time_in_market_1y_pct": 31.35,
+    "stock_max_drawdown_1y_pct": 12.84,
+    "drawdown_saving_1y_pct": -2.4,
+    "missed_bnh_1y_pct": 198.22,
+    "beat_stock_1y": false,
+    "max_drawdown_1y_pct": 15.24,
+    "trades_1y_count": 14,
+    "win_rate_1y_pct": 57.14,
+    "sharpe": 0.22,
+    "profit_factor": 1.12,
+    "total_return_pct": 6.48,
+    "annual_return_pct": 2.42,
+    "max_drawdown_pct": 15.24,
+    "trades_count": 19,
+    "win_count": 10,
+    "win_rate_pct": 52.63,
+    "avg_win_pct": 4.67,
+    "avg_loss_pct": -4.45,
+    "bnh_return_pct": 204.7,
+    "excess_pct": -198.22,
+    "return_1m_pct": 0.0,
+    "bnh_1m_pct": 16.17
+  },
+  "trades": [
+    {
+      "entry_index": 30,
+      "entry_date": "2025-01-08",
+      "entry_price": 1.1391379999999998,
+      "exit_index": 33,
+      "exit_date": "2025-01-13",
+      "exit_price": 1.109889,
+      "pnl_pct": -2.67,
+      "pnl_abs": -261.51,
+      "bars_held": 3,
+      "note_in": "下轨附近企稳反弹",
+      "note_out": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "entry_index": 35,
+      "entry_date": "2025-01-15",
+      "entry_price": 1.1651639999999999,
+      "exit_index": 47,
+      "exit_date": "2025-02-10",
+      "exit_price": 1.21878,
+      "pnl_pct": 4.5,
+      "pnl_abs": 442.58,
+      "bars_held": 12,
+      "note_in": "下轨附近企稳反弹",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 65,
+      "entry_date": "2025-03-06",
+      "entry_price": 1.2322309999999999,
+      "exit_index": 79,
+      "exit_date": "2025-03-26",
+      "exit_price": 1.1748239999999999,
+      "pnl_pct": -4.76,
+      "pnl_abs": -478.46,
+      "bars_held": 14,
+      "note_in": "下轨附近企稳反弹",
+      "note_out": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "entry_index": 85,
+      "entry_date": "2025-04-03",
+      "entry_price": 1.1511499999999997,
+      "exit_index": 86,
+      "exit_date": "2025-04-07",
+      "exit_price": 1.0639349999999999,
+      "pnl_pct": -7.68,
+      "pnl_abs": -738.08,
+      "bars_held": 1,
+      "note_in": "下轨附近企稳反弹",
+      "note_out": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "entry_index": 89,
+      "entry_date": "2025-04-10",
+      "entry_price": 1.0830819999999999,
+      "exit_index": 106,
+      "exit_date": "2025-05-08",
+      "exit_price": 1.140858,
+      "pnl_pct": 5.23,
+      "pnl_abs": 472.2,
+      "bars_held": 17,
+      "note_in": "下轨附近企稳反弹",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 125,
+      "entry_date": "2025-06-05",
+      "entry_price": 1.1731719999999999,
+      "exit_index": 130,
+      "exit_date": "2025-06-12",
+      "exit_price": 1.199799,
+      "pnl_pct": 2.17,
+      "pnl_abs": 208.71,
+      "bars_held": 5,
+      "note_in": "下轨附近企稳反弹",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 131,
+      "entry_date": "2025-06-13",
+      "entry_price": 1.2011999999999998,
+      "exit_index": 136,
+      "exit_date": "2025-06-20",
+      "exit_price": 1.2277710000000002,
+      "pnl_pct": 2.11,
+      "pnl_abs": 207.7,
+      "bars_held": 5,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 212,
+      "entry_date": "2025-10-14",
+      "entry_price": 1.8988969999999998,
+      "exit_index": 216,
+      "exit_date": "2025-10-20",
+      "exit_price": 1.829169,
+      "pnl_pct": -3.77,
+      "pnl_abs": -365.12,
+      "bars_held": 4,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "entry_index": 217,
+      "entry_date": "2025-10-21",
+      "entry_price": 1.849848,
+      "exit_index": 222,
+      "exit_date": "2025-10-28",
+      "exit_price": 2.0389589999999997,
+      "pnl_pct": 10.12,
+      "pnl_abs": 960.32,
+      "bars_held": 5,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 223,
+      "entry_date": "2025-10-29",
+      "entry_price": 2.094092,
+      "exit_index": 241,
+      "exit_date": "2025-11-24",
+      "exit_price": 1.8111869999999999,
+      "pnl_pct": -13.61,
+      "pnl_abs": -1409.47,
+      "bars_held": 18,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "entry_index": 243,
+      "entry_date": "2025-11-26",
+      "entry_price": 1.8608589999999998,
+      "exit_index": 248,
+      "exit_date": "2025-12-03",
+      "exit_price": 2.0159819999999997,
+      "pnl_pct": 8.24,
+      "pnl_abs": 744.2,
+      "bars_held": 5,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 282,
+      "entry_date": "2026-01-22",
+      "entry_price": 2.2712689999999998,
+      "exit_index": 289,
+      "exit_date": "2026-02-02",
+      "exit_price": 2.36763,
+      "pnl_pct": 4.14,
+      "pnl_abs": 407.53,
+      "bars_held": 7,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 291,
+      "entry_date": "2026-02-04",
+      "entry_price": 2.393391,
+      "exit_index": 296,
+      "exit_date": "2026-02-11",
+      "exit_price": 2.3666310000000004,
+      "pnl_pct": -1.22,
+      "pnl_abs": -118.24,
+      "bars_held": 5,
+      "note_in": "下轨附近企稳反弹;重新站上唐奇安中轨;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 298,
+      "entry_date": "2026-02-13",
+      "entry_price": 2.368366,
+      "exit_index": 303,
+      "exit_date": "2026-03-02",
+      "exit_price": 2.400597,
+      "pnl_pct": 1.26,
+      "pnl_abs": 131.08,
+      "bars_held": 5,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 306,
+      "entry_date": "2026-03-05",
+      "entry_price": 2.468466,
+      "exit_index": 311,
+      "exit_date": "2026-03-12",
+      "exit_price": 2.463534,
+      "pnl_pct": -0.3,
+      "pnl_abs": -25.3,
+      "bars_held": 5,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 313,
+      "entry_date": "2026-03-16",
+      "entry_price": 2.408406,
+      "exit_index": 315,
+      "exit_date": "2026-03-18",
+      "exit_price": 2.319678,
+      "pnl_pct": -3.78,
+      "pnl_abs": -376.96,
+      "bars_held": 2,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "entry_index": 316,
+      "entry_date": "2026-03-19",
+      "entry_price": 2.3533509999999995,
+      "exit_index": 319,
+      "exit_date": "2026-03-24",
+      "exit_price": 2.3016959999999997,
+      "pnl_pct": -2.29,
+      "pnl_abs": -218.06,
+      "bars_held": 3,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "跌破20日唐奇安下轨,破位止损"
+    },
+    {
+      "entry_index": 320,
+      "entry_date": "2026-03-25",
+      "entry_price": 2.3793769999999994,
+      "exit_index": 328,
+      "exit_date": "2026-04-07",
+      "exit_price": 2.435562,
+      "pnl_pct": 2.26,
+      "pnl_abs": 219.36,
+      "bars_held": 8,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    },
+    {
+      "entry_index": 329,
+      "entry_date": "2026-04-08",
+      "entry_price": 2.5065039999999996,
+      "exit_index": 334,
+      "exit_date": "2026-04-15",
+      "exit_price": 2.6773200000000004,
+      "pnl_pct": 6.71,
+      "pnl_abs": 656.53,
+      "bars_held": 5,
+      "note_in": "下轨附近企稳反弹;收盘价位于EMA120上方",
+      "note_out": "接近唐奇安上轨,波段止盈"
+    }
+  ],
+  "overlay": {
+    "overlays": {
+      "Donchian20上轨": [
+        2.501,
+        2.501,
+        2.501,
+        2.501,
+        2.501,
+        2.501,
+        2.501,
+        2.483,
+        2.483,
+        2.483,
+        2.483,
+        2.483,
+        2.483,
+        2.592,
+        2.628,
+        2.645,
+        2.645,
+        2.67,
+        2.67,
+        2.724,
+        2.831,
+        2.87,
+        2.876,
+        3.002,
+        3.002,
+        3.002,
+        3.002,
+        3.002,
+        3.002,
+        3.002,
+        3.002,
+        3.041,
+        3.087,
+        3.192,
+        3.218,
+        3.29,
+        3.29,
+        3.29,
+        3.29,
+        3.29,
+        3.29,
+        3.29,
+        3.29,
+        3.29,
+        3.29,
+        3.29,
+        3.34,
+        3.34,
+        3.34,
+        3.34,
+        3.476,
+        3.485,
+        3.485,
+        3.485,
+        3.485,
+        3.485,
+        3.485,
+        3.485,
+        3.485,
+        3.587,
+        3.622,
+        3.724,
+        3.794
+      ],
+      "Donchian20中轨": [
+        2.4095,
+        2.4095,
+        2.392,
+        2.392,
+        2.392,
+        2.392,
+        2.392,
+        2.383,
+        2.383,
+        2.383,
+        2.383,
+        2.383,
+        2.383,
+        2.4375,
+        2.4555,
+        2.464,
+        2.464,
+        2.4765,
+        2.4765,
+        2.5035,
+        2.557,
+        2.5765,
+        2.6025,
+        2.6825,
+        2.6825,
+        2.6825,
+        2.6825,
+        2.6825,
+        2.6925,
+        2.6925,
+        2.721,
+        2.742,
+        2.8395,
+        2.91,
+        2.927,
+        2.963,
+        2.9635,
+        2.9635,
+        3.007,
+        3.0585,
+        3.0585,
+        3.0585,
+        3.0585,
+        3.0585,
+        3.0585,
+        3.0585,
+        3.0835,
+        3.085,
+        3.09,
+        3.1225,
+        3.2585,
+        3.2775,
+        3.2775,
+        3.2775,
+        3.2775,
+        3.2775,
+        3.2775,
+        3.2775,
+        3.2775,
+        3.3285,
+        3.346,
+        3.4435,
+        3.4785
+      ],
+      "Donchian20下轨": [
+        2.318,
+        2.318,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.283,
+        2.329,
+        2.363,
+        2.363,
+        2.363,
+        2.363,
+        2.363,
+        2.383,
+        2.383,
+        2.44,
+        2.443,
+        2.592,
+        2.628,
+        2.636,
+        2.636,
+        2.637,
+        2.637,
+        2.724,
+        2.827,
+        2.827,
+        2.827,
+        2.827,
+        2.827,
+        2.827,
+        2.827,
+        2.827,
+        2.83,
+        2.84,
+        2.905,
+        3.041,
+        3.07,
+        3.07,
+        3.07,
+        3.07,
+        3.07,
+        3.07,
+        3.07,
+        3.07,
+        3.07,
+        3.07,
+        3.163,
+        3.163
+      ],
+      "EMA120": [
+        2.1456,
+        2.1479,
+        2.1509,
+        2.1552,
+        2.1587,
+        2.1621,
+        2.1662,
+        2.1694,
+        2.1736,
+        2.177,
+        2.1814,
+        2.1857,
+        2.1924,
+        2.1996,
+        2.207,
+        2.2141,
+        2.2216,
+        2.2285,
+        2.2367,
+        2.2465,
+        2.2568,
+        2.267,
+        2.2792,
+        2.2904,
+        2.2998,
+        2.3096,
+        2.3181,
+        2.3266,
+        2.3351,
+        2.3445,
+        2.356,
+        2.3681,
+        2.3817,
+        2.3955,
+        2.4103,
+        2.4246,
+        2.4371,
+        2.4505,
+        2.4638,
+        2.4766,
+        2.4864,
+        2.4979,
+        2.5107,
+        2.5226,
+        2.534,
+        2.5473,
+        2.5594,
+        2.5693,
+        2.5821,
+        2.5968,
+        2.6115,
+        2.6253,
+        2.6368,
+        2.6508,
+        2.6628,
+        2.6738,
+        2.684,
+        2.6969,
+        2.7117,
+        2.7267,
+        2.7432,
+        2.7606,
+        2.7761
+      ]
+    },
+    "sub_panels": []
+  }
+}
