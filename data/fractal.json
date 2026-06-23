@@ -1,7 +1,7 @@
 {
   "component": "fractal",
   "title": "顶底分型",
-  "updated_at": "2026-06-24 02:40:29",
+  "updated_at": "2026-06-24 02:49:20",
   "source": "tickflow.klines",
   "config": {
     "period": "1d",
@@ -16,7 +16,7 @@
   "stocks_ok": 27,
   "stocks_failed": 1,
   "stocks_skipped_old": 14,
-  "cache_hits": 0,
+  "cache_hits": 27,
   "net_retry_recovered": 0,
   "top_fractals": [
     {

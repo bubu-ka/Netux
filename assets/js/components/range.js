@@ -228,14 +228,6 @@
     return "action-watch";
   }
 
-  function hasRecentBuyPoint(it) {
-    const nd = it.next_day || {};
-    if ((nd.new_entry_action || nd.action) === "buy") return true;
-    const recent = it.signals_recent || [];
-    const last = recent[recent.length - 1];
-    return !!last && last.kind === "buy";
-  }
-
   function rowOf(it, strategy) {
     const nd = it.next_day || {};
     const st = selectedStrategyOf(it, strategy);
@@ -256,14 +248,13 @@
     }).join("");
     const recentCell = recent || '<span class="text-mute">—</span>';
     const activeCls = activeSymbol === it.symbol ? "active" : "";
-    const buyCls = hasRecentBuyPoint(it) ? "recent-buy" : "";
     const regimeTip = rg.label
       ? `${rg.start_date || ""} → ${rg.end_date || ""} · ${fmtPct(rg.return_pct)} · ${rg.bars || "—"}日`
       : "暂无阶段数据";
     return `
-      <tr class="range-row ${activeCls} ${buyCls}" data-sym="${it.symbol}">
+      <tr class="range-row ${activeCls}" data-sym="${it.symbol}">
         <td class="sym">${it.symbol}</td>
-        <td>${it.name}${buyCls ? '<span class="buy-highlight-tag">买点</span>' : ''}</td>
+        <td>${it.name}</td>
         <td><span class="strategy-chip" title="${esc(reason)}">${esc(strategyDisplayTitle(st))}</span></td>
         <td><span class="action-pill ${actionClass(nd.new_entry_action || nd.action)}">${nd.new_entry_label || nd.action_label || "观察等待"}</span></td>
         <td class="num ${pctClass(metric(it, "strategy_return_1m_pct", "return_1m_pct"))} strong">${fmtPct(metric(it, "strategy_return_1m_pct", "return_1m_pct"))}</td>

@@ -1,7 +1,7 @@
 {
   "component": "range",
   "title": "波段策略",
-  "updated_at": "2026-06-24 02:40:48",
+  "updated_at": "2026-06-24 02:49:33",
   "config": {
     "lookback_bars": 380,
     "metric_1m_bars": 21,
@@ -29,17 +29,17 @@
       "classifier": "rule_score_v1"
     },
     "summary": {
-      "stocks": 25,
+      "stocks": 27,
       "actions": {
         "buy": 0,
         "sell": 0,
-        "hold": 18,
-        "watch": 2,
+        "hold": 19,
+        "watch": 3,
         "avoid": 5
       },
       "strategy_counts": {
         "海龟交易": 17,
-        "唐奇安通道": 8
+        "唐奇安通道": 10
       }
     },
     "stocks": [
@@ -2515,6 +2515,174 @@
         }
       },
       {
+        "symbol": "600026.SH",
+        "name": "中远海能",
+        "last_close": 20.75,
+        "signals_recent": [
+          {
+            "index": 325,
+            "date": "2026-04-01",
+            "kind": "buy",
+            "price": 23.65,
+            "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+          },
+          {
+            "index": 330,
+            "date": "2026-04-09",
+            "kind": "sell",
+            "price": 25.56,
+            "note": "接近唐奇安上轨,波段止盈"
+          },
+          {
+            "index": 337,
+            "date": "2026-04-20",
+            "kind": "buy",
+            "price": 22.28,
+            "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+          },
+          {
+            "index": 339,
+            "date": "2026-04-22",
+            "kind": "sell",
+            "price": 21.9,
+            "note": "跌破20日唐奇安下轨,破位止损"
+          },
+          {
+            "index": 344,
+            "date": "2026-04-29",
+            "kind": "buy",
+            "price": 21.74,
+            "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+          },
+          {
+            "index": 361,
+            "date": "2026-05-27",
+            "kind": "sell",
+            "price": 20.3,
+            "note": "跌破20日唐奇安下轨,破位止损"
+          },
+          {
+            "index": 376,
+            "date": "2026-06-17",
+            "kind": "buy",
+            "price": 19.69,
+            "note": "下轨附近企稳反弹;重新站上唐奇安中轨;收盘价位于EMA120上方"
+          }
+        ],
+        "position": {
+          "in_position": true,
+          "since": "2026-06-18",
+          "entry_price": 19.919899999999995,
+          "float_pnl_pct": 4.12,
+          "last_close": 20.75,
+          "bars_held": 2
+        },
+        "next_day": {
+          "action": "hold",
+          "action_label": "继续持有",
+          "existing_holder_action": "hold",
+          "existing_holder_label": "已有仓位继续持有",
+          "new_entry_action": "watch",
+          "new_entry_label": "已有仓位可持有；未持有等待新买点",
+          "entry_timing": "fresh",
+          "direction": "down",
+          "direction_label": "下跌风险",
+          "rise_confidence_pct": 40,
+          "fall_risk_pct": 60,
+          "confidence_label": "偏弱",
+          "is_rule_based": true,
+          "not_ml_probability": true,
+          "basis": [
+            "当前策略仍处于持仓状态",
+            "收盘价站上唐奇安中轨",
+            "距上轨约5.2%",
+            "收盘价位于EMA120上方"
+          ],
+          "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "waves": {
+          "upward_1y_count": 12,
+          "upward_3m_count": 4,
+          "current_wave": {
+            "active": true,
+            "start_index": 372,
+            "start_date": "2026-06-11",
+            "start_price": 15.99,
+            "end_index": 379,
+            "end_date": "2026-06-23",
+            "end_price": 20.75,
+            "return_pct": 29.77,
+            "bars": 7,
+            "status": "active"
+          }
+        },
+        "regime": {
+          "current": {
+            "type": "choppy",
+            "label": "震荡阶段",
+            "start_index": 378,
+            "start_date": "2026-06-22",
+            "end_index": 379,
+            "end_date": "2026-06-23",
+            "bars": 2,
+            "return_pct": 1.52,
+            "max_drawdown_pct": 0.0,
+            "strategy_name": "donchian_channel",
+            "strategy_title": "唐奇安通道",
+            "basis": [
+              "近40日区间涨跌幅有限",
+              "均线斜率偏弱,更偏震荡交易"
+            ],
+            "entry_posture": "fresh"
+          }
+        },
+        "metrics": {
+          "initial": 10000.0,
+          "final": 12411.51,
+          "strategy_return_1m_pct": -8.35,
+          "strategy_return_1y_pct": 19.56,
+          "stock_return_1m_pct": -8.99,
+          "stock_return_1y_pct": 109.11,
+          "excess_1m_pct": 0.64,
+          "excess_1y_pct": -89.55,
+          "capture_ratio_1y_pct": 17.93,
+          "time_in_market_1y_pct": 41.27,
+          "stock_max_drawdown_1y_pct": 36.4,
+          "drawdown_saving_1y_pct": 18.16,
+          "missed_bnh_1y_pct": 89.55,
+          "beat_stock_1y": false,
+          "max_drawdown_1y_pct": 18.24,
+          "trades_1y_count": 17,
+          "win_rate_1y_pct": 47.06,
+          "sharpe": 0.67,
+          "profit_factor": 1.4,
+          "total_return_pct": 19.56,
+          "annual_return_pct": 15.45,
+          "max_drawdown_pct": 18.24,
+          "trades_count": 26,
+          "win_count": 11,
+          "win_rate_pct": 42.31,
+          "avg_win_pct": 6.04,
+          "avg_loss_pct": -3.0,
+          "bnh_return_pct": 109.11,
+          "excess_pct": -89.55,
+          "return_1m_pct": -8.35,
+          "bnh_1m_pct": -8.99
+        },
+        "detail_url": "data/range/donchian_channel/600026.SH.json",
+        "selected_strategy": {
+          "name": "donchian_channel",
+          "title": "唐奇安通道",
+          "group": "通道低吸 + 上轨止盈",
+          "score": 56.21,
+          "reason": [
+            "当前震荡阶段更适合唐奇安通道",
+            "当前策略仍处于持仓状态",
+            "近1年回撤节省 18.16pct"
+          ]
+        }
+      },
+      {
         "symbol": "159870.SZ",
         "name": "化工ETF",
         "last_close": 0.865,
@@ -2741,6 +2909,180 @@
             "当前震荡阶段更适合唐奇安通道",
             "当前处于观察等待区间",
             "近1年回撤节省 2.29pct"
+          ]
+        }
+      },
+      {
+        "symbol": "600519.SH",
+        "name": "贵州茅台",
+        "last_close": 1222.45,
+        "signals_recent": [
+          {
+            "index": 325,
+            "date": "2026-04-01",
+            "kind": "sell",
+            "price": 1459.44,
+            "note": "接近唐奇安上轨,波段止盈"
+          },
+          {
+            "index": 326,
+            "date": "2026-04-02",
+            "kind": "buy",
+            "price": 1459.88,
+            "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+          },
+          {
+            "index": 334,
+            "date": "2026-04-15",
+            "kind": "sell",
+            "price": 1467.5,
+            "note": "接近唐奇安上轨,波段止盈"
+          },
+          {
+            "index": 336,
+            "date": "2026-04-17",
+            "kind": "buy",
+            "price": 1407.24,
+            "note": "下轨附近企稳反弹"
+          },
+          {
+            "index": 341,
+            "date": "2026-04-24",
+            "kind": "sell",
+            "price": 1458.49,
+            "note": "接近唐奇安上轨,波段止盈"
+          },
+          {
+            "index": 343,
+            "date": "2026-04-28",
+            "kind": "buy",
+            "price": 1405.0,
+            "note": "下轨附近企稳反弹"
+          },
+          {
+            "index": 344,
+            "date": "2026-04-29",
+            "kind": "sell",
+            "price": 1401.17,
+            "note": "跌破20日唐奇安下轨,破位止损"
+          },
+          {
+            "index": 348,
+            "date": "2026-05-08",
+            "kind": "buy",
+            "price": 1372.99,
+            "note": "下轨附近企稳反弹"
+          },
+          {
+            "index": 349,
+            "date": "2026-05-11",
+            "kind": "sell",
+            "price": 1361.33,
+            "note": "跌破20日唐奇安下轨,破位止损"
+          }
+        ],
+        "position": {
+          "in_position": false,
+          "since": null,
+          "entry_price": null,
+          "float_pnl_pct": null,
+          "last_close": 1222.45,
+          "bars_held": null
+        },
+        "next_day": {
+          "action": "watch",
+          "action_label": "观察等待",
+          "existing_holder_action": "watch",
+          "existing_holder_label": "观察等待",
+          "new_entry_action": "avoid",
+          "new_entry_label": "下行阶段，未持有优先防守观察",
+          "entry_timing": "fresh",
+          "direction": "flat",
+          "direction_label": "震荡观察",
+          "rise_confidence_pct": 50,
+          "fall_risk_pct": 50,
+          "confidence_label": "中性",
+          "is_rule_based": true,
+          "not_ml_probability": true,
+          "basis": [
+            "接近唐奇安下轨(0.6%)",
+            "仍在唐奇安中轨下方,等待企稳",
+            "距上轨约7.8%",
+            "近5日触碰/接近下轨",
+            "风险:收盘价低于EMA120较多"
+          ],
+          "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "waves": {
+          "upward_1y_count": 4,
+          "upward_3m_count": 1,
+          "current_wave": {
+            "active": false
+          }
+        },
+        "regime": {
+          "current": {
+            "type": "down",
+            "label": "下行阶段",
+            "start_index": 342,
+            "start_date": "2026-04-27",
+            "end_index": 379,
+            "end_date": "2026-06-23",
+            "bars": 38,
+            "return_pct": -12.88,
+            "max_drawdown_pct": 13.52,
+            "strategy_name": "",
+            "strategy_title": "防守观察",
+            "basis": [
+              "价格低于长期均线或中期趋势走弱",
+              "近20日收益 -4.93%"
+            ],
+            "entry_posture": "fresh"
+          }
+        },
+        "metrics": {
+          "initial": 10000.0,
+          "final": 9654.58,
+          "strategy_return_1m_pct": 0.0,
+          "strategy_return_1y_pct": -1.97,
+          "stock_return_1m_pct": -5.25,
+          "stock_return_1y_pct": -14.7,
+          "excess_1m_pct": 5.25,
+          "excess_1y_pct": 12.73,
+          "capture_ratio_1y_pct": null,
+          "time_in_market_1y_pct": 57.54,
+          "stock_max_drawdown_1y_pct": 21.86,
+          "drawdown_saving_1y_pct": 5.39,
+          "missed_bnh_1y_pct": -12.73,
+          "beat_stock_1y": true,
+          "max_drawdown_1y_pct": 16.47,
+          "trades_1y_count": 23,
+          "win_rate_1y_pct": 56.52,
+          "sharpe": -0.12,
+          "profit_factor": 0.94,
+          "total_return_pct": -1.97,
+          "annual_return_pct": -2.31,
+          "max_drawdown_pct": 16.47,
+          "trades_count": 33,
+          "win_count": 18,
+          "win_rate_pct": 54.55,
+          "avg_win_pct": 1.66,
+          "avg_loss_pct": -2.16,
+          "bnh_return_pct": -14.7,
+          "excess_pct": 12.73,
+          "return_1m_pct": 0.0,
+          "bnh_1m_pct": -5.25
+        },
+        "detail_url": "data/range/donchian_channel/600519.SH.json",
+        "selected_strategy": {
+          "name": "donchian_channel",
+          "title": "唐奇安通道",
+          "group": "通道低吸 + 上轨止盈",
+          "score": 53.42,
+          "reason": [
+            "当前处于观察等待区间",
+            "近1年超额收益 +12.73%",
+            "近1年回撤节省 5.39pct"
           ]
         }
       },
@@ -3539,8 +3881,8 @@
     ]
   },
   "stocks_total": 28,
-  "stocks_failed": 3,
-  "cache_hits": 20,
+  "stocks_failed": 1,
+  "cache_hits": 25,
   "net_retry_recovered": 0,
   "strategies": [
     {
@@ -3559,33 +3901,33 @@
         "hard_stop_pct": 18.0
       },
       "summary": {
-        "stocks": 25,
-        "avg_strategy_return_1m_pct": 5.04,
-        "avg_strategy_return_1y_pct": 113.47,
-        "avg_stock_return_1m_pct": 4.62,
-        "avg_stock_return_1y_pct": 168.85,
-        "avg_excess_1m_pct": 0.42,
-        "avg_excess_1y_pct": -55.38,
-        "avg_capture_ratio_1y_pct": 59.5,
-        "avg_time_in_market_1y_pct": 74.18,
-        "avg_drawdown_saving_1y_pct": 0.29,
-        "avg_max_drawdown_pct": 21.81,
+        "stocks": 27,
+        "avg_strategy_return_1m_pct": 4.04,
+        "avg_strategy_return_1y_pct": 105.76,
+        "avg_stock_return_1m_pct": 3.75,
+        "avg_stock_return_1y_pct": 159.84,
+        "avg_excess_1m_pct": 0.29,
+        "avg_excess_1y_pct": -54.07,
+        "avg_capture_ratio_1y_pct": 58.41,
+        "avg_time_in_market_1y_pct": 71.66,
+        "avg_drawdown_saving_1y_pct": 0.79,
+        "avg_max_drawdown_pct": 21.83,
         "beat_stock_1y": 2,
-        "winning_stocks": 22,
+        "winning_stocks": 23,
         "in_position_now": 16,
         "actions": {
           "buy": 0,
           "sell": 1,
           "hold": 16,
           "watch": 0,
-          "avoid": 8
+          "avoid": 10
         },
-        "avg_return_pct": 113.47,
-        "avg_annual_pct": 113.47,
-        "avg_bnh_pct": 168.85,
-        "avg_excess_pct": -55.38,
-        "avg_return_1m_pct": 5.04,
-        "avg_bnh_1m_pct": 4.62,
+        "avg_return_pct": 105.76,
+        "avg_annual_pct": 105.76,
+        "avg_bnh_pct": 159.84,
+        "avg_excess_pct": -54.07,
+        "avg_return_1m_pct": 4.04,
+        "avg_bnh_1m_pct": 3.75,
         "beat_bnh": 2
       },
       "stocks": [
@@ -5470,6 +5812,124 @@
           "detail_url": "data/range/medium_swing/159608.SZ.json"
         },
         {
+          "symbol": "600026.SH",
+          "name": "中远海能",
+          "last_close": 20.75,
+          "signals_recent": [
+            {
+              "index": 364,
+              "date": "2026-06-01",
+              "kind": "sell",
+              "price": 18.8,
+              "note": "跌破Chandelier Exit(6×ATR)+跌破20日低点"
+            }
+          ],
+          "position": {
+            "in_position": false,
+            "since": null,
+            "entry_price": null,
+            "float_pnl_pct": null,
+            "last_close": 20.75,
+            "bars_held": null
+          },
+          "next_day": {
+            "action": "avoid",
+            "action_label": "趋势偏弱,暂时回避",
+            "existing_holder_action": "avoid",
+            "existing_holder_label": "趋势偏弱,暂时回避",
+            "new_entry_action": "avoid",
+            "new_entry_label": "震荡阶段，等待通道低吸或突破确认",
+            "entry_timing": "fresh",
+            "direction": "down",
+            "direction_label": "下跌风险",
+            "rise_confidence_pct": 25,
+            "fall_risk_pct": 75,
+            "confidence_label": "偏弱",
+            "is_rule_based": true,
+            "not_ml_probability": true,
+            "basis": [
+              "距40日新高约11.4%",
+              "收盘价站上EMA60",
+              "收盘价站上EMA120",
+              "ATR波动率5.9%可接受",
+              "距Chandelier止损约22.8%",
+              "风险:规则评分偏弱",
+              "风险:长期趋势过滤未通过"
+            ],
+            "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "waves": {
+            "upward_1y_count": 12,
+            "upward_3m_count": 4,
+            "current_wave": {
+              "active": true,
+              "start_index": 372,
+              "start_date": "2026-06-11",
+              "start_price": 15.99,
+              "end_index": 379,
+              "end_date": "2026-06-23",
+              "end_price": 20.75,
+              "return_pct": 29.77,
+              "bars": 7,
+              "status": "active"
+            }
+          },
+          "regime": {
+            "current": {
+              "type": "choppy",
+              "label": "震荡阶段",
+              "start_index": 378,
+              "start_date": "2026-06-22",
+              "end_index": 379,
+              "end_date": "2026-06-23",
+              "bars": 2,
+              "return_pct": 1.52,
+              "max_drawdown_pct": 0.0,
+              "strategy_name": "donchian_channel",
+              "strategy_title": "唐奇安通道",
+              "basis": [
+                "近40日区间涨跌幅有限",
+                "均线斜率偏弱,更偏震荡交易"
+              ],
+              "entry_posture": "fresh"
+            }
+          },
+          "metrics": {
+            "initial": 10000.0,
+            "final": 13514.97,
+            "strategy_return_1m_pct": -16.88,
+            "strategy_return_1y_pct": 35.15,
+            "stock_return_1m_pct": -8.99,
+            "stock_return_1y_pct": 109.11,
+            "excess_1m_pct": -7.89,
+            "excess_1y_pct": -73.96,
+            "capture_ratio_1y_pct": 32.22,
+            "time_in_market_1y_pct": 55.95,
+            "stock_max_drawdown_1y_pct": 36.4,
+            "drawdown_saving_1y_pct": 8.51,
+            "missed_bnh_1y_pct": 73.96,
+            "beat_stock_1y": false,
+            "max_drawdown_1y_pct": 27.89,
+            "trades_1y_count": 2,
+            "win_rate_1y_pct": 50.0,
+            "sharpe": 0.72,
+            "profit_factor": 5.31,
+            "total_return_pct": 35.15,
+            "annual_return_pct": 22.17,
+            "max_drawdown_pct": 27.89,
+            "trades_count": 2,
+            "win_count": 1,
+            "win_rate_pct": 50.0,
+            "avg_win_pct": 47.31,
+            "avg_loss_pct": -8.23,
+            "bnh_return_pct": 109.11,
+            "excess_pct": -73.96,
+            "return_1m_pct": -16.88,
+            "bnh_1m_pct": -8.99
+          },
+          "detail_url": "data/range/medium_swing/600026.SH.json"
+        },
+        {
           "symbol": "300750.SZ",
           "name": "宁德时代",
           "last_close": 392.51,
@@ -6175,6 +6635,126 @@
           "detail_url": "data/range/medium_swing/601118.SH.json"
         },
         {
+          "symbol": "600519.SH",
+          "name": "贵州茅台",
+          "last_close": 1222.45,
+          "signals_recent": [
+            {
+              "index": 318,
+              "date": "2026-03-23",
+              "kind": "sell",
+              "price": 1408.07,
+              "note": "跌破EMA120长趋势线"
+            },
+            {
+              "index": 327,
+              "date": "2026-04-03",
+              "kind": "buy",
+              "price": 1460.0,
+              "note": "收盘价位于EMA120上方；EMA60位于EMA120上方；EMA60斜率向上；成熟上升趋势:距40日高点10%以内；ATR波动率1.9%未过热"
+            },
+            {
+              "index": 347,
+              "date": "2026-05-07",
+              "kind": "sell",
+              "price": 1371.05,
+              "note": "跌破20日低点+跌破EMA120长趋势线"
+            }
+          ],
+          "position": {
+            "in_position": false,
+            "since": null,
+            "entry_price": null,
+            "float_pnl_pct": null,
+            "last_close": 1222.45,
+            "bars_held": null
+          },
+          "next_day": {
+            "action": "avoid",
+            "action_label": "趋势偏弱,暂时回避",
+            "existing_holder_action": "avoid",
+            "existing_holder_label": "趋势偏弱,暂时回避",
+            "new_entry_action": "avoid",
+            "new_entry_label": "下行阶段，未持有优先防守观察",
+            "entry_timing": "fresh",
+            "direction": "down",
+            "direction_label": "下跌风险",
+            "rise_confidence_pct": 0,
+            "fall_risk_pct": 100,
+            "confidence_label": "偏弱",
+            "is_rule_based": true,
+            "not_ml_probability": true,
+            "basis": [
+              "距40日新高约16.2%",
+              "ATR波动率2.1%可接受",
+              "风险:规则评分偏弱",
+              "风险:长期趋势过滤未通过"
+            ],
+            "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "waves": {
+            "upward_1y_count": 4,
+            "upward_3m_count": 1,
+            "current_wave": {
+              "active": false
+            }
+          },
+          "regime": {
+            "current": {
+              "type": "down",
+              "label": "下行阶段",
+              "start_index": 342,
+              "start_date": "2026-04-27",
+              "end_index": 379,
+              "end_date": "2026-06-23",
+              "bars": 38,
+              "return_pct": -12.88,
+              "max_drawdown_pct": 13.52,
+              "strategy_name": "",
+              "strategy_title": "防守观察",
+              "basis": [
+                "价格低于长期均线或中期趋势走弱",
+                "近20日收益 -4.93%"
+              ],
+              "entry_posture": "fresh"
+            }
+          },
+          "metrics": {
+            "initial": 10000.0,
+            "final": 8379.0,
+            "strategy_return_1m_pct": 0.0,
+            "strategy_return_1y_pct": -16.21,
+            "stock_return_1m_pct": -5.25,
+            "stock_return_1y_pct": -14.7,
+            "excess_1m_pct": 5.25,
+            "excess_1y_pct": -1.51,
+            "capture_ratio_1y_pct": null,
+            "time_in_market_1y_pct": 24.6,
+            "stock_max_drawdown_1y_pct": 21.86,
+            "drawdown_saving_1y_pct": 5.65,
+            "missed_bnh_1y_pct": 1.51,
+            "beat_stock_1y": false,
+            "max_drawdown_1y_pct": 16.21,
+            "trades_1y_count": 3,
+            "win_rate_1y_pct": 0.0,
+            "sharpe": -1.32,
+            "profit_factor": 0.0,
+            "total_return_pct": -16.21,
+            "annual_return_pct": -11.09,
+            "max_drawdown_pct": 16.21,
+            "trades_count": 3,
+            "win_count": 0,
+            "win_rate_pct": 0.0,
+            "avg_win_pct": null,
+            "avg_loss_pct": -5.73,
+            "bnh_return_pct": -14.7,
+            "excess_pct": -1.51,
+            "return_1m_pct": 0.0,
+            "bnh_1m_pct": -5.25
+          },
+          "detail_url": "data/range/medium_swing/600519.SH.json"
+        },
+        {
           "symbol": "002594.SZ",
           "name": "比亚迪",
           "last_close": 85.0,
@@ -6506,34 +7086,34 @@
         "take_profit_pct": 2.0
       },
       "summary": {
-        "stocks": 25,
-        "avg_strategy_return_1m_pct": 2.15,
-        "avg_strategy_return_1y_pct": 20.73,
-        "avg_stock_return_1m_pct": 4.62,
-        "avg_stock_return_1y_pct": 168.85,
-        "avg_excess_1m_pct": -2.48,
-        "avg_excess_1y_pct": -148.11,
-        "avg_capture_ratio_1y_pct": -21.37,
-        "avg_time_in_market_1y_pct": 37.78,
-        "avg_drawdown_saving_1y_pct": 1.17,
-        "avg_max_drawdown_pct": 20.93,
-        "beat_stock_1y": 1,
-        "winning_stocks": 19,
-        "in_position_now": 14,
+        "stocks": 27,
+        "avg_strategy_return_1m_pct": 1.68,
+        "avg_strategy_return_1y_pct": 19.85,
+        "avg_stock_return_1m_pct": 3.75,
+        "avg_stock_return_1y_pct": 159.84,
+        "avg_excess_1m_pct": -2.07,
+        "avg_excess_1y_pct": -139.99,
+        "avg_capture_ratio_1y_pct": -19.8,
+        "avg_time_in_market_1y_pct": 38.64,
+        "avg_drawdown_saving_1y_pct": 1.95,
+        "avg_max_drawdown_pct": 20.67,
+        "beat_stock_1y": 2,
+        "winning_stocks": 20,
+        "in_position_now": 15,
         "actions": {
           "buy": 0,
           "sell": 1,
-          "hold": 14,
-          "watch": 8,
+          "hold": 15,
+          "watch": 9,
           "avoid": 2
         },
-        "avg_return_pct": 20.73,
-        "avg_annual_pct": 20.73,
-        "avg_bnh_pct": 168.85,
-        "avg_excess_pct": -148.11,
-        "avg_return_1m_pct": 2.15,
-        "avg_bnh_1m_pct": 4.62,
-        "beat_bnh": 1
+        "avg_return_pct": 19.85,
+        "avg_annual_pct": 19.85,
+        "avg_bnh_pct": 159.84,
+        "avg_excess_pct": -139.99,
+        "avg_return_1m_pct": 1.68,
+        "avg_bnh_1m_pct": 3.75,
+        "beat_bnh": 2
       },
       "stocks": [
         {
@@ -8332,6 +8912,163 @@
           "detail_url": "data/range/donchian_channel/510500.SH.json"
         },
         {
+          "symbol": "600026.SH",
+          "name": "中远海能",
+          "last_close": 20.75,
+          "signals_recent": [
+            {
+              "index": 325,
+              "date": "2026-04-01",
+              "kind": "buy",
+              "price": 23.65,
+              "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+            },
+            {
+              "index": 330,
+              "date": "2026-04-09",
+              "kind": "sell",
+              "price": 25.56,
+              "note": "接近唐奇安上轨,波段止盈"
+            },
+            {
+              "index": 337,
+              "date": "2026-04-20",
+              "kind": "buy",
+              "price": 22.28,
+              "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+            },
+            {
+              "index": 339,
+              "date": "2026-04-22",
+              "kind": "sell",
+              "price": 21.9,
+              "note": "跌破20日唐奇安下轨,破位止损"
+            },
+            {
+              "index": 344,
+              "date": "2026-04-29",
+              "kind": "buy",
+              "price": 21.74,
+              "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+            },
+            {
+              "index": 361,
+              "date": "2026-05-27",
+              "kind": "sell",
+              "price": 20.3,
+              "note": "跌破20日唐奇安下轨,破位止损"
+            },
+            {
+              "index": 376,
+              "date": "2026-06-17",
+              "kind": "buy",
+              "price": 19.69,
+              "note": "下轨附近企稳反弹;重新站上唐奇安中轨;收盘价位于EMA120上方"
+            }
+          ],
+          "position": {
+            "in_position": true,
+            "since": "2026-06-18",
+            "entry_price": 19.919899999999995,
+            "float_pnl_pct": 4.12,
+            "last_close": 20.75,
+            "bars_held": 2
+          },
+          "next_day": {
+            "action": "hold",
+            "action_label": "继续持有",
+            "existing_holder_action": "hold",
+            "existing_holder_label": "已有仓位继续持有",
+            "new_entry_action": "watch",
+            "new_entry_label": "已有仓位可持有；未持有等待新买点",
+            "entry_timing": "fresh",
+            "direction": "down",
+            "direction_label": "下跌风险",
+            "rise_confidence_pct": 40,
+            "fall_risk_pct": 60,
+            "confidence_label": "偏弱",
+            "is_rule_based": true,
+            "not_ml_probability": true,
+            "basis": [
+              "当前策略仍处于持仓状态",
+              "收盘价站上唐奇安中轨",
+              "距上轨约5.2%",
+              "收盘价位于EMA120上方"
+            ],
+            "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "waves": {
+            "upward_1y_count": 12,
+            "upward_3m_count": 4,
+            "current_wave": {
+              "active": true,
+              "start_index": 372,
+              "start_date": "2026-06-11",
+              "start_price": 15.99,
+              "end_index": 379,
+              "end_date": "2026-06-23",
+              "end_price": 20.75,
+              "return_pct": 29.77,
+              "bars": 7,
+              "status": "active"
+            }
+          },
+          "regime": {
+            "current": {
+              "type": "choppy",
+              "label": "震荡阶段",
+              "start_index": 378,
+              "start_date": "2026-06-22",
+              "end_index": 379,
+              "end_date": "2026-06-23",
+              "bars": 2,
+              "return_pct": 1.52,
+              "max_drawdown_pct": 0.0,
+              "strategy_name": "donchian_channel",
+              "strategy_title": "唐奇安通道",
+              "basis": [
+                "近40日区间涨跌幅有限",
+                "均线斜率偏弱,更偏震荡交易"
+              ],
+              "entry_posture": "fresh"
+            }
+          },
+          "metrics": {
+            "initial": 10000.0,
+            "final": 12411.51,
+            "strategy_return_1m_pct": -8.35,
+            "strategy_return_1y_pct": 19.56,
+            "stock_return_1m_pct": -8.99,
+            "stock_return_1y_pct": 109.11,
+            "excess_1m_pct": 0.64,
+            "excess_1y_pct": -89.55,
+            "capture_ratio_1y_pct": 17.93,
+            "time_in_market_1y_pct": 41.27,
+            "stock_max_drawdown_1y_pct": 36.4,
+            "drawdown_saving_1y_pct": 18.16,
+            "missed_bnh_1y_pct": 89.55,
+            "beat_stock_1y": false,
+            "max_drawdown_1y_pct": 18.24,
+            "trades_1y_count": 17,
+            "win_rate_1y_pct": 47.06,
+            "sharpe": 0.67,
+            "profit_factor": 1.4,
+            "total_return_pct": 19.56,
+            "annual_return_pct": 15.45,
+            "max_drawdown_pct": 18.24,
+            "trades_count": 26,
+            "win_count": 11,
+            "win_rate_pct": 42.31,
+            "avg_win_pct": 6.04,
+            "avg_loss_pct": -3.0,
+            "bnh_return_pct": 109.11,
+            "excess_pct": -89.55,
+            "return_1m_pct": -8.35,
+            "bnh_1m_pct": -8.99
+          },
+          "detail_url": "data/range/donchian_channel/600026.SH.json"
+        },
+        {
           "symbol": "159796.SZ",
           "name": "电池ETF",
           "last_close": 1.051,
@@ -8988,6 +9725,169 @@
             "bnh_1m_pct": -10.32
           },
           "detail_url": "data/range/donchian_channel/601118.SH.json"
+        },
+        {
+          "symbol": "600519.SH",
+          "name": "贵州茅台",
+          "last_close": 1222.45,
+          "signals_recent": [
+            {
+              "index": 325,
+              "date": "2026-04-01",
+              "kind": "sell",
+              "price": 1459.44,
+              "note": "接近唐奇安上轨,波段止盈"
+            },
+            {
+              "index": 326,
+              "date": "2026-04-02",
+              "kind": "buy",
+              "price": 1459.88,
+              "note": "下轨附近企稳反弹;收盘价位于EMA120上方"
+            },
+            {
+              "index": 334,
+              "date": "2026-04-15",
+              "kind": "sell",
+              "price": 1467.5,
+              "note": "接近唐奇安上轨,波段止盈"
+            },
+            {
+              "index": 336,
+              "date": "2026-04-17",
+              "kind": "buy",
+              "price": 1407.24,
+              "note": "下轨附近企稳反弹"
+            },
+            {
+              "index": 341,
+              "date": "2026-04-24",
+              "kind": "sell",
+              "price": 1458.49,
+              "note": "接近唐奇安上轨,波段止盈"
+            },
+            {
+              "index": 343,
+              "date": "2026-04-28",
+              "kind": "buy",
+              "price": 1405.0,
+              "note": "下轨附近企稳反弹"
+            },
+            {
+              "index": 344,
+              "date": "2026-04-29",
+              "kind": "sell",
+              "price": 1401.17,
+              "note": "跌破20日唐奇安下轨,破位止损"
+            },
+            {
+              "index": 348,
+              "date": "2026-05-08",
+              "kind": "buy",
+              "price": 1372.99,
+              "note": "下轨附近企稳反弹"
+            },
+            {
+              "index": 349,
+              "date": "2026-05-11",
+              "kind": "sell",
+              "price": 1361.33,
+              "note": "跌破20日唐奇安下轨,破位止损"
+            }
+          ],
+          "position": {
+            "in_position": false,
+            "since": null,
+            "entry_price": null,
+            "float_pnl_pct": null,
+            "last_close": 1222.45,
+            "bars_held": null
+          },
+          "next_day": {
+            "action": "watch",
+            "action_label": "观察等待",
+            "existing_holder_action": "watch",
+            "existing_holder_label": "观察等待",
+            "new_entry_action": "avoid",
+            "new_entry_label": "下行阶段，未持有优先防守观察",
+            "entry_timing": "fresh",
+            "direction": "flat",
+            "direction_label": "震荡观察",
+            "rise_confidence_pct": 50,
+            "fall_risk_pct": 50,
+            "confidence_label": "中性",
+            "is_rule_based": true,
+            "not_ml_probability": true,
+            "basis": [
+              "接近唐奇安下轨(0.6%)",
+              "仍在唐奇安中轨下方,等待企稳",
+              "距上轨约7.8%",
+              "近5日触碰/接近下轨",
+              "风险:收盘价低于EMA120较多"
+            ],
+            "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "waves": {
+            "upward_1y_count": 4,
+            "upward_3m_count": 1,
+            "current_wave": {
+              "active": false
+            }
+          },
+          "regime": {
+            "current": {
+              "type": "down",
+              "label": "下行阶段",
+              "start_index": 342,
+              "start_date": "2026-04-27",
+              "end_index": 379,
+              "end_date": "2026-06-23",
+              "bars": 38,
+              "return_pct": -12.88,
+              "max_drawdown_pct": 13.52,
+              "strategy_name": "",
+              "strategy_title": "防守观察",
+              "basis": [
+                "价格低于长期均线或中期趋势走弱",
+                "近20日收益 -4.93%"
+              ],
+              "entry_posture": "fresh"
+            }
+          },
+          "metrics": {
+            "initial": 10000.0,
+            "final": 9654.58,
+            "strategy_return_1m_pct": 0.0,
+            "strategy_return_1y_pct": -1.97,
+            "stock_return_1m_pct": -5.25,
+            "stock_return_1y_pct": -14.7,
+            "excess_1m_pct": 5.25,
+            "excess_1y_pct": 12.73,
+            "capture_ratio_1y_pct": null,
+            "time_in_market_1y_pct": 57.54,
+            "stock_max_drawdown_1y_pct": 21.86,
+            "drawdown_saving_1y_pct": 5.39,
+            "missed_bnh_1y_pct": -12.73,
+            "beat_stock_1y": true,
+            "max_drawdown_1y_pct": 16.47,
+            "trades_1y_count": 23,
+            "win_rate_1y_pct": 56.52,
+            "sharpe": -0.12,
+            "profit_factor": 0.94,
+            "total_return_pct": -1.97,
+            "annual_return_pct": -2.31,
+            "max_drawdown_pct": 16.47,
+            "trades_count": 33,
+            "win_count": 18,
+            "win_rate_pct": 54.55,
+            "avg_win_pct": 1.66,
+            "avg_loss_pct": -2.16,
+            "bnh_return_pct": -14.7,
+            "excess_pct": 12.73,
+            "return_1m_pct": 0.0,
+            "bnh_1m_pct": -5.25
+          },
+          "detail_url": "data/range/donchian_channel/600519.SH.json"
         },
         {
           "symbol": "562590.SH",
@@ -10618,16 +11518,6 @@
     }
   ],
   "errors": [
-    {
-      "symbol": "600026.SH",
-      "name": "中远海能",
-      "error": "RateLimitError: 请求频率超限 (60/min)，请 10688ms 后重试。免费服务有速率限制，如需更高频率请访问 https://tickflow.org 注册。"
-    },
-    {
-      "symbol": "600519.SH",
-      "name": "贵州茅台",
-      "error": "RateLimitError: 请求频率超限 (60/min)，请 1439ms 后重试。免费服务有速率限制，如需更高频率请访问 https://tickflow.org 注册。"
-    },
     {
       "symbol": "161226.SZ",
       "name": "国投白银LOF",

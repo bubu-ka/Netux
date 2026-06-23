@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:40:48",
+  "updated_at": "2026-06-24 02:49:33",
   "strategy": {
     "name": "donchian_channel",
     "title": "唐奇安通道",

@@ -815,13 +815,6 @@ table.fractal-tbl tbody tr.row-pick.active {
   transition: background .12s ease;
 }
 .range-table tbody tr:hover { background: rgba(37,212,242,0.06); }
-.range-table tbody tr.recent-buy {
-  background: linear-gradient(90deg, rgba(255,77,109,0.14), rgba(255,181,71,0.045));
-  box-shadow: inset 3px 0 0 var(--up);
-}
-.range-table tbody tr.recent-buy:hover {
-  background: linear-gradient(90deg, rgba(255,77,109,0.18), rgba(255,181,71,0.065));
-}
 .range-table tbody tr.active {
   background: linear-gradient(90deg,
     rgba(37,212,242,0.12), rgba(37,212,242,0.04));
@@ -832,18 +825,6 @@ table.fractal-tbl tbody tr.row-pick.active {
   color: var(--text-dim);
 }
 .range-table .strong { font-weight: 700; }
-.buy-highlight-tag {
-  display: inline-flex;
-  margin-left: 6px;
-  padding: 1px 6px;
-  border-radius: 999px;
-  color: #fff;
-  background: linear-gradient(135deg, var(--up), var(--warn));
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  vertical-align: middle;
-}
 .strategy-chip {
   display: inline-flex;
   align-items: center;

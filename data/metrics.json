@@ -1,14 +1,14 @@
 {
   "component": "metrics",
   "title": "大盘",
-  "updated_at": "2026-06-24 02:40:48",
+  "updated_at": "2026-06-24 02:49:33",
   "source": "tickflow.klines (free tier)",
   "tier": "free",
   "total": 16,
-  "ok": 15,
-  "failed": 1,
+  "ok": 16,
+  "failed": 0,
   "quotes_hit": 0,
-  "fallback_recovered": 15,
+  "fallback_recovered": 16,
   "groups": [
     {
       "name": "A 股指数",
@@ -170,8 +170,11 @@
         {
           "symbol": "SOXX.US",
           "name": "费城半导体 (SOXX)",
-          "alias": null,
-          "error": "数据获取失败 — 检查代号格式或市场后缀"
+          "last_price": 655.01,
+          "prev_close": 639.45,
+          "change": 15.56,
+          "change_pct": 2.4333,
+          "source": "klines"
         }
       ]
     }
