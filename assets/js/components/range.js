@@ -9,6 +9,7 @@
 (function () {
   "use strict";
 
+  const FAVORITES_KEY = "nexus_favorites";
   const DATA_URL = "data/range.json";
 
   // ---------- helpers ----------
@@ -54,6 +55,48 @@
     if (!item) return null;
     return item.recent_fractal_hint || item.bottom_fractal_hint || null;
   }
+
+  function loadFavorites() {
+    try {
+      const raw = window.localStorage && window.localStorage.getItem(FAVORITES_KEY);
+      if (!raw) return {};
+      const data = JSON.parse(raw);
+      return (data && data.items) || {};
+    } catch (_) {
+      return {};
+    }
+  }
+
+  function saveFavorites(items) {
+    try {
+      window.localStorage && window.localStorage.setItem(FAVORITES_KEY, JSON.stringify({
+        version: 1,
+        updatedAt: new Date().toISOString(),
+        items,
+      }));
+    } catch (_) {
+      // localStorage 不可用时仅保持本次页面内状态。
+    }
+  }
+
+  function isFavorite(symbol) {
+    return !!favorites[symbol];
+  }
+
+  function toggleFavorite(symbol, name) {
+    const next = { ...favorites };
+    if (next[symbol]) {
+      delete next[symbol];
+    } else {
+      next[symbol] = { symbol, name: name || symbol, addedAt: new Date().toISOString() };
+    }
+    favorites = next;
+    saveFavorites(favorites);
+  }
+
+  function favoriteCount() {
+    return Object.keys(favorites).length;
+  }
   function renderRecentHintTags(item, compact = false) {
     const nd = item.next_day || {};
     const action = nd.new_entry_action || nd.action;
@@ -91,6 +134,12 @@
   let detailError = null;
   let detailErrorKey = null;
   let detailRequestSeq = 0;
+  let assetFilter = "all";
+  let fractalFilter = "all";
+  let favoriteFilter = false;
+  let favorites = loadFavorites();
+  let currentPage = 1;
+  const PAGE_SIZE = 15;
 
   function strategyNameOf(item, fallback) {
     const st = (item && (item.selected_strategy || item.strategy)) || {};
@@ -152,6 +201,27 @@
     return title === "海龟突破波段" ? "海龟交易" : title;
   }
 
+  function assetTypeOf(item) {
+    const symbol = String((item && item.symbol) || "").toUpperCase();
+    const name = String((item && item.name) || "").toUpperCase();
+    const code = symbol.split(".")[0];
+    if (name.includes("ETF")) return "etf";
+    if (/^(15|51|52|56|58)/.test(code)) return "etf";
+    return "stock";
+  }
+
+  function assetTypeLabel(type) {
+    if (type === "etf") return "ETF";
+    if (type === "stock") return "个股";
+    return "全部";
+  }
+
+  function fractalTypeLabel(type) {
+    if (type === "bottom") return "底分型";
+    if (type === "top") return "顶分型";
+    return "全部分型";
+  }
+
   // ---------- render: strategy header ----------
   function renderStrategyHeader(s) {
     const strategyDescriptions = [
@@ -185,9 +255,24 @@
         </div>
         <div class="rs-desc">${esc(s.desc || "不同标的波动结构不同；分类器会结合趋势结构、近期表现、超额收益、回撤控制和明日信号，为每个标的选择更合适的单支波段策略。")}</div>
         <div class="strategy-desc-list">${descHtml}</div>
-        <div class="range-table-searchbar range-searchbar-in-card">
-          <input class="range-search" type="search" placeholder="搜索标的名称 / 编号" value="${esc(searchDraft)}" />
-          <button class="range-search-btn" type="button">搜索</button>
+        <div class="range-filterbar range-searchbar-in-card">
+          <div class="range-quick-filters">
+            ${["all", "etf", "stock"].map((type) => `
+              <button class="range-filter-btn ${assetFilter === type ? "active" : ""}" type="button" data-asset-filter="${type}">${assetTypeLabel(type)}</button>
+            `).join("")}
+          </div>
+          <div class="range-quick-filters favorite-filters">
+            <button class="range-filter-btn fav-filter ${favoriteFilter ? "active" : ""}" type="button" data-favorite-filter="toggle">★ 自选${favoriteCount() ? ` ${favoriteCount()}` : ""}</button>
+          </div>
+          <div class="range-quick-filters fractal-filters">
+            ${["bottom", "top"].map((type) => `
+              <button class="range-filter-btn fractal-filter ${fractalFilter === type ? "active" : ""}" type="button" data-fractal-filter="${type}">${fractalTypeLabel(type)}</button>
+            `).join("")}
+          </div>
+          <div class="range-table-searchbar">
+            <input class="range-search" type="search" placeholder="搜索标的名称 / 编号" value="${esc(searchDraft)}" />
+            <button class="range-search-btn" type="button">搜索</button>
+          </div>
         </div>
       </div>
     `;
@@ -217,21 +302,37 @@
     return `<th class="num sortable ${sortClass(key)}" data-sort="${key}">${label}<span class="sort-ind">${sortIndicator(key)}</span></th>`;
   }
 
+  function renderPager(total, page, totalPages) {
+    if (total <= PAGE_SIZE) return "";
+    return `
+      <div class="range-pager">
+        <button class="range-page-btn" type="button" data-page="prev" ${page <= 1 ? "disabled" : ""}>上一页</button>
+        <span class="range-page-info">第 <b>${page}</b> / ${totalPages} 页 · 共 ${total} 个标的</span>
+        <button class="range-page-btn" type="button" data-page="next" ${page >= totalPages ? "disabled" : ""}>下一页</button>
+      </div>
+    `;
+  }
+
   function renderTable(s) {
+    const total = s.total_stocks ?? s.stocks.length;
+    const page = s.page || 1;
+    const totalPages = s.total_pages || 1;
     const rows = s.stocks.map((it) => rowOf(it, s)).join("");
-    const empty = rows ? "" : `<tr><td colspan="14" class="text-mute">没有匹配的标的</td></tr>`;
+    const empty = rows ? "" : `<tr><td colspan="14" class="text-mute fav-empty">${favoriteFilter ? "暂无自选标的，点击表格中的 ☆ 添加自选" : "没有匹配的标的"}</td></tr>`;
     return `
       <div class="panel range-table-panel">
         <div class="panel-head">
           <div class="panel-title">
             中线波段榜单
-            <small>每个标的使用分类器匹配的策略 · 点击查看最近3个月日K、买卖点和上涨波段</small>
+            <small>当前 ${assetTypeLabel(assetFilter)} · 共 ${total} 个匹配标的 · 每页 ${PAGE_SIZE} 个 · 点击查看最近3个月日K、买卖点和上涨波段</small>
           </div>
         </div>
+        ${renderPager(total, page, totalPages)}
         <div class="range-table-wrap">
           <table class="range-table">
             <thead>
               <tr>
+                <th class="favorite-cell">★</th>
                 <th>代码</th>
                 <th>名称</th>
                 <th>适用策略</th>
@@ -250,6 +351,7 @@
             <tbody>${rows || empty}</tbody>
           </table>
         </div>
+        ${renderPager(total, page, totalPages)}
       </div>
     `;
   }
@@ -282,11 +384,13 @@
     }).join("");
     const recentCell = recent || '<span class="text-mute">—</span>';
     const activeCls = activeSymbol === it.symbol ? "active" : "";
+    const fav = isFavorite(it.symbol);
     const regimeTip = rg.label
       ? `${rg.start_date || ""} → ${rg.end_date || ""} · ${fmtPct(rg.return_pct)} · ${rg.bars || "—"}日`
       : "暂无阶段数据";
     return `
       <tr class="range-row ${activeCls}" data-sym="${it.symbol}">
+        <td class="favorite-cell"><button class="fav-btn ${fav ? "active" : ""}" type="button" data-symbol="${esc(it.symbol)}" data-name="${esc(it.name)}" title="${fav ? "取消自选" : "加入自选"}">${fav ? "★" : "☆"}</button></td>
         <td class="sym">${it.symbol}</td>
         <td>${it.name}</td>
         <td><span class="strategy-chip" title="${esc(reason)}">${esc(strategyDisplayTitle(st))}</span></td>
@@ -509,27 +613,28 @@
     const buyPoints = [];
     const sellPoints = [];
     const fractalPoints = [];
-    const recentHint = getFractalHint(item);
-    if (recentHint) {
-      const relIdx = dates.indexOf(recentHint.fractal_date);
-      if (relIdx >= 0) {
-        const meta = fractalMeta(recentHint);
-        const y = meta.isTop ? recentHint.fractal_high : recentHint.fractal_low;
-        fractalPoints.push({
-          coord: [dates[relIdx], y],
-          value: meta.short,
-          itemStyle: { color: meta.isTop ? "#ff4d6d" : (recentHint.strength === "转折" ? "#19d27a" : "#6b7892") },
-          symbol: "pin",
-          symbolSize: 42,
-          symbolOffset: [0, meta.isTop ? -12 : 12],
-          symbolRotate: meta.isTop ? 0 : 180,
-          label: { color: "#fff", fontWeight: 900, formatter: meta.short, offset: [0, meta.isTop ? 0 : 8] },
-          tooltip: {
-            formatter: `${meta.label} ${recentHint.fractal_date}<br/>${meta.priceLabel} ${fmtNum(y)}<br/>强度:${esc(recentHint.strength || "-")}<br/>量能:${esc(recentHint.volume_label || "-")}${recentHint.volume_ratio != null ? " " + recentHint.volume_ratio + "x" : ""}`,
-          },
-        });
-      }
-    }
+    const chartFractals = Array.isArray(item.fractal_hints) && item.fractal_hints.length
+      ? item.fractal_hints
+      : [getFractalHint(item)].filter(Boolean);
+    chartFractals.forEach((hint) => {
+      const relIdx = dates.indexOf(hint.fractal_date);
+      if (relIdx < 0) return;
+      const meta = fractalMeta(hint);
+      const y = meta.isTop ? hint.fractal_high : hint.fractal_low;
+      fractalPoints.push({
+        coord: [dates[relIdx], y],
+        value: meta.short,
+        itemStyle: { color: meta.isTop ? "#ff4d6d" : (hint.strength === "转折" ? "#19d27a" : "#6b7892") },
+        symbol: "pin",
+        symbolSize: 42,
+        symbolOffset: [0, meta.isTop ? -12 : 12],
+        symbolRotate: meta.isTop ? 0 : 180,
+        label: { color: "#fff", fontWeight: 900, formatter: meta.short, offset: [0, meta.isTop ? 0 : 8] },
+        tooltip: {
+          formatter: `${meta.label} ${hint.fractal_date}<br/>${meta.priceLabel} ${fmtNum(y)}<br/>强度:${esc(hint.strength || "-")}<br/>量能:${esc(hint.volume_label || "-")}${hint.volume_ratio != null ? " " + hint.volume_ratio + "x" : ""}`,
+        },
+      });
+    });
     (item.signals || []).forEach((sg) => {
       if (sg.index < chartStart) return;
       const relIdx = sg.index - chartStart;
@@ -732,8 +837,12 @@
 
   function filterStocks(stocks) {
     const q = normalizeSearch(searchQuery);
-    if (!q) return stocks;
     return stocks.filter((it) => {
+      if (assetFilter !== "all" && assetTypeOf(it) !== assetFilter) return false;
+      const hint = getFractalHint(it);
+      if (fractalFilter !== "all" && (!hint || hint.kind !== fractalFilter)) return false;
+      if (favoriteFilter && !isFavorite(it.symbol)) return false;
+      if (!q) return true;
       const sym = normalizeSearch(it.symbol);
       const name = normalizeSearch(it.name);
       return sym.includes(q) || name.includes(q);
@@ -782,7 +891,10 @@
     }
     const filteredStocks = filterStocks(s.stocks || []);
     const sortedStocks = sortStocks(filteredStocks);
-    const sView = { ...s, stocks: sortedStocks };
+    const totalPages = Math.max(1, Math.ceil(sortedStocks.length / PAGE_SIZE));
+    currentPage = Math.max(1, Math.min(currentPage, totalPages));
+    const pageStocks = sortedStocks.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+    const sView = { ...s, stocks: pageStocks, total_stocks: sortedStocks.length, page: currentPage, total_pages: totalPages };
 
     if (activeSymbol && !sortedStocks.find((it) => it.symbol === activeSymbol)) {
       activeSymbol = null;
@@ -805,6 +917,8 @@
       search.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
           searchQuery = searchDraft;
+          currentPage = 1;
+          activeSymbol = null;
           rerender({ focusSearch: true });
         }
       });
@@ -813,9 +927,54 @@
     if (searchBtn) {
       searchBtn.addEventListener("click", () => {
         searchQuery = searchDraft;
+        currentPage = 1;
+        activeSymbol = null;
         rerender({ focusSearch: true });
       });
     }
+    host.querySelectorAll(".range-filter-btn[data-asset-filter]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        assetFilter = btn.dataset.assetFilter || "all";
+        currentPage = 1;
+        activeSymbol = null;
+        rerender();
+      });
+    });
+    host.querySelectorAll(".range-filter-btn[data-fractal-filter]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const type = btn.dataset.fractalFilter || "all";
+        fractalFilter = fractalFilter === type ? "all" : type;
+        currentPage = 1;
+        activeSymbol = null;
+        rerender();
+      });
+    });
+    host.querySelectorAll(".range-filter-btn[data-favorite-filter]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        favoriteFilter = !favoriteFilter;
+        favorites = loadFavorites();
+        currentPage = 1;
+        activeSymbol = null;
+        rerender();
+      });
+    });
+    host.querySelectorAll(".fav-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleFavorite(btn.dataset.symbol, btn.dataset.name);
+        rerender();
+      });
+    });
+    host.querySelectorAll(".range-page-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.disabled) return;
+        const dir = btn.dataset.page;
+        currentPage += dir === "next" ? 1 : -1;
+        activeSymbol = null;
+        rerender();
+      });
+    });
     host.querySelectorAll(".range-table th.sortable").forEach((th) => {
       th.addEventListener("click", () => {
         const key = th.dataset.sort;
@@ -824,6 +983,7 @@
           sortState.key = key;
           sortState.dir = -1;
         }
+        currentPage = 1;
         rerender();
       });
     });
@@ -906,6 +1066,11 @@
     sortState = { key: null, dir: -1 };
     searchQuery = "";
     searchDraft = "";
+    assetFilter = "all";
+    fractalFilter = "all";
+    favoriteFilter = false;
+    favorites = loadFavorites();
+    currentPage = 1;
     detailCache = new Map();
     detailLoadingKey = null;
     detailError = null;
