@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "medium_swing",
     "title": "海龟交易",
@@ -568,6 +568,21 @@
       "EMA60斜率向上"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "159695.SZ",
+    "name": "通信ETF",
+    "kind": "top",
+    "strength": "转折",
+    "fractal_date": "2026-06-22",
+    "fractal_high": 3.818,
+    "fractal_low": 3.678,
+    "bars_since": 1,
+    "latest_date": "2026-06-23",
+    "latest_close": 3.699,
+    "change_pct": -2.5,
+    "volume_label": "平量",
+    "volume_ratio": 0.72
   },
   "waves": {
     "upward_1y_count": 16,

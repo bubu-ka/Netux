@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "donchian_channel",
     "title": "唐奇安通道",
@@ -995,6 +995,21 @@
       "收盘价位于EMA120上方"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "513870.SH",
+    "name": "纳指ETF",
+    "kind": "top",
+    "strength": "转折",
+    "fractal_date": "2026-06-22",
+    "fractal_high": 2.142,
+    "fractal_low": 2.103,
+    "bars_since": 1,
+    "latest_date": "2026-06-23",
+    "latest_close": 2.054,
+    "change_pct": -3.11,
+    "volume_label": "平量",
+    "volume_ratio": 0.72
   },
   "waves": {
     "upward_1y_count": 9,

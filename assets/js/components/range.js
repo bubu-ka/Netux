@@ -1,8 +1,8 @@
-/* 波段策略 component
+/* 单支波段策略 component
  * 数据: frontend/data/range.json  由 backend/components/range/ 生产
  *
  * 视图:
- *   - 唯一中线波段策略说明 + 明日操作统计
+ *   - 唯一单支波段策略说明 + 明日操作统计
  *   - 榜单:明日建议、规则评分、策略/股票近 1 月和近 1 年表现、上涨波段数
  *   - 点击行 → 最近 3 个月日 K + 买卖点 + 策略波段 + 操作依据
  */
@@ -38,6 +38,39 @@
     return String(s || "").replace(/[&<>"]/g, (c) => ({
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;",
     }[c]));
+  }
+  function fractalMeta(hint) {
+    const isTop = hint && hint.kind === "top";
+    return {
+      isTop,
+      short: isTop ? "顶" : "底",
+      label: isTop ? "顶分型" : "底分型",
+      priceLabel: isTop ? "高点" : "低点",
+      price: isTop ? hint.fractal_high : hint.fractal_low,
+      chipClass: isTop ? "top" : "bottom",
+    };
+  }
+  function getFractalHint(item) {
+    if (!item) return null;
+    return item.recent_fractal_hint || item.bottom_fractal_hint || null;
+  }
+  function renderRecentHintTags(item, compact = false) {
+    const nd = item.next_day || {};
+    const action = nd.new_entry_action || nd.action;
+    const actionLabel = nd.new_entry_label || nd.action_label || "观察等待";
+    const actionTip = (nd.basis || []).join("；") || nd.existing_holder_label || actionLabel;
+    const tags = [`<span class="action-pill ${actionClass(action)}" title="${esc(actionTip)}">${esc(actionLabel)}</span>`];
+    const hint = getFractalHint(item);
+    if (hint) {
+      const meta = fractalMeta(hint);
+      const tip = `${meta.label} ${hint.fractal_date} · 距今 ${hint.bars_since}日 · ${meta.priceLabel} ${fmtNum(meta.price)}`
+        + (hint.volume_label ? ` · ${hint.volume_label}${hint.volume_ratio != null ? " " + hint.volume_ratio + "x" : ""}` : "");
+      const text = compact
+        ? `${meta.label} ${shortDate(hint.fractal_date)} · ${hint.strength || "-"}`
+        : `${meta.label} ${shortDate(hint.fractal_date)}`;
+      tags.push(`<span class="fractal-chip compact ${meta.chipClass}" title="${esc(tip)}">${esc(text)}</span>`);
+    }
+    return `<div class="recent-hint-tags">${tags.join("")}</div>`;
   }
 
   async function loadData() {
@@ -97,6 +130,7 @@
     const merged = {
       ...item,
       ...detail,
+      recent_fractal_hint: getFractalHint(item) || detail.recent_fractal_hint,
       selected_strategy: item.selected_strategy || detail.selected_strategy,
       detail_url: item.detail_url || detail.detail_url,
     };
@@ -142,14 +176,14 @@
       <div class="range-strategy-card range-explain">
         <div class="rs-head">
           <div class="rs-title">
-            <span class="rs-name">${s.title || "智能匹配波段策略"}</span>
+            <span class="rs-name">${s.title || "智能匹配单支波段策略"}</span>
             <span class="rs-tag">${s.group || "逐标的策略分类器"}</span>
           </div>
           <div class="rs-params">
             <code>逐标的分类</code><code>日K</code><code>次日开盘执行</code>
           </div>
         </div>
-        <div class="rs-desc">${esc(s.desc || "不同标的波动结构不同；分类器会结合趋势结构、近期表现、超额收益、回撤控制和明日信号，为每个标的选择更合适的波段策略。")}</div>
+        <div class="rs-desc">${esc(s.desc || "不同标的波动结构不同；分类器会结合趋势结构、近期表现、超额收益、回撤控制和明日信号，为每个标的选择更合适的单支波段策略。")}</div>
         <div class="strategy-desc-list">${descHtml}</div>
         <div class="range-table-searchbar range-searchbar-in-card">
           <input class="range-search" type="search" placeholder="搜索标的名称 / 编号" value="${esc(searchDraft)}" />
@@ -185,7 +219,7 @@
 
   function renderTable(s) {
     const rows = s.stocks.map((it) => rowOf(it, s)).join("");
-    const empty = rows ? "" : `<tr><td colspan="12" class="text-mute">没有匹配的标的</td></tr>`;
+    const empty = rows ? "" : `<tr><td colspan="14" class="text-mute">没有匹配的标的</td></tr>`;
     return `
       <div class="panel range-table-panel">
         <div class="panel-head">
@@ -201,7 +235,7 @@
                 <th>代码</th>
                 <th>名称</th>
                 <th>适用策略</th>
-                <th>明日建议</th>
+                <th>近期提示</th>
                 ${sortTh("strategy_1m", "策略近1月")}
                 ${sortTh("stock_1m", "股票近1月")}
                 ${sortTh("strategy_1y", "策略近1年")}
@@ -256,7 +290,7 @@
         <td class="sym">${it.symbol}</td>
         <td>${it.name}</td>
         <td><span class="strategy-chip" title="${esc(reason)}">${esc(strategyDisplayTitle(st))}</span></td>
-        <td><span class="action-pill ${actionClass(nd.new_entry_action || nd.action)}">${nd.new_entry_label || nd.action_label || "观察等待"}</span></td>
+        <td class="recent-hint-cell">${renderRecentHintTags(it, true)}</td>
         <td class="num ${pctClass(metric(it, "strategy_return_1m_pct", "return_1m_pct"))} strong">${fmtPct(metric(it, "strategy_return_1m_pct", "return_1m_pct"))}</td>
         <td class="num ${pctClass(metric(it, "stock_return_1m_pct", "bnh_1m_pct"))}">${fmtPct(metric(it, "stock_return_1m_pct", "bnh_1m_pct"))}</td>
         <td class="num ${pctClass(metric(it, "strategy_return_1y_pct", "total_return_pct"))}">${fmtPct(metric(it, "strategy_return_1y_pct", "total_return_pct"))}</td>
@@ -351,6 +385,7 @@
       </div>
     `;
   }
+
 
   function renderRegimeLegend() {
     return `
@@ -473,6 +508,28 @@
 
     const buyPoints = [];
     const sellPoints = [];
+    const fractalPoints = [];
+    const recentHint = getFractalHint(item);
+    if (recentHint) {
+      const relIdx = dates.indexOf(recentHint.fractal_date);
+      if (relIdx >= 0) {
+        const meta = fractalMeta(recentHint);
+        const y = meta.isTop ? recentHint.fractal_high : recentHint.fractal_low;
+        fractalPoints.push({
+          coord: [dates[relIdx], y],
+          value: meta.short,
+          itemStyle: { color: meta.isTop ? "#ff4d6d" : (recentHint.strength === "转折" ? "#19d27a" : "#6b7892") },
+          symbol: "pin",
+          symbolSize: 42,
+          symbolOffset: [0, meta.isTop ? -12 : 12],
+          symbolRotate: meta.isTop ? 0 : 180,
+          label: { color: "#fff", fontWeight: 900, formatter: meta.short, offset: [0, meta.isTop ? 0 : 8] },
+          tooltip: {
+            formatter: `${meta.label} ${recentHint.fractal_date}<br/>${meta.priceLabel} ${fmtNum(y)}<br/>强度:${esc(recentHint.strength || "-")}<br/>量能:${esc(recentHint.volume_label || "-")}${recentHint.volume_ratio != null ? " " + recentHint.volume_ratio + "x" : ""}`,
+          },
+        });
+      }
+    }
     (item.signals || []).forEach((sg) => {
       if (sg.index < chartStart) return;
       const relIdx = sg.index - chartStart;
@@ -611,7 +668,7 @@
           markPoint: {
             symbol: "pin", symbolSize: 34,
             label: { fontSize: 11, color: "#fff", fontWeight: 800 },
-            data: [...buyPoints, ...sellPoints],
+            data: [...buyPoints, ...sellPoints, ...fractalPoints],
           },
         },
         ...overlaySeries,
@@ -863,7 +920,7 @@
   window.NexusComponents = window.NexusComponents || {};
   window.NexusComponents["range"] = {
     id: "range",
-    title: "波段策略",
+    title: "单支波段策略",
     group: "技术分析",
     render,
   };

@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "donchian_channel",
     "title": "唐奇安通道",
@@ -863,6 +863,21 @@
       "风险:跌破唐奇安下轨"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "002149.SZ",
+    "name": "西部材料",
+    "kind": "top",
+    "strength": "中继",
+    "fractal_date": "2026-06-16",
+    "fractal_high": 61.86,
+    "fractal_low": 58.82,
+    "bars_since": 4,
+    "latest_date": "2026-06-23",
+    "latest_close": 49.15,
+    "change_pct": -10.0,
+    "volume_label": "平量",
+    "volume_ratio": 1.14
   },
   "waves": {
     "upward_1y_count": 15,

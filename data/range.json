@@ -1,13 +1,15 @@
 {
   "component": "range",
-  "title": "波段策略",
-  "updated_at": "2026-06-24 02:49:33",
+  "title": "单支波段策略",
+  "updated_at": "2026-06-24 14:33:27",
   "config": {
     "lookback_bars": 380,
     "metric_1m_bars": 21,
     "metric_1y_bars": 252,
     "chart_kline_bars": 63,
     "recent_signal_bars": 63,
+    "recent_fractal_hint_enabled": true,
+    "fractal_recent_days": 5,
     "strategy_count": 2,
     "initial_capital": 10000.0,
     "fee_rate": 0.0005,
@@ -22,14 +24,15 @@
   },
   "strategy": {
     "name": "classified_range",
-    "title": "智能匹配波段策略",
+    "title": "智能匹配单支波段策略",
     "group": "逐标的策略分类器",
-    "desc": "不同标的波动结构不同；分类器会结合趋势结构、近期表现、超额收益、回撤控制和明日信号，为每个标的选择更合适的波段策略。",
+    "desc": "不同标的波动结构不同；分类器会结合趋势结构、近期表现、超额收益、回撤控制和明日信号，为每个标的选择更合适的单支波段策略。",
     "params": {
       "classifier": "rule_score_v1"
     },
     "summary": {
       "stocks": 27,
+      "recent_fractal_hints": 17,
       "actions": {
         "buy": 0,
         "sell": 0,
@@ -79,6 +82,21 @@
             "EMA60斜率向上"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "159695.SZ",
+          "name": "通信ETF",
+          "kind": "top",
+          "strength": "转折",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 3.818,
+          "fractal_low": 3.678,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 3.699,
+          "change_pct": -2.5,
+          "volume_label": "平量",
+          "volume_ratio": 0.72
         },
         "waves": {
           "upward_1y_count": 16,
@@ -215,6 +233,21 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": {
+          "symbol": "000657.SZ",
+          "name": "中钨高新",
+          "kind": "bottom",
+          "strength": "转折",
+          "fractal_date": "2026-06-17",
+          "fractal_high": 92.12,
+          "fractal_low": 88.0,
+          "bars_since": 3,
+          "latest_date": "2026-06-23",
+          "latest_close": 102.5,
+          "change_pct": -5.38,
+          "volume_label": "平量",
+          "volume_ratio": 0.84
+        },
         "waves": {
           "upward_1y_count": 15,
           "upward_3m_count": 3,
@@ -335,6 +368,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 13,
           "upward_3m_count": 4,
@@ -455,6 +489,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 14,
           "upward_3m_count": 5,
@@ -574,6 +609,21 @@
             "已突破40日新高"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "002428.SZ",
+          "name": "云南褚业",
+          "kind": "bottom",
+          "strength": "转折",
+          "fractal_date": "2026-06-17",
+          "fractal_high": 100.3,
+          "fractal_low": 96.12,
+          "bars_since": 3,
+          "latest_date": "2026-06-23",
+          "latest_close": 111.9,
+          "change_pct": 1.29,
+          "volume_label": "平量",
+          "volume_ratio": 0.89
         },
         "waves": {
           "upward_1y_count": 19,
@@ -703,6 +753,21 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": {
+          "symbol": "513870.SH",
+          "name": "纳指ETF",
+          "kind": "top",
+          "strength": "转折",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 2.142,
+          "fractal_low": 2.103,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 2.054,
+          "change_pct": -3.11,
+          "volume_label": "平量",
+          "volume_ratio": 0.72
+        },
         "waves": {
           "upward_1y_count": 9,
           "upward_3m_count": 4,
@@ -823,6 +888,21 @@
             "距40日新高约6.2%"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "513310.SH",
+          "name": "中韩半导体ETF",
+          "kind": "top",
+          "strength": "转折",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 6.529,
+          "fractal_low": 6.418,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 6.093,
+          "change_pct": -6.17,
+          "volume_label": "平量",
+          "volume_ratio": 0.78
         },
         "waves": {
           "upward_1y_count": 16,
@@ -984,6 +1064,21 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": {
+          "symbol": "159796.SZ",
+          "name": "电池ETF",
+          "kind": "bottom",
+          "strength": "中继",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 1.073,
+          "fractal_low": 1.043,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 1.051,
+          "change_pct": -4.97,
+          "volume_label": "平量",
+          "volume_ratio": 1.02
+        },
         "waves": {
           "upward_1y_count": 13,
           "upward_3m_count": 3,
@@ -1119,6 +1214,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 11,
           "upward_3m_count": 2,
@@ -1235,6 +1331,21 @@
             "距40日新高约6.4%"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "002463.SZ",
+          "name": "沪电股份",
+          "kind": "top",
+          "strength": "转折",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 151.9,
+          "fractal_low": 142.81,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 138.5,
+          "change_pct": -4.65,
+          "volume_label": "平量",
+          "volume_ratio": 0.97
         },
         "waves": {
           "upward_1y_count": 18,
@@ -1405,6 +1516,21 @@
             "近5日触碰/接近下轨"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "159845.SZ",
+          "name": "中证1000",
+          "kind": "top",
+          "strength": "中继",
+          "fractal_date": "2026-06-18",
+          "fractal_high": 3.76,
+          "fractal_low": 3.585,
+          "bars_since": 2,
+          "latest_date": "2026-06-23",
+          "latest_close": 3.6,
+          "change_pct": -2.15,
+          "volume_label": "缩量",
+          "volume_ratio": 0.66
         },
         "waves": {
           "upward_1y_count": 8,
@@ -1588,6 +1714,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 9,
           "upward_3m_count": 2,
@@ -1722,6 +1849,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 11,
           "upward_3m_count": 1,
@@ -1847,6 +1975,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 10,
           "upward_3m_count": 2,
@@ -1980,6 +2109,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 11,
           "upward_3m_count": 3,
@@ -2154,6 +2284,21 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": {
+          "symbol": "300750.SZ",
+          "name": "宁德时代",
+          "kind": "bottom",
+          "strength": "中继",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 403.3,
+          "fractal_low": 386.0,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 392.51,
+          "change_pct": -4.03,
+          "volume_label": "放量",
+          "volume_ratio": 1.71
+        },
         "waves": {
           "upward_1y_count": 16,
           "upward_3m_count": 5,
@@ -2293,6 +2438,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 17,
           "upward_3m_count": 4,
@@ -2433,6 +2579,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 16,
           "upward_3m_count": 3,
@@ -2599,6 +2746,21 @@
             "收盘价位于EMA120上方"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "600026.SH",
+          "name": "中远海能",
+          "kind": "bottom",
+          "strength": "转折",
+          "fractal_date": "2026-06-17",
+          "fractal_high": 19.69,
+          "fractal_low": 18.0,
+          "bars_since": 3,
+          "latest_date": "2026-06-23",
+          "latest_close": 20.75,
+          "change_pct": 1.52,
+          "volume_label": "平量",
+          "volume_ratio": 1.28
         },
         "waves": {
           "upward_1y_count": 12,
@@ -2830,6 +2992,21 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": {
+          "symbol": "159870.SZ",
+          "name": "化工ETF",
+          "kind": "bottom",
+          "strength": "转折",
+          "fractal_date": "2026-06-18",
+          "fractal_high": 0.86,
+          "fractal_low": 0.832,
+          "bars_since": 2,
+          "latest_date": "2026-06-23",
+          "latest_close": 0.865,
+          "change_pct": -3.67,
+          "volume_label": "平量",
+          "volume_ratio": 1.37
+        },
         "waves": {
           "upward_1y_count": 14,
           "upward_3m_count": 3,
@@ -3013,6 +3190,21 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": {
+          "symbol": "600519.SH",
+          "name": "贵州茅台",
+          "kind": "bottom",
+          "strength": "中继",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 1238.87,
+          "fractal_low": 1205.0,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 1222.45,
+          "change_pct": -1.53,
+          "volume_label": "平量",
+          "volume_ratio": 1.27
+        },
         "waves": {
           "upward_1y_count": 4,
           "upward_3m_count": 1,
@@ -3180,6 +3372,21 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": {
+          "symbol": "601118.SH",
+          "name": "海南橡胶",
+          "kind": "bottom",
+          "strength": "中继",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 5.73,
+          "fractal_low": 5.49,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 5.56,
+          "change_pct": -2.8,
+          "volume_label": "平量",
+          "volume_ratio": 1.16
+        },
         "waves": {
           "upward_1y_count": 17,
           "upward_3m_count": 5,
@@ -3289,6 +3496,7 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": null,
         "waves": {
           "upward_1y_count": 19,
           "upward_3m_count": 6,
@@ -3397,6 +3605,21 @@
             "风险:长期趋势过滤未通过"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "520870.SH",
+          "name": "巴西ETF",
+          "kind": "bottom",
+          "strength": "中继",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 1.055,
+          "fractal_low": 1.041,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 1.052,
+          "change_pct": -0.09,
+          "volume_label": "平量",
+          "volume_ratio": 0.77
         },
         "waves": {
           "upward_1y_count": 8,
@@ -3520,6 +3743,21 @@
             "风险:长期趋势过滤未通过"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "002594.SZ",
+          "name": "比亚迪",
+          "kind": "bottom",
+          "strength": "中继",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 87.9,
+          "fractal_low": 84.6,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 85.0,
+          "change_pct": -2.96,
+          "volume_label": "放量",
+          "volume_ratio": 1.62
         },
         "waves": {
           "upward_1y_count": 14,
@@ -3652,6 +3890,21 @@
             "风险:长期趋势过滤未通过"
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+        },
+        "recent_fractal_hint": {
+          "symbol": "159890.SZ",
+          "name": "云计算ETF",
+          "kind": "top",
+          "strength": "转折",
+          "fractal_date": "2026-06-22",
+          "fractal_high": 1.826,
+          "fractal_low": 1.756,
+          "bars_since": 1,
+          "latest_date": "2026-06-23",
+          "latest_close": 1.76,
+          "change_pct": -3.51,
+          "volume_label": "平量",
+          "volume_ratio": 1.05
         },
         "waves": {
           "upward_1y_count": 15,
@@ -3806,6 +4059,21 @@
           ],
           "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
         },
+        "recent_fractal_hint": {
+          "symbol": "002149.SZ",
+          "name": "西部材料",
+          "kind": "top",
+          "strength": "中继",
+          "fractal_date": "2026-06-16",
+          "fractal_high": 61.86,
+          "fractal_low": 58.82,
+          "bars_since": 4,
+          "latest_date": "2026-06-23",
+          "latest_close": 49.15,
+          "change_pct": -10.0,
+          "volume_label": "平量",
+          "volume_ratio": 1.14
+        },
         "waves": {
           "upward_1y_count": 15,
           "upward_3m_count": 6,
@@ -3882,7 +4150,7 @@
   },
   "stocks_total": 28,
   "stocks_failed": 1,
-  "cache_hits": 25,
+  "cache_hits": 27,
   "net_retry_recovered": 0,
   "strategies": [
     {
@@ -3902,6 +4170,7 @@
       },
       "summary": {
         "stocks": 27,
+        "recent_fractal_hints": 17,
         "avg_strategy_return_1m_pct": 4.04,
         "avg_strategy_return_1y_pct": 105.76,
         "avg_stock_return_1m_pct": 3.75,
@@ -3967,6 +4236,21 @@
               "已突破40日新高"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "002428.SZ",
+            "name": "云南褚业",
+            "kind": "bottom",
+            "strength": "转折",
+            "fractal_date": "2026-06-17",
+            "fractal_high": 100.3,
+            "fractal_low": 96.12,
+            "bars_since": 3,
+            "latest_date": "2026-06-23",
+            "latest_close": 111.9,
+            "change_pct": 1.29,
+            "volume_label": "平量",
+            "volume_ratio": 0.89
           },
           "waves": {
             "upward_1y_count": 19,
@@ -4092,6 +4376,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 11,
             "upward_3m_count": 2,
@@ -4198,6 +4483,21 @@
               "EMA60斜率向上"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "159695.SZ",
+            "name": "通信ETF",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 3.818,
+            "fractal_low": 3.678,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 3.699,
+            "change_pct": -2.5,
+            "volume_label": "平量",
+            "volume_ratio": 0.72
           },
           "waves": {
             "upward_1y_count": 16,
@@ -4323,6 +4623,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 11,
             "upward_3m_count": 1,
@@ -4438,6 +4739,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 10,
             "upward_3m_count": 2,
@@ -4545,6 +4847,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 13,
             "upward_3m_count": 4,
@@ -4669,6 +4972,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "159845.SZ",
+            "name": "中证1000",
+            "kind": "top",
+            "strength": "中继",
+            "fractal_date": "2026-06-18",
+            "fractal_high": 3.76,
+            "fractal_low": 3.585,
+            "bars_since": 2,
+            "latest_date": "2026-06-23",
+            "latest_close": 3.6,
+            "change_pct": -2.15,
+            "volume_label": "缩量",
+            "volume_ratio": 0.66
+          },
           "waves": {
             "upward_1y_count": 8,
             "upward_3m_count": 2,
@@ -4792,6 +5110,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 11,
             "upward_3m_count": 3,
@@ -4929,6 +5248,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 9,
             "upward_3m_count": 2,
@@ -5052,6 +5372,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "000657.SZ",
+            "name": "中钨高新",
+            "kind": "bottom",
+            "strength": "转折",
+            "fractal_date": "2026-06-17",
+            "fractal_high": 92.12,
+            "fractal_low": 88.0,
+            "bars_since": 3,
+            "latest_date": "2026-06-23",
+            "latest_close": 102.5,
+            "change_pct": -5.38,
+            "volume_label": "平量",
+            "volume_ratio": 0.84
+          },
           "waves": {
             "upward_1y_count": 15,
             "upward_3m_count": 3,
@@ -5160,6 +5495,21 @@
               "距40日新高约6.4%"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "002463.SZ",
+            "name": "沪电股份",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 151.9,
+            "fractal_low": 142.81,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 138.5,
+            "change_pct": -4.65,
+            "volume_label": "平量",
+            "volume_ratio": 0.97
           },
           "waves": {
             "upward_1y_count": 18,
@@ -5270,6 +5620,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "513310.SH",
+            "name": "中韩半导体ETF",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 6.529,
+            "fractal_low": 6.418,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 6.093,
+            "change_pct": -6.17,
+            "volume_label": "平量",
+            "volume_ratio": 0.78
+          },
           "waves": {
             "upward_1y_count": 16,
             "upward_3m_count": 5,
@@ -5377,6 +5742,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 14,
             "upward_3m_count": 5,
@@ -5494,6 +5860,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "513870.SH",
+            "name": "纳指ETF",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 2.142,
+            "fractal_low": 2.103,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 2.054,
+            "change_pct": -3.11,
+            "volume_label": "平量",
+            "volume_ratio": 0.72
+          },
           "waves": {
             "upward_1y_count": 9,
             "upward_3m_count": 4,
@@ -5603,6 +5984,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 16,
             "upward_3m_count": 3,
@@ -5739,6 +6121,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 17,
             "upward_3m_count": 4,
@@ -5858,6 +6241,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "600026.SH",
+            "name": "中远海能",
+            "kind": "bottom",
+            "strength": "转折",
+            "fractal_date": "2026-06-17",
+            "fractal_high": 19.69,
+            "fractal_low": 18.0,
+            "bars_since": 3,
+            "latest_date": "2026-06-23",
+            "latest_close": 20.75,
+            "change_pct": 1.52,
+            "volume_label": "平量",
+            "volume_ratio": 1.28
+          },
           "waves": {
             "upward_1y_count": 12,
             "upward_3m_count": 4,
@@ -5974,6 +6372,21 @@
               "风险:长期趋势过滤未通过"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "300750.SZ",
+            "name": "宁德时代",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 403.3,
+            "fractal_low": 386.0,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 392.51,
+            "change_pct": -4.03,
+            "volume_label": "放量",
+            "volume_ratio": 1.71
           },
           "waves": {
             "upward_1y_count": 16,
@@ -6097,6 +6510,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "159796.SZ",
+            "name": "电池ETF",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 1.073,
+            "fractal_low": 1.043,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 1.051,
+            "change_pct": -4.97,
+            "volume_label": "平量",
+            "volume_ratio": 1.02
+          },
           "waves": {
             "upward_1y_count": 13,
             "upward_3m_count": 3,
@@ -6213,6 +6641,21 @@
               "风险:长期趋势过滤未通过"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "159870.SZ",
+            "name": "化工ETF",
+            "kind": "bottom",
+            "strength": "转折",
+            "fractal_date": "2026-06-18",
+            "fractal_high": 0.86,
+            "fractal_low": 0.832,
+            "bars_since": 2,
+            "latest_date": "2026-06-23",
+            "latest_close": 0.865,
+            "change_pct": -3.67,
+            "volume_label": "平量",
+            "volume_ratio": 1.37
           },
           "waves": {
             "upward_1y_count": 14,
@@ -6344,6 +6787,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "159890.SZ",
+            "name": "云计算ETF",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 1.826,
+            "fractal_low": 1.756,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 1.76,
+            "change_pct": -3.51,
+            "volume_label": "平量",
+            "volume_ratio": 1.05
+          },
           "waves": {
             "upward_1y_count": 15,
             "upward_3m_count": 2,
@@ -6452,6 +6910,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 19,
             "upward_3m_count": 6,
@@ -6571,6 +7030,21 @@
               "风险:长期趋势过滤未通过"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "601118.SH",
+            "name": "海南橡胶",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 5.73,
+            "fractal_low": 5.49,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 5.56,
+            "change_pct": -2.8,
+            "volume_label": "平量",
+            "volume_ratio": 1.16
           },
           "waves": {
             "upward_1y_count": 17,
@@ -6692,6 +7166,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "600519.SH",
+            "name": "贵州茅台",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 1238.87,
+            "fractal_low": 1205.0,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 1222.45,
+            "change_pct": -1.53,
+            "volume_label": "平量",
+            "volume_ratio": 1.27
+          },
           "waves": {
             "upward_1y_count": 4,
             "upward_3m_count": 1,
@@ -6805,6 +7294,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "002594.SZ",
+            "name": "比亚迪",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 87.9,
+            "fractal_low": 84.6,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 85.0,
+            "change_pct": -2.96,
+            "volume_label": "放量",
+            "volume_ratio": 1.62
+          },
           "waves": {
             "upward_1y_count": 14,
             "upward_3m_count": 4,
@@ -6902,6 +7406,21 @@
               "风险:长期趋势过滤未通过"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "520870.SH",
+            "name": "巴西ETF",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 1.055,
+            "fractal_low": 1.041,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 1.052,
+            "change_pct": -0.09,
+            "volume_label": "平量",
+            "volume_ratio": 0.77
           },
           "waves": {
             "upward_1y_count": 8,
@@ -7010,6 +7529,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "002149.SZ",
+            "name": "西部材料",
+            "kind": "top",
+            "strength": "中继",
+            "fractal_date": "2026-06-16",
+            "fractal_high": 61.86,
+            "fractal_low": 58.82,
+            "bars_since": 4,
+            "latest_date": "2026-06-23",
+            "latest_close": 49.15,
+            "change_pct": -10.0,
+            "volume_label": "平量",
+            "volume_ratio": 1.14
+          },
           "waves": {
             "upward_1y_count": 15,
             "upward_3m_count": 6,
@@ -7087,6 +7621,7 @@
       },
       "summary": {
         "stocks": 27,
+        "recent_fractal_hints": 17,
         "avg_strategy_return_1m_pct": 1.68,
         "avg_strategy_return_1y_pct": 19.85,
         "avg_stock_return_1m_pct": 3.75,
@@ -7209,6 +7744,21 @@
               "收盘价位于EMA120上方"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "300750.SZ",
+            "name": "宁德时代",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 403.3,
+            "fractal_low": 386.0,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 392.51,
+            "change_pct": -4.03,
+            "volume_label": "放量",
+            "volume_ratio": 1.71
           },
           "waves": {
             "upward_1y_count": 16,
@@ -7373,6 +7923,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 11,
             "upward_3m_count": 1,
@@ -7537,6 +8088,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 14,
             "upward_3m_count": 5,
@@ -7710,6 +8262,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 13,
             "upward_3m_count": 4,
@@ -7868,6 +8421,21 @@
               "近5日触碰/接近下轨"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "159845.SZ",
+            "name": "中证1000",
+            "kind": "top",
+            "strength": "中继",
+            "fractal_date": "2026-06-18",
+            "fractal_high": 3.76,
+            "fractal_low": 3.585,
+            "bars_since": 2,
+            "latest_date": "2026-06-23",
+            "latest_close": 3.6,
+            "change_pct": -2.15,
+            "volume_label": "缩量",
+            "volume_ratio": 0.66
           },
           "waves": {
             "upward_1y_count": 8,
@@ -8063,6 +8631,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "520870.SH",
+            "name": "巴西ETF",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 1.055,
+            "fractal_low": 1.041,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 1.052,
+            "change_pct": -0.09,
+            "volume_label": "平量",
+            "volume_ratio": 0.77
+          },
           "waves": {
             "upward_1y_count": 8,
             "upward_3m_count": 3,
@@ -8213,6 +8796,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 19,
             "upward_3m_count": 6,
@@ -8339,6 +8923,21 @@
               "风险:突破上轨后偏高,不追高"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "002428.SZ",
+            "name": "云南褚业",
+            "kind": "bottom",
+            "strength": "转折",
+            "fractal_date": "2026-06-17",
+            "fractal_high": 100.3,
+            "fractal_low": 96.12,
+            "bars_since": 3,
+            "latest_date": "2026-06-23",
+            "latest_close": 111.9,
+            "change_pct": 1.29,
+            "volume_label": "平量",
+            "volume_ratio": 0.89
           },
           "waves": {
             "upward_1y_count": 19,
@@ -8470,6 +9069,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 16,
             "upward_3m_count": 3,
@@ -8668,6 +9268,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 17,
             "upward_3m_count": 4,
@@ -8840,6 +9441,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 9,
             "upward_3m_count": 2,
@@ -8997,6 +9599,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "600026.SH",
+            "name": "中远海能",
+            "kind": "bottom",
+            "strength": "转折",
+            "fractal_date": "2026-06-17",
+            "fractal_high": 19.69,
+            "fractal_low": 18.0,
+            "bars_since": 3,
+            "latest_date": "2026-06-23",
+            "latest_close": 20.75,
+            "change_pct": 1.52,
+            "volume_label": "平量",
+            "volume_ratio": 1.28
+          },
           "waves": {
             "upward_1y_count": 12,
             "upward_3m_count": 4,
@@ -9147,6 +9764,21 @@
               "近5日触碰/接近下轨"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "159796.SZ",
+            "name": "电池ETF",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 1.073,
+            "fractal_low": 1.043,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 1.051,
+            "change_pct": -4.97,
+            "volume_label": "平量",
+            "volume_ratio": 1.02
           },
           "waves": {
             "upward_1y_count": 13,
@@ -9341,6 +9973,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "159890.SZ",
+            "name": "云计算ETF",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 1.826,
+            "fractal_low": 1.756,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 1.76,
+            "change_pct": -3.51,
+            "volume_label": "平量",
+            "volume_ratio": 1.05
+          },
           "waves": {
             "upward_1y_count": 15,
             "upward_3m_count": 2,
@@ -9497,6 +10144,21 @@
               "收盘价位于EMA120上方"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "513870.SH",
+            "name": "纳指ETF",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 2.142,
+            "fractal_low": 2.103,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 2.054,
+            "change_pct": -3.11,
+            "volume_label": "平量",
+            "volume_ratio": 0.72
           },
           "waves": {
             "upward_1y_count": 9,
@@ -9664,6 +10326,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "601118.SH",
+            "name": "海南橡胶",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 5.73,
+            "fractal_low": 5.49,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 5.56,
+            "change_pct": -2.8,
+            "volume_label": "平量",
+            "volume_ratio": 1.16
+          },
           "waves": {
             "upward_1y_count": 17,
             "upward_3m_count": 5,
@@ -9827,6 +10504,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "600519.SH",
+            "name": "贵州茅台",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 1238.87,
+            "fractal_low": 1205.0,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 1222.45,
+            "change_pct": -1.53,
+            "volume_label": "平量",
+            "volume_ratio": 1.27
+          },
           "waves": {
             "upward_1y_count": 4,
             "upward_3m_count": 1,
@@ -9974,6 +10666,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 11,
             "upward_3m_count": 2,
@@ -10121,6 +10814,21 @@
               "收盘价位于EMA120上方"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "513310.SH",
+            "name": "中韩半导体ETF",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 6.529,
+            "fractal_low": 6.418,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 6.093,
+            "change_pct": -6.17,
+            "volume_label": "平量",
+            "volume_ratio": 0.78
           },
           "waves": {
             "upward_1y_count": 16,
@@ -10298,6 +11006,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 10,
             "upward_3m_count": 2,
@@ -10473,6 +11182,21 @@
               "收盘价位于EMA120上方"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "000657.SZ",
+            "name": "中钨高新",
+            "kind": "bottom",
+            "strength": "转折",
+            "fractal_date": "2026-06-17",
+            "fractal_high": 92.12,
+            "fractal_low": 88.0,
+            "bars_since": 3,
+            "latest_date": "2026-06-23",
+            "latest_close": 102.5,
+            "change_pct": -5.38,
+            "volume_label": "平量",
+            "volume_ratio": 0.84
           },
           "waves": {
             "upward_1y_count": 15,
@@ -10694,6 +11418,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "159870.SZ",
+            "name": "化工ETF",
+            "kind": "bottom",
+            "strength": "转折",
+            "fractal_date": "2026-06-18",
+            "fractal_high": 0.86,
+            "fractal_low": 0.832,
+            "bars_since": 2,
+            "latest_date": "2026-06-23",
+            "latest_close": 0.865,
+            "change_pct": -3.67,
+            "volume_label": "平量",
+            "volume_ratio": 1.37
+          },
           "waves": {
             "upward_1y_count": 14,
             "upward_3m_count": 3,
@@ -10814,6 +11553,21 @@
               "收盘价位于EMA120上方"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "002463.SZ",
+            "name": "沪电股份",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 151.9,
+            "fractal_low": 142.81,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 138.5,
+            "change_pct": -4.65,
+            "volume_label": "平量",
+            "volume_ratio": 0.97
           },
           "waves": {
             "upward_1y_count": 18,
@@ -10957,6 +11711,21 @@
               "收盘价位于EMA120上方"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "159695.SZ",
+            "name": "通信ETF",
+            "kind": "top",
+            "strength": "转折",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 3.818,
+            "fractal_low": 3.678,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 3.699,
+            "change_pct": -2.5,
+            "volume_label": "平量",
+            "volume_ratio": 0.72
           },
           "waves": {
             "upward_1y_count": 16,
@@ -11138,6 +11907,21 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": {
+            "symbol": "002594.SZ",
+            "name": "比亚迪",
+            "kind": "bottom",
+            "strength": "中继",
+            "fractal_date": "2026-06-22",
+            "fractal_high": 87.9,
+            "fractal_low": 84.6,
+            "bars_since": 1,
+            "latest_date": "2026-06-23",
+            "latest_close": 85.0,
+            "change_pct": -2.96,
+            "volume_label": "放量",
+            "volume_ratio": 1.62
+          },
           "waves": {
             "upward_1y_count": 14,
             "upward_3m_count": 4,
@@ -11272,6 +12056,21 @@
               "风险:跌破唐奇安下轨"
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+          },
+          "recent_fractal_hint": {
+            "symbol": "002149.SZ",
+            "name": "西部材料",
+            "kind": "top",
+            "strength": "中继",
+            "fractal_date": "2026-06-16",
+            "fractal_high": 61.86,
+            "fractal_low": 58.82,
+            "bars_since": 4,
+            "latest_date": "2026-06-23",
+            "latest_close": 49.15,
+            "change_pct": -10.0,
+            "volume_label": "平量",
+            "volume_ratio": 1.14
           },
           "waves": {
             "upward_1y_count": 15,
@@ -11443,6 +12242,7 @@
             ],
             "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
           },
+          "recent_fractal_hint": null,
           "waves": {
             "upward_1y_count": 11,
             "upward_3m_count": 3,

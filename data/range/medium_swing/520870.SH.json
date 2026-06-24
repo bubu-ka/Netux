@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "medium_swing",
     "title": "海龟交易",
@@ -559,6 +559,21 @@
       "风险:长期趋势过滤未通过"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "520870.SH",
+    "name": "巴西ETF",
+    "kind": "bottom",
+    "strength": "中继",
+    "fractal_date": "2026-06-22",
+    "fractal_high": 1.055,
+    "fractal_low": 1.041,
+    "bars_since": 1,
+    "latest_date": "2026-06-23",
+    "latest_close": 1.052,
+    "change_pct": -0.09,
+    "volume_label": "平量",
+    "volume_ratio": 0.77
   },
   "waves": {
     "upward_1y_count": 8,

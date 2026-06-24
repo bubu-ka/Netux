@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "donchian_channel",
     "title": "唐奇安通道",
@@ -1087,6 +1087,21 @@
       "风险:收盘价低于EMA120较多"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "600519.SH",
+    "name": "贵州茅台",
+    "kind": "bottom",
+    "strength": "中继",
+    "fractal_date": "2026-06-22",
+    "fractal_high": 1238.87,
+    "fractal_low": 1205.0,
+    "bars_since": 1,
+    "latest_date": "2026-06-23",
+    "latest_close": 1222.45,
+    "change_pct": -1.53,
+    "volume_label": "平量",
+    "volume_ratio": 1.27
   },
   "waves": {
     "upward_1y_count": 4,

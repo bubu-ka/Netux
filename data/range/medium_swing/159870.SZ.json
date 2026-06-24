@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "medium_swing",
     "title": "海龟交易",
@@ -584,6 +584,21 @@
       "风险:长期趋势过滤未通过"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "159870.SZ",
+    "name": "化工ETF",
+    "kind": "bottom",
+    "strength": "转折",
+    "fractal_date": "2026-06-18",
+    "fractal_high": 0.86,
+    "fractal_low": 0.832,
+    "bars_since": 2,
+    "latest_date": "2026-06-23",
+    "latest_close": 0.865,
+    "change_pct": -3.67,
+    "volume_label": "平量",
+    "volume_ratio": 1.37
   },
   "waves": {
     "upward_1y_count": 14,

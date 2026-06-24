@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "medium_swing",
     "title": "海龟交易",
@@ -597,6 +597,21 @@
       "距40日新高约2.6%"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "159845.SZ",
+    "name": "中证1000",
+    "kind": "top",
+    "strength": "中继",
+    "fractal_date": "2026-06-18",
+    "fractal_high": 3.76,
+    "fractal_low": 3.585,
+    "bars_since": 2,
+    "latest_date": "2026-06-23",
+    "latest_close": 3.6,
+    "change_pct": -2.15,
+    "volume_label": "缩量",
+    "volume_ratio": 0.66
   },
   "waves": {
     "upward_1y_count": 8,

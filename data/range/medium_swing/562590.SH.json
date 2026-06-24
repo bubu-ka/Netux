@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "medium_swing",
     "title": "海龟交易",
@@ -598,6 +598,7 @@
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
   },
+  "recent_fractal_hint": null,
   "waves": {
     "upward_1y_count": 11,
     "upward_3m_count": 2,

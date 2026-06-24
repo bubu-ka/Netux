@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "medium_swing",
     "title": "海龟交易",
@@ -597,6 +597,21 @@
       "距40日新高约5.4%"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "000657.SZ",
+    "name": "中钨高新",
+    "kind": "bottom",
+    "strength": "转折",
+    "fractal_date": "2026-06-17",
+    "fractal_high": 92.12,
+    "fractal_low": 88.0,
+    "bars_since": 3,
+    "latest_date": "2026-06-23",
+    "latest_close": 102.5,
+    "change_pct": -5.38,
+    "volume_label": "平量",
+    "volume_ratio": 0.84
   },
   "waves": {
     "upward_1y_count": 15,

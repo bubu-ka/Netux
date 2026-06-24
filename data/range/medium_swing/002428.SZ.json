@@ -1,6 +1,6 @@
 {
   "component": "range",
-  "updated_at": "2026-06-24 02:49:33",
+  "updated_at": "2026-06-24 14:33:27",
   "strategy": {
     "name": "medium_swing",
     "title": "海龟交易",
@@ -582,6 +582,21 @@
       "已突破40日新高"
     ],
     "execution": "信号基于日K收盘,按下一交易日开盘执行；若大幅高开/低开需人工复核"
+  },
+  "recent_fractal_hint": {
+    "symbol": "002428.SZ",
+    "name": "云南褚业",
+    "kind": "bottom",
+    "strength": "转折",
+    "fractal_date": "2026-06-17",
+    "fractal_high": 100.3,
+    "fractal_low": 96.12,
+    "bars_since": 3,
+    "latest_date": "2026-06-23",
+    "latest_close": 111.9,
+    "change_pct": 1.29,
+    "volume_label": "平量",
+    "volume_ratio": 0.89
   },
   "waves": {
     "upward_1y_count": 19,

@@ -334,116 +334,8 @@ table.tbl tbody td.flat { color: var(--text-dim); }
   .nav-item { justify-content: center; padding: 10px 0; }
 }
 
-/* ---------- Fractal component ---------- */
-.fractal-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-bottom: 18px;
-}
-.fractal-grid .panel { margin-bottom: 0; }
-@media (max-width: 1100px) {
-  .fractal-grid { grid-template-columns: 1fr; }
-}
-
-.fractal-chart { height: 540px; }
-
 table.tbl td.num, table.tbl th.num { text-align: right; font-variant-numeric: tabular-nums; }
 table.tbl td.mono { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Consolas, monospace; color: var(--text); }
-
-table.fractal-tbl tbody tr.row-pick { cursor: pointer; }
-table.fractal-tbl tbody tr.row-pick.active {
-  background: linear-gradient(90deg, rgba(37, 212, 242, 0.18), rgba(37, 212, 242, 0));
-  box-shadow: inset 3px 0 0 0 var(--primary);
-}
-
-.badge {
-  display: inline-block;
-  padding: 1px 8px;
-  border-radius: 999px;
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  border: 1px solid transparent;
-}
-.badge.fresh {
-  color: var(--primary);
-  border-color: rgba(37, 212, 242, 0.45);
-  background: rgba(37, 212, 242, 0.08);
-}
-.badge.stale {
-  color: var(--text-mute);
-  border-color: rgba(74, 86, 115, 0.5);
-  background: rgba(74, 86, 115, 0.08);
-}
-
-.dot-tag {
-  display: inline-block;
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  margin-right: 8px;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-}
-.dot-tag.dot-up { background: var(--up); box-shadow: 0 0 8px rgba(255, 77, 109, 0.6); }
-.dot-tag.dot-down { background: var(--down); box-shadow: 0 0 8px rgba(25, 210, 122, 0.6); }
-
-/* 量能标签 */
-.vol-tag {
-  display: inline-block;
-  padding: 1px 8px;
-  border-radius: 4px;
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  border: 1px solid transparent;
-  font-weight: 600;
-}
-.vol-tag.vol-high {
-  color: var(--warn);
-  background: rgba(255, 181, 71, 0.12);
-  border-color: rgba(255, 181, 71, 0.4);
-}
-.vol-tag.vol-low {
-  color: #6b7892;
-  background: rgba(74, 86, 115, 0.12);
-  border-color: rgba(74, 86, 115, 0.4);
-}
-.vol-tag.vol-mid {
-  color: var(--text-dim);
-  background: rgba(125, 138, 166, 0.08);
-  border-color: rgba(125, 138, 166, 0.3);
-}
-.vol-ratio {
-  margin-left: 6px;
-  color: var(--text-mute);
-  font-size: 11px;
-  font-variant-numeric: tabular-nums;
-}
-
-/* 缠论分型强度标签:转折型 = 强信号(高亮 cyan)/ 中继型 = 弱信号(灰) */
-.strength-tag {
-  display: inline-block;
-  padding: 1px 8px;
-  border-radius: 4px;
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  border: 1px solid transparent;
-  font-weight: 600;
-}
-.strength-tag.strength-strong {
-  color: var(--primary);
-  background: rgba(37, 212, 242, 0.12);
-  border-color: rgba(37, 212, 242, 0.45);
-  /* 微微发光,扫一眼就能看见"真信号" */
-  box-shadow: 0 0 6px rgba(37, 212, 242, 0.25);
-}
-.strength-tag.strength-weak {
-  color: var(--text-dim);
-  background: rgba(125, 138, 166, 0.08);
-  border-color: rgba(125, 138, 166, 0.35);
-  /* 中继型用斜体暗示"待确认" */
-  font-style: italic;
-}
 
 /* ---------- Metrics component (大盘 metric tiles) ---------- */
 
@@ -862,6 +754,38 @@ table.fractal-tbl tbody tr.row-pick.active {
 .range-table .down { color: var(--down); }
 .range-table .flat { color: var(--text); }
 .text-mute { color: var(--text-mute); }
+
+.recent-hint-cell { min-width: 180px; }
+.recent-hint-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.fractal-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.fractal-chip.compact {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.2px;
+}
+.fractal-chip.bottom {
+  color: var(--down);
+  background: rgba(25,210,122,0.10);
+  border: 1px solid rgba(25,210,122,0.32);
+}
+.fractal-chip.top {
+  color: var(--up);
+  background: rgba(255,77,109,0.10);
+  border: 1px solid rgba(255,77,109,0.32);
+}
 
 .pos-tag {
   font-size: 11px;
