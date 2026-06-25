@@ -40,6 +40,10 @@
     return res.json();
   }
 
+  function renderSection() {
+    return `<div class="etf-section-divider"></div>`;
+  }
+
   function renderExplain() {
     const c = payload.config || {};
     return `
@@ -54,6 +58,34 @@
           </div>
         </div>
         <div class="rs-desc">只在 ETF 站上长期趋势线时参与排名，使用 R20/R60/R120/R250 综合动量并扣除波动率惩罚，选择强势 Top3，按波动率倒数分配仓位；组合回撤超过阈值时自动降仓或清仓。</div>
+      </div>
+    `;
+  }
+
+  function renderPoolFit() {
+    const fit = payload.pool_fit || {};
+    if (!fit || !fit.status) return "";
+    const status = fit.status || "normal";
+    const statusText = status === "warning" ? "风格集中" : status === "watch" ? "观察" : "正常";
+    const statusIcon = status === "warning" ? "⚠" : status === "watch" ? "◐" : "✓";
+    const cats = (fit.category_scores || []).slice(0, 4);
+    const hints = fit.hints || [];
+    return `
+      <div class="panel etf-pool-fit">
+        <div class="panel-title">市场主线观察<small>观察当前强势分类与持仓集中度，不预测市场</small></div>
+        <div class="etf-pool-fit-head">
+          <div class="etf-pool-fit-status ${esc(status)}"><span>${statusIcon}</span>${statusText}</div>
+          <div><b>${esc(fit.dominant_category || "—")}</b><span>当前主导分类</span></div>
+          <div><b>${fmtPct(fit.holding_concentration_pct, false)}</b><span>持仓集中度</span></div>
+          <div><b>${fit.trend_ok_count || 0}/${fit.pool_count || 0}</b><span>站上MA120</span></div>
+        </div>
+        <div class="etf-pool-fit-grid">
+          <div><span>Top5分类集中度</span><b>${fmtPct(fit.top5_concentration_pct, false)}</b></div>
+          <div><span>活跃分类</span><b>${(fit.active_categories || []).map(esc).join("、") || "—"}</b></div>
+          <div><span>观察结论</span><b>${esc(fit.explanation || "仅作观察，不代表后续行情判断。")}</b></div>
+        </div>
+        ${cats.length ? `<div class="etf-pool-fit-cats">${cats.map((c) => `<span><b>${esc(c.category)}</b> 均分 ${fmtNum(c.avg_score, 2)} · 趋势 ${c.trend_ok_count || 0}/${c.pool_count || 0} · 持仓 ${fmtPct(c.holding_weight_pct || 0, false)}</span>`).join("")}</div>` : ""}
+        ${hints.length ? `<div class="etf-pool-fit-hints">${hints.map((h) => `<div>${esc(h)}</div>`).join("")}</div>` : ""}
       </div>
     `;
   }
@@ -128,7 +160,8 @@
 
   function renderLastYearBacktest() {
     const c = payload.comparisons || {};
-    const holding3 = c.holding3 || c.top3 || ((payload.metrics || {}).last_year) || {};
+    const m = payload.metrics || {};
+    const holding3 = c.holding3 || c.top3 || m.last_year || {};
     function block(label, ly) {
       return `<div>
         <span>${label}</span>
@@ -138,9 +171,9 @@
     }
     return `
       <div class="panel etf-last-year-card">
-        <div class="panel-title">最近一年回测<small>${esc(holding3.start_date || "—")} → ${esc(holding3.end_date || "—")} · 收益继续投入</small></div>
+        <div class="panel-title">回测概览<small>本金 ${fmtNum(holding3.initial || m.initial, 2)} · ${esc(holding3.start_date || "—")} → ${esc(holding3.end_date || "—")} · [回测]首次建仓 ${esc(m.first_entry_date || "—")} · 收益继续投入</small></div>
         <div class="etf-backtest-numbers compare">
-          ${block("持仓3支收益率", holding3)}
+          ${block("持仓3支回测收益率", holding3)}
         </div>
       </div>
     `;
@@ -261,7 +294,7 @@
       legend: { top: 4, textStyle: { color: "#7d8aa6" }, data: ["组合净值", "回撤"] },
       grid: [{ left: 60, right: 24, top: 36, height: 230 }, { left: 60, right: 24, top: 300, height: 90 }],
       xAxis: [{ type: "category", data: dates, axisLabel: { color: "#7d8aa6", hideOverlap: true }, axisLine: { lineStyle: { color: "#1d2942" } } }, { type: "category", data: dates, gridIndex: 1, axisLabel: { color: "#7d8aa6", hideOverlap: true }, axisLine: { lineStyle: { color: "#1d2942" } } }],
-      yAxis: [{ scale: true, axisLabel: { color: "#7d8aa6" }, splitLine: { lineStyle: { color: "rgba(29,41,66,0.6)" } } }, { gridIndex: 1, axisLabel: { color: "#7d8aa6", formatter: "{value}%" }, splitLine: { lineStyle: { color: "rgba(29,41,66,0.6)" } } }],
+      yAxis: [{ scale: true, axisLabel: { color: "#7d8aa6", formatter: (value) => { const initial = Number((payload.metrics || {}).initial || 10000); const pct = initial > 0 ? (Number(value) / initial - 1) * 100 : 0; return `${Number(value).toFixed(0)}\n${pct >= 0 ? "+" : ""}${pct.toFixed(0)}%`; } }, splitLine: { lineStyle: { color: "rgba(29,41,66,0.6)" } } }, { gridIndex: 1, axisLabel: { color: "#7d8aa6", formatter: "{value}%" }, splitLine: { lineStyle: { color: "rgba(29,41,66,0.6)" } } }],
       series: [
         { name: "组合净值", type: "line", data: curve.map((x) => x.equity), smooth: true, symbol: "none", lineStyle: { color: "#25d4f2", width: 2 } },
         { name: "回撤", type: "line", xAxisIndex: 1, yAxisIndex: 1, data: curve.map((x) => -x.drawdown_pct), smooth: true, symbol: "none", areaStyle: { color: "rgba(25,210,122,0.12)" }, lineStyle: { color: "#19d27a", width: 1.5 } },
@@ -297,15 +330,23 @@
     }
     host.innerHTML = `
       ${renderExplain()}
-      ${renderPool()}
+
+      ${renderSection("实际运行", "个人持仓、收益与操作建议")}
       ${renderLivePortfolio()}
       ${renderLivePositions()}
-      ${renderLastYearBacktest()}
-      ${renderContributionTable()}
       ${renderHoldings()}
-      <div class="panel"><div class="panel-title">组合净值与回撤</div><div id="etf-rotation-chart" style="width:100%;height:420px;background:#0b1220;border-radius:10px;"></div></div>
-      ${renderRanking()}
       ${renderLiveTradeLog()}
+
+      ${renderSection("策略部分", "ETF池与市场主线观察")}
+      ${renderPoolFit()}
+      ${renderPool()}
+      ${renderRanking()}
+
+      ${renderSection("回测模块", "历史回测、净值回撤与调仓记录")}
+      ${renderLastYearBacktest()}
+      <div class="panel"><div class="panel-title">组合净值与回撤<small>左轴为本金净值/收益百分比，下方为回撤</small></div><div id="etf-rotation-chart" style="width:100%;height:420px;background:#0b1220;border-radius:10px;"></div></div>
+      ${renderContributionTable()}
+      ${renderRebalanceLog()}
       ${renderErrors()}
     `;
     mountChart();

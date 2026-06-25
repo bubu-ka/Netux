@@ -1,7 +1,7 @@
 {
   "component": "short_range",
   "title": "单支短线策略",
-  "updated_at": "2026-06-25 11:29:18",
+  "updated_at": "2026-06-25 15:49:47",
   "config": {
     "lookback_bars": 90,
     "metric_2w_bars": 10,

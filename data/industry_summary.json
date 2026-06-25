@@ -1,7 +1,7 @@
 {
   "component": "industry-summary",
   "title": "行业一览图",
-  "updated_at": "2026-06-25 11:29:03",
+  "updated_at": "2026-06-25 17:22:22",
   "source": "akshare.stock_board_industry_summary_ths",
   "columns": [
     "序号",

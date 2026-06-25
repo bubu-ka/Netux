@@ -1,7 +1,7 @@
 {
   "component": "range",
   "title": "单支波段策略",
-  "updated_at": "2026-06-25 11:29:16",
+  "updated_at": "2026-06-25 15:49:45",
   "config": {
     "lookback_bars": 380,
     "metric_1m_bars": 21,

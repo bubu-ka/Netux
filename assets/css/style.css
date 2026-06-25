@@ -1283,7 +1283,96 @@ table.tbl td.mono { font-family: ui-monospace, SFMono-Regular, "JetBrains Mono",
 }
 .wave-current b { color: var(--up); }
 
+.etf-pool-fit {
+  border-color: rgba(37,212,242,0.26);
+}
+.etf-pool-fit-head {
+  display: grid;
+  grid-template-columns: 1.1fr repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+.etf-pool-fit-head > div,
+.etf-pool-fit-grid > div {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(125,138,166,0.20);
+  background: rgba(11,18,32,0.32);
+}
+.etf-pool-fit-head b,
+.etf-pool-fit-grid b {
+  display: block;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 900;
+}
+.etf-pool-fit-head span,
+.etf-pool-fit-grid span {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-mute);
+  font-size: 11px;
+}
+.etf-pool-fit-status {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+}
+.etf-pool-fit-status span { margin-top: 0; font-size: 16px; }
+.etf-pool-fit-status.normal { color: var(--up); border-color: rgba(255,77,109,0.32); background: rgba(255,77,109,0.08); }
+.etf-pool-fit-status.watch { color: var(--warn); border-color: rgba(255,181,71,0.36); background: rgba(255,181,71,0.10); }
+.etf-pool-fit-status.warning { color: var(--down); border-color: rgba(25,210,122,0.34); background: rgba(25,210,122,0.10); }
+.etf-pool-fit-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr 2fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.etf-pool-fit-grid b {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.etf-pool-fit-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.etf-pool-fit-cats span {
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(37,212,242,0.22);
+  color: var(--text-dim);
+  background: rgba(37,212,242,0.07);
+  font-size: 11px;
+}
+.etf-pool-fit-cats b { color: var(--primary); }
+.etf-pool-fit-hints {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--text-mute);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.etf-pool-fit-hints div {
+  padding-left: 10px;
+  border-left: 2px solid rgba(255,181,71,0.45);
+}
+@media (max-width: 960px) {
+  .etf-pool-fit-head,
+  .etf-pool-fit-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== ETF轮动 ===== */
+.etf-section-divider {
+  height: 2px;
+  margin: 14px 0 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(37,212,242,0.78), rgba(91,140,255,0.55), rgba(37,212,242,0.78), transparent);
+  box-shadow: 0 0 10px rgba(37,212,242,0.16);
+}
 .etf-pool-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
