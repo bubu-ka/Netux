@@ -1,7 +1,7 @@
 {
   "component": "metrics",
   "title": "大盘",
-  "updated_at": "2026-06-24 20:05:00",
+  "updated_at": "2026-06-25 09:57:39",
   "source": "tickflow.klines (free tier)",
   "tier": "free",
   "total": 16,
