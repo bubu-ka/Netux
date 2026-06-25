@@ -1,7 +1,7 @@
 {
   "component": "etf_rotation",
   "title": "ETF轮动",
-  "updated_at": "2026-06-25 09:57:26",
+  "updated_at": "2026-06-25 11:29:03",
   "config": {
     "lookback_bars": 380,
     "top_n": 3,
@@ -16,11 +16,6 @@
     }
   },
   "pool": [
-    {
-      "category": "宽基",
-      "symbol": "510300.SH",
-      "name": "沪深300ETF"
-    },
     {
       "category": "宽基",
       "symbol": "510500.SH",
@@ -38,18 +33,8 @@
     },
     {
       "category": "宽基",
-      "symbol": "563300.SH",
-      "name": "中证2000"
-    },
-    {
-      "category": "宽基",
-      "symbol": "159845.SZ",
-      "name": "中证1000"
-    },
-    {
-      "category": "成长",
-      "symbol": "159995.SZ",
-      "name": "芯片ETF"
+      "symbol": "510300.SH",
+      "name": "沪深300"
     },
     {
       "category": "成长",
@@ -63,18 +48,8 @@
     },
     {
       "category": "成长",
-      "symbol": "159890.SZ",
-      "name": "云计算ETF"
-    },
-    {
-      "category": "成长",
       "symbol": "159796.SZ",
       "name": "电池ETF"
-    },
-    {
-      "category": "成长",
-      "symbol": "513310.SH",
-      "name": "中韩半导体ETF"
     },
     {
       "category": "周期",
@@ -92,14 +67,24 @@
       "name": "电网设备ETF"
     },
     {
+      "category": "金融",
+      "symbol": "512880.SH",
+      "name": "券商ETF"
+    },
+    {
       "category": "防御",
       "symbol": "518880.SH",
       "name": "黄金ETF"
     },
     {
       "category": "防御",
-      "symbol": "512800.SH",
-      "name": "银行ETF"
+      "symbol": "161226.SZ",
+      "name": "国投白银LOF"
+    },
+    {
+      "category": "防御",
+      "symbol": "515180.SH",
+      "name": "红利ETF"
     }
   ],
   "ranking": [
@@ -119,25 +104,7 @@
       "momentum_score": 90.47,
       "final_score": 58.48,
       "rank": 1,
-      "target_weight_pct": 31.06
-    },
-    {
-      "category": "成长",
-      "symbol": "513310.SH",
-      "name": "中韩半导体ETF",
-      "date": "2026-06-24",
-      "close": 6.309,
-      "ma120": 4.2133,
-      "trend_ok": true,
-      "r20_pct": 2.62,
-      "r60_pct": 62.27,
-      "r120_pct": 165.2,
-      "r250_pct": 297.29,
-      "vol20_pct": 72.16,
-      "momentum_score": 82.5,
-      "final_score": 46.41,
-      "rank": 2,
-      "target_weight_pct": 27.55
+      "target_weight_pct": 27.87
     },
     {
       "category": "成长",
@@ -154,26 +121,8 @@
       "vol20_pct": 48.02,
       "momentum_score": 58.77,
       "final_score": 34.76,
-      "rank": 3,
-      "target_weight_pct": 41.39
-    },
-    {
-      "category": "成长",
-      "symbol": "159995.SZ",
-      "name": "芯片ETF",
-      "date": "2026-06-24",
-      "close": 3.012,
-      "ma120": 2.0383,
-      "trend_ok": true,
-      "r20_pct": 11.27,
-      "r60_pct": 74.91,
-      "r120_pct": 80.9,
-      "r250_pct": 157.0,
-      "vol20_pct": 60.78,
-      "momentum_score": 58.86,
-      "final_score": 28.47,
-      "rank": 4,
-      "target_weight_pct": 0.0
+      "rank": 2,
+      "target_weight_pct": 37.14
     },
     {
       "category": "宽基",
@@ -190,8 +139,8 @@
       "vol20_pct": 50.99,
       "momentum_score": 39.51,
       "final_score": 14.02,
-      "rank": 5,
-      "target_weight_pct": 0.0
+      "rank": 3,
+      "target_weight_pct": 34.98
     },
     {
       "category": "周期",
@@ -208,7 +157,7 @@
       "vol20_pct": 34.6,
       "momentum_score": 28.1,
       "final_score": 10.8,
-      "rank": 6,
+      "rank": 4,
       "target_weight_pct": 0.0
     },
     {
@@ -226,7 +175,7 @@
       "vol20_pct": 40.21,
       "momentum_score": 28.91,
       "final_score": 8.8,
-      "rank": 7,
+      "rank": 5,
       "target_weight_pct": 0.0
     },
     {
@@ -244,7 +193,7 @@
       "vol20_pct": 27.68,
       "momentum_score": 15.91,
       "final_score": 2.06,
-      "rank": 8,
+      "rank": 6,
       "target_weight_pct": 0.0
     },
     {
@@ -262,49 +211,13 @@
       "vol20_pct": 52.99,
       "momentum_score": 28.01,
       "final_score": 1.52,
-      "rank": 9,
-      "target_weight_pct": 0.0
-    },
-    {
-      "category": "宽基",
-      "symbol": "563300.SH",
-      "name": "中证2000",
-      "date": "2026-06-24",
-      "close": 1.628,
-      "ma120": 1.511,
-      "trend_ok": true,
-      "r20_pct": 0.87,
-      "r60_pct": 13.37,
-      "r120_pct": 22.59,
-      "r250_pct": 44.45,
-      "vol20_pct": 26.3,
-      "momentum_score": 13.32,
-      "final_score": 0.17,
-      "rank": 10,
-      "target_weight_pct": 0.0
-    },
-    {
-      "category": "宽基",
-      "symbol": "159845.SZ",
-      "name": "中证1000",
-      "date": "2026-06-24",
-      "close": 3.638,
-      "ma120": 3.3951,
-      "trend_ok": true,
-      "r20_pct": 1.31,
-      "r60_pct": 13.94,
-      "r120_pct": 20.38,
-      "r250_pct": 43.62,
-      "vol20_pct": 26.27,
-      "momentum_score": 13.14,
-      "final_score": 0.01,
-      "rank": 11,
+      "rank": 7,
       "target_weight_pct": 0.0
     },
     {
       "category": "宽基",
       "symbol": "510300.SH",
-      "name": "沪深300ETF",
+      "name": "沪深300",
       "date": "2026-06-24",
       "close": 4.967,
       "ma120": 4.7422,
@@ -316,7 +229,7 @@
       "vol20_pct": 21.87,
       "momentum_score": 7.55,
       "final_score": -3.39,
-      "rank": 12,
+      "rank": 8,
       "target_weight_pct": 0.0
     },
     {
@@ -334,7 +247,7 @@
       "vol20_pct": 38.38,
       "momentum_score": 12.1,
       "final_score": -7.09,
-      "rank": 13,
+      "rank": 9,
       "target_weight_pct": 0.0
     },
     {
@@ -352,42 +265,42 @@
       "vol20_pct": 39.24,
       "momentum_score": 12.02,
       "final_score": -7.61,
-      "rank": 14,
-      "target_weight_pct": 0.0
-    },
-    {
-      "category": "成长",
-      "symbol": "159890.SZ",
-      "name": "云计算ETF",
-      "date": "2026-06-24",
-      "close": 1.78,
-      "ma120": 1.823,
-      "trend_ok": false,
-      "r20_pct": -4.71,
-      "r60_pct": 3.01,
-      "r120_pct": 8.21,
-      "r250_pct": 55.19,
-      "vol20_pct": 36.68,
-      "momentum_score": 6.18,
-      "final_score": -12.16,
-      "rank": null,
+      "rank": 10,
       "target_weight_pct": 0.0
     },
     {
       "category": "防御",
-      "symbol": "512800.SH",
-      "name": "银行ETF",
+      "symbol": "515180.SH",
+      "name": "红利ETF",
       "date": "2026-06-24",
-      "close": 0.761,
-      "ma120": 0.7903,
+      "close": 1.334,
+      "ma120": 1.4177,
       "trend_ok": false,
-      "r20_pct": -1.3,
-      "r60_pct": -4.16,
-      "r120_pct": -7.65,
-      "r250_pct": -8.63,
-      "vol20_pct": 20.32,
-      "momentum_score": -4.16,
-      "final_score": -14.32,
+      "r20_pct": -4.65,
+      "r60_pct": -6.65,
+      "r120_pct": -2.13,
+      "r250_pct": 1.77,
+      "vol20_pct": 17.08,
+      "momentum_score": -4.1,
+      "final_score": -12.64,
+      "rank": null,
+      "target_weight_pct": 0.0
+    },
+    {
+      "category": "金融",
+      "symbol": "512880.SH",
+      "name": "券商ETF",
+      "date": "2026-06-24",
+      "close": 1.111,
+      "ma120": 1.117,
+      "trend_ok": false,
+      "r20_pct": 5.21,
+      "r60_pct": 4.91,
+      "r120_pct": -8.26,
+      "r250_pct": 2.21,
+      "vol20_pct": 36.32,
+      "momentum_score": 2.13,
+      "final_score": -16.03,
       "rank": null,
       "target_weight_pct": 0.0
     },
@@ -413,26 +326,26 @@
   "current": {
     "date": "2026-06-24",
     "risk_mode": "normal",
-    "drawdown_pct": 0.0,
+    "drawdown_pct": 0.19,
     "target_exposure_pct": 100.0,
     "holdings": [
       {
         "symbol": "159695.SZ",
         "name": "通信ETF",
         "category": "成长",
-        "weight_pct": 41.39
+        "weight_pct": 37.14
+      },
+      {
+        "symbol": "588950.SH",
+        "name": "科创50",
+        "category": "宽基",
+        "weight_pct": 34.98
       },
       {
         "symbol": "562590.SH",
         "name": "半导体设备ETF",
         "category": "成长",
-        "weight_pct": 31.06
-      },
-      {
-        "symbol": "513310.SH",
-        "name": "中韩半导体ETF",
-        "category": "成长",
-        "weight_pct": 27.55
+        "weight_pct": 27.87
       }
     ]
   },
@@ -446,8 +359,8 @@
         "name": "半导体设备ETF",
         "category": "成长",
         "rank": 1,
-        "target_weight_pct": 31.06,
-        "entry_weight_pct": 9.32,
+        "target_weight_pct": 27.87,
+        "entry_weight_pct": 8.36,
         "final_score": 58.48,
         "vol20_pct": 63.99,
         "r5_pct": 19.21,
@@ -460,26 +373,12 @@
         ]
       },
       {
-        "symbol": "513310.SH",
-        "name": "中韩半导体ETF",
-        "category": "成长",
-        "rank": 2,
-        "target_weight_pct": 27.55,
-        "entry_weight_pct": 8.27,
-        "final_score": 46.41,
-        "vol20_pct": 72.16,
-        "r5_pct": 5.89,
-        "ma20_deviation_pct": 5.81,
-        "rsi6": 63.51,
-        "hot_reasons": []
-      },
-      {
         "symbol": "159695.SZ",
         "name": "通信ETF",
         "category": "成长",
-        "rank": 3,
-        "target_weight_pct": 41.39,
-        "entry_weight_pct": 12.42,
+        "rank": 2,
+        "target_weight_pct": 37.14,
+        "entry_weight_pct": 11.14,
         "final_score": 34.76,
         "vol20_pct": 48.02,
         "r5_pct": 4.43,
@@ -488,20 +387,38 @@
         "hot_reasons": [
           "RSI6=79.7过热"
         ]
+      },
+      {
+        "symbol": "588950.SH",
+        "name": "科创50",
+        "category": "宽基",
+        "rank": 3,
+        "target_weight_pct": 34.98,
+        "entry_weight_pct": 10.49,
+        "final_score": 14.02,
+        "vol20_pct": 50.99,
+        "r5_pct": 13.41,
+        "ma20_deviation_pct": 12.93,
+        "rsi6": 88.25,
+        "hot_reasons": [
+          "近5日涨幅13.41%偏高",
+          "较MA20偏离12.93%偏高",
+          "RSI6=88.3过热"
+        ]
       }
     ],
-    "target_exposure_pct": 100.0,
-    "entry_exposure_pct": 30.01,
-    "cash_weight_pct": 69.99,
+    "target_exposure_pct": 99.99,
+    "entry_exposure_pct": 29.99,
+    "cash_weight_pct": 70.01,
     "entry_level": "small",
-    "entry_note": "近5日涨幅19.21%偏高；较MA20偏离24.75%偏高；RSI6=99.2过热；RSI6=79.7过热"
+    "entry_note": "近5日涨幅19.21%偏高；较MA20偏离24.75%偏高；RSI6=99.2过热；RSI6=79.7过热；近5日涨幅13.41%偏高；较MA20偏离12.93%偏高；RSI6=88.3过热"
   },
   "live_portfolio": {
     "enabled": true,
     "start_date": "2026-06-24",
     "portfolio": {
       "version": 1,
-      "updated_at": "2026-06-25 09:57:26",
+      "updated_at": "2026-06-25 11:29:03",
       "start_date": "2026-06-24",
       "initial_capital": 100000.0,
       "cash": 100000.0,
@@ -522,52 +439,52 @@
     "tomorrow_plan": {
       "mode": "from_cash",
       "date": "2026-06-24",
-      "target_exposure_pct": 100.0,
-      "entry_exposure_pct": 30.01,
-      "cash_weight_pct": 69.99,
-      "entry_note": "近5日涨幅19.21%偏高；较MA20偏离24.75%偏高；RSI6=99.2过热；RSI6=79.7过热",
+      "target_exposure_pct": 99.99,
+      "entry_exposure_pct": 29.99,
+      "cash_weight_pct": 70.01,
+      "entry_note": "近5日涨幅19.21%偏高；较MA20偏离24.75%偏高；RSI6=99.2过热；RSI6=79.7过热；近5日涨幅13.41%偏高；较MA20偏离12.93%偏高；RSI6=88.3过热",
       "actions": [
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
           "action": "buy",
-          "amount": 9320.0,
-          "signed_amount": 9320.0,
+          "amount": 8360.0,
+          "signed_amount": 8360.0,
           "price": 3.518,
-          "shares": 2649,
-          "target_weight_pct": 31.06,
-          "entry_weight_pct": 9.32,
-          "summary": "半导体设备ETF 买入 9320元"
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "action": "buy",
-          "amount": 8270.0,
-          "signed_amount": 8270.0,
-          "price": 6.309,
-          "shares": 1310,
-          "target_weight_pct": 27.55,
-          "entry_weight_pct": 8.27,
-          "summary": "中韩半导体ETF 买入 8270元"
+          "shares": 2376,
+          "target_weight_pct": 27.87,
+          "entry_weight_pct": 8.36,
+          "summary": "半导体设备ETF 买入 8360元"
         },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
           "action": "buy",
-          "amount": 12420.0,
-          "signed_amount": 12420.0,
+          "amount": 11140.0,
+          "signed_amount": 11140.0,
           "price": 3.746,
-          "shares": 3315,
-          "target_weight_pct": 41.39,
-          "entry_weight_pct": 12.42,
-          "summary": "通信ETF 买入 12420元"
+          "shares": 2973,
+          "target_weight_pct": 37.14,
+          "entry_weight_pct": 11.14,
+          "summary": "通信ETF 买入 11140元"
+        },
+        {
+          "symbol": "588950.SH",
+          "name": "科创50",
+          "category": "宽基",
+          "action": "buy",
+          "amount": 10490.0,
+          "signed_amount": 10490.0,
+          "price": 2.072,
+          "shares": 5062,
+          "target_weight_pct": 34.98,
+          "entry_weight_pct": 10.49,
+          "summary": "科创50 买入 10490元"
         }
       ],
-      "summary": "半导体设备ETF 买入 9320元；中韩半导体ETF 买入 8270元；通信ETF 买入 12420元"
+      "summary": "半导体设备ETF 买入 8360元；通信ETF 买入 11140元；科创50 买入 10490元"
     }
   },
   "equity_curve": [
@@ -1643,628 +1560,628 @@
     },
     {
       "date": "2025-12-15",
-      "equity": 9836.96,
-      "drawdown_pct": 1.63
+      "equity": 9990.5,
+      "drawdown_pct": 0.1
     },
     {
       "date": "2025-12-16",
-      "equity": 9609.56,
-      "drawdown_pct": 3.9
+      "equity": 9845.33,
+      "drawdown_pct": 1.55
     },
     {
       "date": "2025-12-17",
-      "equity": 9843.39,
-      "drawdown_pct": 1.57
+      "equity": 10018.4,
+      "drawdown_pct": 0.0
     },
     {
       "date": "2025-12-18",
-      "equity": 9704.85,
-      "drawdown_pct": 2.95
+      "equity": 9947.23,
+      "drawdown_pct": 0.71
     },
     {
       "date": "2025-12-19",
-      "equity": 9725.08,
-      "drawdown_pct": 2.52
+      "equity": 9957.06,
+      "drawdown_pct": 0.53
     },
     {
       "date": "2025-12-22",
-      "equity": 9964.25,
-      "drawdown_pct": 0.36
+      "equity": 10201.94,
+      "drawdown_pct": 0.0
     },
     {
       "date": "2025-12-23",
-      "equity": 10044.39,
+      "equity": 10283.99,
       "drawdown_pct": 0.0
     },
     {
       "date": "2025-12-24",
-      "equity": 10102.2,
+      "equity": 10343.18,
       "drawdown_pct": 0.0
     },
     {
       "date": "2025-12-25",
-      "equity": 10044.18,
+      "equity": 10283.78,
       "drawdown_pct": 0.57
     },
     {
       "date": "2025-12-26",
-      "equity": 10162.92,
+      "equity": 10405.35,
       "drawdown_pct": 0.0
     },
     {
       "date": "2025-12-29",
-      "equity": 10031.54,
+      "equity": 10270.83,
       "drawdown_pct": 1.29
     },
     {
       "date": "2025-12-30",
-      "equity": 9970.37,
+      "equity": 10208.2,
       "drawdown_pct": 1.9
     },
     {
       "date": "2025-12-31",
-      "equity": 9933.41,
+      "equity": 10170.36,
       "drawdown_pct": 2.11
     },
     {
       "date": "2026-01-05",
-      "equity": 10111.05,
+      "equity": 10352.24,
       "drawdown_pct": 0.51
     },
     {
       "date": "2026-01-06",
-      "equity": 10406.14,
+      "equity": 10654.37,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-01-07",
-      "equity": 10472.31,
+      "equity": 10722.11,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-01-08",
-      "equity": 10358.17,
+      "equity": 10605.26,
       "drawdown_pct": 1.09
     },
     {
       "date": "2026-01-09",
-      "equity": 10484.79,
+      "equity": 10734.9,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-01-12",
-      "equity": 10776.32,
+      "equity": 11033.38,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-01-13",
-      "equity": 10522.81,
+      "equity": 10773.82,
       "drawdown_pct": 2.35
     },
     {
       "date": "2026-01-14",
-      "equity": 10563.52,
+      "equity": 10815.51,
       "drawdown_pct": 1.97
     },
     {
       "date": "2026-01-15",
-      "equity": 10827.69,
+      "equity": 11085.98,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-01-16",
-      "equity": 10818.28,
+      "equity": 11087.76,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-01-19",
-      "equity": 10827.1,
-      "drawdown_pct": 0.03
+      "equity": 11029.06,
+      "drawdown_pct": 0.54
     },
     {
       "date": "2026-01-20",
-      "equity": 10675.36,
-      "drawdown_pct": 1.43
+      "equity": 10846.28,
+      "drawdown_pct": 2.19
     },
     {
       "date": "2026-01-21",
-      "equity": 10919.85,
-      "drawdown_pct": 0.0
+      "equity": 10992.51,
+      "drawdown_pct": 0.87
     },
     {
       "date": "2026-01-22",
-      "equity": 10890.94,
-      "drawdown_pct": 0.26
+      "equity": 11018.01,
+      "drawdown_pct": 0.64
     },
     {
       "date": "2026-01-23",
-      "equity": 11052.13,
+      "equity": 11223.72,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-01-26",
-      "equity": 11149.35,
-      "drawdown_pct": 0.0
+      "equity": 11203.65,
+      "drawdown_pct": 0.32
     },
     {
       "date": "2026-01-27",
-      "equity": 11129.16,
-      "drawdown_pct": 0.18
+      "equity": 11139.51,
+      "drawdown_pct": 0.89
     },
     {
       "date": "2026-01-28",
-      "equity": 11552.33,
+      "equity": 11416.93,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-01-29",
-      "equity": 11497.5,
-      "drawdown_pct": 0.47
+      "equity": 11229.94,
+      "drawdown_pct": 1.64
     },
     {
       "date": "2026-01-30",
-      "equity": 11215.4,
-      "drawdown_pct": 2.81
+      "equity": 10896.77,
+      "drawdown_pct": 4.46
     },
     {
       "date": "2026-02-02",
-      "equity": 10520.02,
-      "drawdown_pct": 8.94
+      "equity": 10324.43,
+      "drawdown_pct": 9.57
     },
     {
       "date": "2026-02-03",
-      "equity": 11026.43,
-      "drawdown_pct": 4.55
+      "equity": 10737.89,
+      "drawdown_pct": 5.95
     },
     {
       "date": "2026-02-04",
-      "equity": 10928.04,
-      "drawdown_pct": 5.4
+      "equity": 10683.33,
+      "drawdown_pct": 6.43
     },
     {
       "date": "2026-02-05",
-      "equity": 10610.8,
-      "drawdown_pct": 8.15
+      "equity": 10385.94,
+      "drawdown_pct": 9.03
     },
     {
       "date": "2026-02-06",
-      "equity": 10694.87,
-      "drawdown_pct": 7.3
+      "equity": 10493.84,
+      "drawdown_pct": 7.9
     },
     {
       "date": "2026-02-09",
-      "equity": 11113.8,
-      "drawdown_pct": 3.8
+      "equity": 10856.63,
+      "drawdown_pct": 4.91
     },
     {
       "date": "2026-02-10",
-      "equity": 11107.69,
-      "drawdown_pct": 3.85
+      "equity": 10873.53,
+      "drawdown_pct": 4.76
     },
     {
       "date": "2026-02-11",
-      "equity": 10989.05,
-      "drawdown_pct": 4.88
+      "equity": 10780.2,
+      "drawdown_pct": 5.58
     },
     {
       "date": "2026-02-12",
-      "equity": 11281.72,
-      "drawdown_pct": 2.34
+      "equity": 10981.8,
+      "drawdown_pct": 3.81
     },
     {
       "date": "2026-02-13",
-      "equity": 11133.53,
-      "drawdown_pct": 3.5
+      "equity": 10853.13,
+      "drawdown_pct": 4.92
     },
     {
       "date": "2026-02-24",
-      "equity": 11511.42,
-      "drawdown_pct": 0.35
+      "equity": 11136.76,
+      "drawdown_pct": 2.45
     },
     {
       "date": "2026-02-25",
-      "equity": 11814.93,
-      "drawdown_pct": 0.0
+      "equity": 11322.46,
+      "drawdown_pct": 0.83
     },
     {
       "date": "2026-02-26",
-      "equity": 12243.1,
+      "equity": 11571.98,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-02-27",
-      "equity": 12064.72,
-      "drawdown_pct": 1.33
+      "equity": 11443.79,
+      "drawdown_pct": 1.0
     },
     {
       "date": "2026-03-02",
-      "equity": 12085.35,
-      "drawdown_pct": 1.29
+      "equity": 11596.22,
+      "drawdown_pct": 0.0
     },
     {
       "date": "2026-03-03",
-      "equity": 11382.38,
-      "drawdown_pct": 7.03
+      "equity": 11058.06,
+      "drawdown_pct": 4.64
     },
     {
       "date": "2026-03-04",
-      "equity": 11581.12,
-      "drawdown_pct": 5.41
+      "equity": 11183.01,
+      "drawdown_pct": 3.56
     },
     {
       "date": "2026-03-05",
-      "equity": 11993.24,
-      "drawdown_pct": 2.04
+      "equity": 11426.96,
+      "drawdown_pct": 1.46
     },
     {
       "date": "2026-03-06",
-      "equity": 11989.25,
-      "drawdown_pct": 1.96
+      "equity": 11361.88,
+      "drawdown_pct": 1.82
     },
     {
       "date": "2026-03-09",
-      "equity": 11890.93,
-      "drawdown_pct": 2.88
+      "equity": 11238.64,
+      "drawdown_pct": 3.08
     },
     {
       "date": "2026-03-10",
-      "equity": 11972.94,
-      "drawdown_pct": 2.21
+      "equity": 11331.37,
+      "drawdown_pct": 2.28
     },
     {
       "date": "2026-03-11",
-      "equity": 12017.35,
-      "drawdown_pct": 1.84
+      "equity": 11361.78,
+      "drawdown_pct": 2.02
     },
     {
       "date": "2026-03-12",
-      "equity": 11916.47,
-      "drawdown_pct": 2.67
+      "equity": 11235.51,
+      "drawdown_pct": 3.11
     },
     {
       "date": "2026-03-13",
-      "equity": 11757.28,
-      "drawdown_pct": 3.95
+      "equity": 11069.59,
+      "drawdown_pct": 4.43
     },
     {
       "date": "2026-03-16",
-      "equity": 11539.01,
-      "drawdown_pct": 5.75
+      "equity": 10808.33,
+      "drawdown_pct": 6.79
     },
     {
       "date": "2026-03-17",
-      "equity": 11198.17,
-      "drawdown_pct": 8.53
+      "equity": 10599.37,
+      "drawdown_pct": 8.6
     },
     {
       "date": "2026-03-18",
-      "equity": 11345.95,
-      "drawdown_pct": 7.33
+      "equity": 10633.91,
+      "drawdown_pct": 8.3
     },
     {
       "date": "2026-03-19",
-      "equity": 10957.52,
-      "drawdown_pct": 10.5
+      "equity": 10205.32,
+      "drawdown_pct": 11.99
     },
     {
       "date": "2026-03-20",
-      "equity": 10778.38,
-      "drawdown_pct": 11.84
+      "equity": 10010.44,
+      "drawdown_pct": 13.51
     },
     {
       "date": "2026-03-23",
-      "equity": 10544.03,
-      "drawdown_pct": 13.88
+      "equity": 9841.15,
+      "drawdown_pct": 15.13
     },
     {
       "date": "2026-03-24",
-      "equity": 10681.31,
-      "drawdown_pct": 12.76
+      "equity": 9911.36,
+      "drawdown_pct": 14.53
     },
     {
       "date": "2026-03-25",
-      "equity": 10844.73,
-      "drawdown_pct": 11.42
+      "equity": 10047.28,
+      "drawdown_pct": 13.36
     },
     {
       "date": "2026-03-26",
-      "equity": 10715.05,
-      "drawdown_pct": 12.48
+      "equity": 9962.09,
+      "drawdown_pct": 14.09
     },
     {
       "date": "2026-03-27",
-      "equity": 10722.5,
-      "drawdown_pct": 12.36
+      "equity": 9976.71,
+      "drawdown_pct": 13.86
     },
     {
       "date": "2026-03-30",
-      "equity": 10684.34,
-      "drawdown_pct": 12.73
+      "equity": 9993.16,
+      "drawdown_pct": 13.82
     },
     {
       "date": "2026-03-31",
-      "equity": 10486.37,
-      "drawdown_pct": 14.35
+      "equity": 9890.36,
+      "drawdown_pct": 14.71
     },
     {
       "date": "2026-04-01",
-      "equity": 10549.4,
-      "drawdown_pct": 13.83
+      "equity": 9898.1,
+      "drawdown_pct": 14.64
     },
     {
       "date": "2026-04-02",
-      "equity": 10415.56,
-      "drawdown_pct": 14.93
+      "equity": 9852.14,
+      "drawdown_pct": 15.04
     },
     {
       "date": "2026-04-03",
-      "equity": 10323.22,
-      "drawdown_pct": 15.62
+      "equity": 9770.19,
+      "drawdown_pct": 15.68
     },
     {
       "date": "2026-04-07",
-      "equity": 10323.22,
-      "drawdown_pct": 15.68
+      "equity": 9770.19,
+      "drawdown_pct": 15.75
     },
     {
       "date": "2026-04-08",
-      "equity": 10323.22,
-      "drawdown_pct": 15.68
+      "equity": 9770.19,
+      "drawdown_pct": 15.75
     },
     {
       "date": "2026-04-09",
-      "equity": 10323.22,
-      "drawdown_pct": 15.68
+      "equity": 9770.19,
+      "drawdown_pct": 15.75
     },
     {
       "date": "2026-04-10",
-      "equity": 10323.22,
-      "drawdown_pct": 15.68
+      "equity": 9770.19,
+      "drawdown_pct": 15.75
     },
     {
       "date": "2026-04-13",
-      "equity": 10323.22,
-      "drawdown_pct": 15.68
+      "equity": 9770.19,
+      "drawdown_pct": 15.75
     },
     {
       "date": "2026-04-14",
-      "equity": 10323.22,
-      "drawdown_pct": 15.68
+      "equity": 9770.19,
+      "drawdown_pct": 15.75
     },
     {
       "date": "2026-04-15",
-      "equity": 10323.22,
-      "drawdown_pct": 15.68
+      "equity": 9770.19,
+      "drawdown_pct": 15.75
     },
     {
       "date": "2026-04-16",
-      "equity": 10323.22,
-      "drawdown_pct": 15.68
+      "equity": 9770.19,
+      "drawdown_pct": 15.75
     },
     {
       "date": "2026-04-17",
-      "equity": 10307.73,
+      "equity": 9755.54,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-04-20",
-      "equity": 10526.13,
+      "equity": 9962.24,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-04-21",
-      "equity": 10492.97,
+      "equity": 9930.85,
       "drawdown_pct": 0.32
     },
     {
       "date": "2026-04-22",
-      "equity": 10758.5,
+      "equity": 10182.16,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-04-23",
-      "equity": 10580.35,
+      "equity": 10013.55,
       "drawdown_pct": 1.66
     },
     {
       "date": "2026-04-24",
-      "equity": 10493.3,
+      "equity": 9940.0,
       "drawdown_pct": 2.37
     },
     {
       "date": "2026-04-27",
-      "equity": 10721.35,
-      "drawdown_pct": 0.35
+      "equity": 9949.16,
+      "drawdown_pct": 2.29
     },
     {
       "date": "2026-04-28",
-      "equity": 10549.7,
-      "drawdown_pct": 1.94
+      "equity": 9730.53,
+      "drawdown_pct": 4.44
     },
     {
       "date": "2026-04-29",
-      "equity": 10582.75,
-      "drawdown_pct": 1.63
+      "equity": 9979.0,
+      "drawdown_pct": 2.0
     },
     {
       "date": "2026-04-30",
-      "equity": 10585.72,
-      "drawdown_pct": 1.48
+      "equity": 9940.67,
+      "drawdown_pct": 2.24
     },
     {
       "date": "2026-05-06",
-      "equity": 11097.73,
-      "drawdown_pct": 0.0
+      "equity": 10157.88,
+      "drawdown_pct": 0.24
     },
     {
       "date": "2026-05-07",
-      "equity": 11490.02,
-      "drawdown_pct": 0.0
+      "equity": 10130.89,
+      "drawdown_pct": 0.5
     },
     {
       "date": "2026-05-08",
-      "equity": 11530.23,
-      "drawdown_pct": 0.0
+      "equity": 10047.01,
+      "drawdown_pct": 1.19
     },
     {
       "date": "2026-05-11",
-      "equity": 12267.61,
+      "equity": 10451.59,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-05-12",
-      "equity": 12381.24,
+      "equity": 10493.25,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-05-13",
-      "equity": 12966.5,
+      "equity": 10719.12,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-05-14",
-      "equity": 12905.34,
-      "drawdown_pct": 0.47
+      "equity": 10492.26,
+      "drawdown_pct": 2.12
     },
     {
       "date": "2026-05-15",
-      "equity": 12840.19,
-      "drawdown_pct": 0.97
+      "equity": 10422.98,
+      "drawdown_pct": 2.64
     },
     {
       "date": "2026-05-18",
-      "equity": 12820.81,
-      "drawdown_pct": 1.12
+      "equity": 10464.16,
+      "drawdown_pct": 2.38
     },
     {
       "date": "2026-05-19",
-      "equity": 12893.72,
-      "drawdown_pct": 0.56
+      "equity": 10618.23,
+      "drawdown_pct": 0.94
     },
     {
       "date": "2026-05-20",
-      "equity": 13175.6,
+      "equity": 10784.98,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-05-21",
-      "equity": 12787.41,
-      "drawdown_pct": 2.95
+      "equity": 10360.03,
+      "drawdown_pct": 3.94
     },
     {
       "date": "2026-05-22",
-      "equity": 13064.68,
-      "drawdown_pct": 0.84
+      "equity": 10602.92,
+      "drawdown_pct": 1.56
     },
     {
       "date": "2026-05-25",
-      "equity": 13637.98,
+      "equity": 11095.85,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-05-26",
-      "equity": 13489.58,
-      "drawdown_pct": 1.09
+      "equity": 10902.43,
+      "drawdown_pct": 1.74
     },
     {
       "date": "2026-05-27",
-      "equity": 13445.39,
-      "drawdown_pct": 1.41
+      "equity": 10644.48,
+      "drawdown_pct": 4.07
     },
     {
       "date": "2026-05-28",
-      "equity": 13538.73,
-      "drawdown_pct": 0.73
+      "equity": 10906.55,
+      "drawdown_pct": 1.71
     },
     {
       "date": "2026-05-29",
-      "equity": 13113.59,
-      "drawdown_pct": 3.83
+      "equity": 10456.52,
+      "drawdown_pct": 5.63
     },
     {
       "date": "2026-06-01",
-      "equity": 12614.21,
-      "drawdown_pct": 7.51
+      "equity": 10109.91,
+      "drawdown_pct": 8.89
     },
     {
       "date": "2026-06-02",
-      "equity": 13058.52,
-      "drawdown_pct": 4.25
+      "equity": 10457.07,
+      "drawdown_pct": 5.76
     },
     {
       "date": "2026-06-03",
-      "equity": 13519.02,
-      "drawdown_pct": 0.87
+      "equity": 10749.07,
+      "drawdown_pct": 3.13
     },
     {
       "date": "2026-06-04",
-      "equity": 13614.48,
-      "drawdown_pct": 0.17
+      "equity": 10794.75,
+      "drawdown_pct": 2.71
     },
     {
       "date": "2026-06-05",
-      "equity": 13227.97,
-      "drawdown_pct": 3.0
+      "equity": 10534.92,
+      "drawdown_pct": 5.05
     },
     {
       "date": "2026-06-08",
-      "equity": 12668.48,
-      "drawdown_pct": 7.11
+      "equity": 10154.29,
+      "drawdown_pct": 8.49
     },
     {
       "date": "2026-06-09",
-      "equity": 13587.58,
-      "drawdown_pct": 0.37
+      "equity": 10679.47,
+      "drawdown_pct": 3.75
     },
     {
       "date": "2026-06-10",
-      "equity": 13360.46,
-      "drawdown_pct": 2.03
+      "equity": 10503.07,
+      "drawdown_pct": 5.34
     },
     {
       "date": "2026-06-11",
-      "equity": 13515.24,
-      "drawdown_pct": 0.9
+      "equity": 10528.32,
+      "drawdown_pct": 5.11
     },
     {
       "date": "2026-06-12",
-      "equity": 13371.4,
-      "drawdown_pct": 1.95
+      "equity": 10448.33,
+      "drawdown_pct": 5.83
     },
     {
       "date": "2026-06-15",
-      "equity": 14110.35,
-      "drawdown_pct": 0.0
+      "equity": 10995.41,
+      "drawdown_pct": 0.91
     },
     {
       "date": "2026-06-16",
-      "equity": 14320.27,
+      "equity": 11211.98,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-06-17",
-      "equity": 14852.41,
+      "equity": 11525.81,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-06-18",
-      "equity": 15218.34,
+      "equity": 11780.51,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-06-22",
-      "equity": 15580.69,
+      "equity": 12075.96,
       "drawdown_pct": 0.0
     },
     {
       "date": "2026-06-23",
-      "equity": 15141.23,
-      "drawdown_pct": 2.82
+      "equity": 11774.73,
+      "drawdown_pct": 2.49
     },
     {
       "date": "2026-06-24",
-      "equity": 15646.36,
-      "drawdown_pct": 0.0
+      "equity": 12037.5,
+      "drawdown_pct": 0.19
     }
   ],
   "rebalance_log": [
@@ -2354,25 +2271,25 @@
       "risk_mode": "normal",
       "drawdown_pct": 0.0,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 76.29,
+      "turnover_pct": 7.64,
       "holdings": [
+        {
+          "symbol": "159695.SZ",
+          "name": "通信ETF",
+          "category": "成长",
+          "weight_pct": 39.99
+        },
         {
           "symbol": "159608.SZ",
           "name": "稀有金属ETF",
           "category": "周期",
-          "weight_pct": 44.35
+          "weight_pct": 36.79
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 28.0
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 27.65
+          "weight_pct": 23.22
         }
       ]
     },
@@ -2381,248 +2298,248 @@
       "risk_mode": "normal",
       "drawdown_pct": 0.0,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 94.44,
+      "turnover_pct": 93.14,
       "holdings": [
         {
           "symbol": "159870.SZ",
           "name": "化工ETF",
           "category": "周期",
-          "weight_pct": 47.22
+          "weight_pct": 46.57
         },
         {
           "symbol": "159608.SZ",
           "name": "稀有金属ETF",
           "category": "周期",
-          "weight_pct": 32.21
+          "weight_pct": 31.77
         },
         {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
+          "symbol": "562590.SH",
+          "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 20.57
+          "weight_pct": 21.67
         }
       ]
     },
     {
       "date": "2026-01-30",
       "risk_mode": "normal",
-      "drawdown_pct": 2.81,
+      "drawdown_pct": 4.46,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 70.49,
+      "turnover_pct": 67.7,
       "holdings": [
         {
           "symbol": "159870.SZ",
           "name": "化工ETF",
           "category": "周期",
-          "weight_pct": 45.48
+          "weight_pct": 43.68
         },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 35.25
+          "weight_pct": 33.85
         },
         {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 19.28
+          "symbol": "159608.SZ",
+          "name": "稀有金属ETF",
+          "category": "周期",
+          "weight_pct": 22.47
         }
       ]
     },
     {
       "date": "2026-02-06",
       "risk_mode": "normal",
-      "drawdown_pct": 7.3,
+      "drawdown_pct": 7.9,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 90.95,
+      "turnover_pct": 132.3,
       "holdings": [
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 41.64
+          "weight_pct": 37.86
         },
         {
           "symbol": "159326.SZ",
           "name": "电网设备ETF",
           "category": "周期",
-          "weight_pct": 36.16
+          "weight_pct": 32.88
         },
         {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
+          "symbol": "562590.SH",
+          "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 22.2
+          "weight_pct": 29.26
         }
       ]
     },
     {
       "date": "2026-02-13",
       "risk_mode": "normal",
-      "drawdown_pct": 3.5,
+      "drawdown_pct": 4.92,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 84.69,
+      "turnover_pct": 12.09,
       "holdings": [
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 42.21
+          "weight_pct": 35.31
+        },
+        {
+          "symbol": "159695.SZ",
+          "name": "通信ETF",
+          "category": "成长",
+          "weight_pct": 35.03
         },
         {
           "symbol": "159326.SZ",
           "name": "电网设备ETF",
           "category": "周期",
-          "weight_pct": 35.45
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 22.34
+          "weight_pct": 29.66
         }
       ]
     },
     {
       "date": "2026-02-27",
       "risk_mode": "normal",
-      "drawdown_pct": 1.33,
+      "drawdown_pct": 1.0,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 84.42,
+      "turnover_pct": 70.62,
       "holdings": [
         {
           "symbol": "159326.SZ",
           "name": "电网设备ETF",
           "category": "周期",
-          "weight_pct": 47.76
+          "weight_pct": 38.25
+        },
+        {
+          "symbol": "159695.SZ",
+          "name": "通信ETF",
+          "category": "成长",
+          "weight_pct": 37.8
         },
         {
           "symbol": "159608.SZ",
           "name": "稀有金属ETF",
           "category": "周期",
-          "weight_pct": 29.91
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 22.33
+          "weight_pct": 23.95
         }
       ]
     },
     {
       "date": "2026-03-06",
       "risk_mode": "normal",
-      "drawdown_pct": 1.96,
+      "drawdown_pct": 1.82,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 79.9,
+      "turnover_pct": 134.67,
       "holdings": [
+        {
+          "symbol": "562590.SH",
+          "name": "半导体设备ETF",
+          "category": "成长",
+          "weight_pct": 35.17
+        },
         {
           "symbol": "159326.SZ",
           "name": "电网设备ETF",
           "category": "周期",
-          "weight_pct": 40.57
+          "weight_pct": 32.67
         },
         {
           "symbol": "159870.SZ",
           "name": "化工ETF",
           "category": "周期",
-          "weight_pct": 39.95
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 19.48
+          "weight_pct": 32.16
         }
       ]
     },
     {
       "date": "2026-03-13",
       "risk_mode": "normal",
-      "drawdown_pct": 3.95,
+      "drawdown_pct": 4.43,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 11.52,
+      "turnover_pct": 79.96,
       "holdings": [
         {
           "symbol": "159870.SZ",
           "name": "化工ETF",
           "category": "周期",
-          "weight_pct": 45.71
+          "weight_pct": 36.24
+        },
+        {
+          "symbol": "518880.SH",
+          "name": "黄金ETF",
+          "category": "防御",
+          "weight_pct": 35.91
         },
         {
           "symbol": "159326.SZ",
           "name": "电网设备ETF",
           "category": "周期",
-          "weight_pct": 35.14
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 19.15
+          "weight_pct": 27.86
         }
       ]
     },
     {
       "date": "2026-03-20",
       "risk_mode": "half",
-      "drawdown_pct": 11.84,
+      "drawdown_pct": 13.51,
       "target_exposure_pct": 50.0,
-      "turnover_pct": 91.12,
+      "turnover_pct": 123.7,
       "holdings": [
+        {
+          "symbol": "159915.SZ",
+          "name": "创业板ETF",
+          "category": "宽基",
+          "weight_pct": 22.25
+        },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 20.56
+          "weight_pct": 14.6
         },
         {
           "symbol": "159326.SZ",
           "name": "电网设备ETF",
           "category": "周期",
-          "weight_pct": 18.51
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 10.93
+          "weight_pct": 13.15
         }
       ]
     },
     {
       "date": "2026-03-27",
       "risk_mode": "half",
-      "drawdown_pct": 12.36,
+      "drawdown_pct": 13.86,
       "target_exposure_pct": 50.0,
-      "turnover_pct": 45.93,
+      "turnover_pct": 79.0,
       "holdings": [
+        {
+          "symbol": "515180.SH",
+          "name": "红利ETF",
+          "category": "防御",
+          "weight_pct": 25.0
+        },
         {
           "symbol": "159796.SZ",
           "name": "电池ETF",
           "category": "成长",
-          "weight_pct": 22.97
+          "weight_pct": 14.5
         },
         {
           "symbol": "159326.SZ",
           "name": "电网设备ETF",
           "category": "周期",
-          "weight_pct": 16.64
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 10.39
+          "weight_pct": 10.5
         }
       ]
     },
     {
       "date": "2026-04-03",
       "risk_mode": "cash",
-      "drawdown_pct": 15.62,
+      "drawdown_pct": 15.68,
       "target_exposure_pct": 0.0,
       "turnover_pct": 50.0,
       "holdings": []
@@ -2630,7 +2547,7 @@
     {
       "date": "2026-04-10",
       "risk_mode": "cash",
-      "drawdown_pct": 15.68,
+      "drawdown_pct": 15.75,
       "target_exposure_pct": 0.0,
       "turnover_pct": 0,
       "holdings": []
@@ -2667,214 +2584,214 @@
       "risk_mode": "normal",
       "drawdown_pct": 2.37,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 62.54,
+      "turnover_pct": 3.28,
       "holdings": [
         {
           "symbol": "159326.SZ",
           "name": "电网设备ETF",
           "category": "周期",
-          "weight_pct": 43.79
+          "weight_pct": 40.07
+        },
+        {
+          "symbol": "159608.SZ",
+          "name": "稀有金属ETF",
+          "category": "周期",
+          "weight_pct": 30.04
         },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 32.67
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 23.54
+          "weight_pct": 29.9
         }
       ]
     },
     {
       "date": "2026-04-30",
       "risk_mode": "normal",
-      "drawdown_pct": 1.48,
+      "drawdown_pct": 2.24,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 87.58,
+      "turnover_pct": 90.41,
       "holdings": [
+        {
+          "symbol": "159870.SZ",
+          "name": "化工ETF",
+          "category": "周期",
+          "weight_pct": 45.21
+        },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 38.08
+          "weight_pct": 28.84
         },
         {
           "symbol": "159608.SZ",
           "name": "稀有金属ETF",
           "category": "周期",
-          "weight_pct": 34.27
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 27.65
+          "weight_pct": 25.95
         }
       ]
     },
     {
       "date": "2026-05-08",
       "risk_mode": "normal",
-      "drawdown_pct": 0.0,
+      "drawdown_pct": 1.19,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 72.57,
+      "turnover_pct": 90.41,
       "holdings": [
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 38.25
+          "weight_pct": 35.04
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 36.12
+          "weight_pct": 33.08
         },
         {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 25.63
+          "symbol": "159608.SZ",
+          "name": "稀有金属ETF",
+          "category": "周期",
+          "weight_pct": 31.88
         }
       ]
     },
     {
       "date": "2026-05-15",
       "risk_mode": "normal",
-      "drawdown_pct": 0.97,
+      "drawdown_pct": 2.64,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 4.96,
+      "turnover_pct": 83.37,
       "holdings": [
+        {
+          "symbol": "159915.SZ",
+          "name": "创业板ETF",
+          "category": "宽基",
+          "weight_pct": 41.69
+        },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 40.53
+          "weight_pct": 30.75
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 36.32
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 23.15
+          "weight_pct": 27.56
         }
       ]
     },
     {
       "date": "2026-05-22",
       "risk_mode": "normal",
-      "drawdown_pct": 0.84,
+      "drawdown_pct": 1.56,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 2.32,
+      "turnover_pct": 83.37,
       "holdings": [
+        {
+          "symbol": "588950.SH",
+          "name": "科创50",
+          "category": "宽基",
+          "weight_pct": 35.48
+        },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 41.69
+          "weight_pct": 34.98
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 35.19
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 23.13
+          "weight_pct": 29.53
         }
       ]
     },
     {
       "date": "2026-05-29",
       "risk_mode": "normal",
-      "drawdown_pct": 3.83,
+      "drawdown_pct": 5.63,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 9.36,
+      "turnover_pct": 90.79,
       "holdings": [
+        {
+          "symbol": "159915.SZ",
+          "name": "创业板ETF",
+          "category": "宽基",
+          "weight_pct": 45.39
+        },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 46.37
+          "weight_pct": 32.69
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 31.08
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 22.56
+          "weight_pct": 21.91
         }
       ]
     },
     {
       "date": "2026-06-05",
       "risk_mode": "normal",
-      "drawdown_pct": 3.0,
+      "drawdown_pct": 5.05,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 5.43,
+      "turnover_pct": 1.5,
       "holdings": [
+        {
+          "symbol": "159915.SZ",
+          "name": "创业板ETF",
+          "category": "宽基",
+          "weight_pct": 45.56
+        },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 43.85
+          "weight_pct": 31.94
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 30.88
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 25.27
+          "weight_pct": 22.5
         }
       ]
     },
     {
       "date": "2026-06-12",
       "risk_mode": "normal",
-      "drawdown_pct": 1.95,
+      "drawdown_pct": 5.83,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 4.75,
+      "turnover_pct": 1.31,
       "holdings": [
+        {
+          "symbol": "159915.SZ",
+          "name": "创业板ETF",
+          "category": "宽基",
+          "weight_pct": 45.68
+        },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 41.68
+          "weight_pct": 31.29
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 30.68
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 27.64
+          "weight_pct": 23.03
         }
       ]
     },
@@ -2883,71 +2800,71 @@
       "risk_mode": "normal",
       "drawdown_pct": 0.0,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 1.52,
+      "turnover_pct": 6.76,
       "holdings": [
+        {
+          "symbol": "159915.SZ",
+          "name": "创业板ETF",
+          "category": "宽基",
+          "weight_pct": 42.3
+        },
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 40.92
+          "weight_pct": 32.95
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 30.75
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 28.34
+          "weight_pct": 24.76
         }
       ]
     },
     {
       "date": "2026-06-24",
       "risk_mode": "normal",
-      "drawdown_pct": 0.0,
+      "drawdown_pct": 0.19,
       "target_exposure_pct": 100.0,
-      "turnover_pct": 1.58,
+      "turnover_pct": 84.59,
       "holdings": [
         {
           "symbol": "159695.SZ",
           "name": "通信ETF",
           "category": "成长",
-          "weight_pct": 41.39
+          "weight_pct": 37.14
+        },
+        {
+          "symbol": "588950.SH",
+          "name": "科创50",
+          "category": "宽基",
+          "weight_pct": 34.98
         },
         {
           "symbol": "562590.SH",
           "name": "半导体设备ETF",
           "category": "成长",
-          "weight_pct": 31.06
-        },
-        {
-          "symbol": "513310.SH",
-          "name": "中韩半导体ETF",
-          "category": "成长",
-          "weight_pct": 27.55
+          "weight_pct": 27.87
         }
       ]
     }
   ],
   "metrics": {
     "initial": 10000.0,
-    "final": 15646.36,
-    "total_return_pct": 56.46,
-    "annual_return_pct": 39.48,
-    "max_drawdown_pct": 15.68,
-    "sharpe": 1.665,
-    "volatility_pct": 22.63,
+    "final": 12037.5,
+    "total_return_pct": 20.37,
+    "annual_return_pct": 14.78,
+    "max_drawdown_pct": 15.75,
+    "sharpe": 0.91,
+    "volatility_pct": 19.54,
     "rebalance_count": 74,
     "last_year": {
       "start_date": "2025-06-10",
       "end_date": "2026-06-24",
       "initial": 10000.0,
-      "final": 15646.36,
-      "return_pct": 56.46
+      "final": 12037.5,
+      "return_pct": 20.37
     }
   },
   "comparisons": {
@@ -2955,8 +2872,8 @@
       "start_date": "2025-06-10",
       "end_date": "2026-06-24",
       "initial": 10000.0,
-      "final": 15646.36,
-      "return_pct": 56.46
+      "final": 12037.5,
+      "return_pct": 20.37
     }
   },
   "last_year_contributions": [
@@ -2964,59 +2881,79 @@
       "symbol": "562590.SH",
       "name": "半导体设备ETF",
       "category": "成长",
-      "pnl": 2523.07,
-      "return_contribution_pct": 25.23
-    },
-    {
-      "symbol": "513310.SH",
-      "name": "中韩半导体ETF",
-      "category": "成长",
-      "pnl": 1931.95,
-      "return_contribution_pct": 19.32
+      "pnl": 1531.78,
+      "return_contribution_pct": 15.32
     },
     {
       "symbol": "159695.SZ",
       "name": "通信ETF",
       "category": "成长",
-      "pnl": 1578.76,
-      "return_contribution_pct": 15.79
-    },
-    {
-      "symbol": "159608.SZ",
-      "name": "稀有金属ETF",
-      "category": "周期",
-      "pnl": 425.22,
-      "return_contribution_pct": 4.25
+      "pnl": 1171.48,
+      "return_contribution_pct": 11.71
     },
     {
       "symbol": "159326.SZ",
       "name": "电网设备ETF",
       "category": "周期",
-      "pnl": 337.46,
-      "return_contribution_pct": 3.37
+      "pnl": 329.58,
+      "return_contribution_pct": 3.3
     },
     {
-      "symbol": "518880.SH",
-      "name": "黄金ETF",
+      "symbol": "159608.SZ",
+      "name": "稀有金属ETF",
+      "category": "周期",
+      "pnl": 250.0,
+      "return_contribution_pct": 2.5
+    },
+    {
+      "symbol": "159915.SZ",
+      "name": "创业板ETF",
+      "category": "宽基",
+      "pnl": 202.51,
+      "return_contribution_pct": 2.03
+    },
+    {
+      "symbol": "515180.SH",
+      "name": "红利ETF",
       "category": "防御",
-      "pnl": -7.44,
-      "return_contribution_pct": -0.07
+      "pnl": -34.16,
+      "return_contribution_pct": -0.34
+    },
+    {
+      "symbol": "588950.SH",
+      "name": "科创50",
+      "category": "宽基",
+      "pnl": -56.31,
+      "return_contribution_pct": -0.56
     },
     {
       "symbol": "159796.SZ",
       "name": "电池ETF",
       "category": "成长",
-      "pnl": -237.26,
-      "return_contribution_pct": -2.37
+      "pnl": -140.55,
+      "return_contribution_pct": -1.41
+    },
+    {
+      "symbol": "518880.SH",
+      "name": "黄金ETF",
+      "category": "防御",
+      "pnl": -289.56,
+      "return_contribution_pct": -2.9
     },
     {
       "symbol": "159870.SZ",
       "name": "化工ETF",
       "category": "周期",
-      "pnl": -651.03,
-      "return_contribution_pct": -6.51
+      "pnl": -637.62,
+      "return_contribution_pct": -6.38
     }
   ],
-  "errors": [],
-  "cache_hits": 17
+  "errors": [
+    {
+      "symbol": "161226.SZ",
+      "name": "国投白银LOF",
+      "error": "数据不足"
+    }
+  ],
+  "cache_hits": 11
 }

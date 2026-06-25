@@ -1,6 +1,6 @@
 {
   "component": "short_range",
-  "updated_at": "2026-06-25 09:58:05",
+  "updated_at": "2026-06-25 11:29:18",
   "strategy": {
     "name": "short_swing",
     "title": "EMA-RSI-ATR短线",

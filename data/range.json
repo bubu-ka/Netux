@@ -1,7 +1,7 @@
 {
   "component": "range",
   "title": "单支波段策略",
-  "updated_at": "2026-06-25 09:57:39",
+  "updated_at": "2026-06-25 11:29:16",
   "config": {
     "lookback_bars": 380,
     "metric_1m_bars": 21,
@@ -4263,7 +4263,7 @@
   },
   "stocks_total": 28,
   "stocks_failed": 1,
-  "cache_hits": 14,
+  "cache_hits": 27,
   "net_retry_recovered": 0,
   "strategies": [
     {
